@@ -1,6 +1,7 @@
 # Results history
 
-Every experiment, in order, with its numbers and evidence. Strict pass means the judge confirmed
+Every experiment, in order, with its numbers and evidence. The live Forge project is
+[wandb-smle/bufo-gen](https://forge.coreweave.com/wandb/wandb-smle/bufo-gen) (team access required). Strict pass means the judge confirmed
 Bufo identity and every listed requirement. Failed generations count as failures.
 
 ## 1. Gemma pilot (2026-10-15)

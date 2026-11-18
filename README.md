@@ -36,6 +36,12 @@ image, agreement 0.875 with blinded human labels); the independent human confirm
 Qwen results is still pending. Evidence: `config/forge-demo-comparison.json`,
 [results history](docs/reference/results-history.md).
 
+Live project (W&B team access required):
+[Forge project `wandb-smle/bufo-gen`](https://forge.coreweave.com/wandb/wandb-smle/bufo-gen)
+with the dataset, tuned models, routing and evaluations shown below, the
+[Weave evaluation comparison](https://forge.coreweave.com/wandb/wandb-smle/bufo-gen/weave/compare-evaluations?view=comparison_2026-10-24_22-07-09-875),
+and the [demo report](https://forge.coreweave.com/wandb/wandb-smle/bufo-gen/reports/Bufo-Forge-AI-loop-demo--VmlldzoxODE3NjU5MQ).
+
 **Same prompt, before and after.** "Bufo on an airport apron holding two orange batons, an airplane
 behind, a smaller Bufo watching on the right."
 
