@@ -9,6 +9,10 @@ mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
 
 
+@pytest.mark.skipif(
+    not (SCRIPT.parents[1] / "runs/references/distill-v2").exists(),
+    reason="requires local reference images under runs/references/distill-v2",
+)
 def test_manifest_links_are_pinned_and_collections_named():
     links, uploads, collections = mod.plan()
     assert all(ref.endswith(tuple(f":v{i}" for i in range(0, 40))) for _, ref, *_ in links)

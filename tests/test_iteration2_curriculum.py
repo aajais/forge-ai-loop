@@ -8,6 +8,10 @@ import pytest
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+pytestmark = pytest.mark.skipif(
+    not (ROOT / "runs/forge-gap/training-fit-selected/scored.jsonl").exists(),
+    reason="requires local experiment evidence under runs/forge-gap/training-fit-selected",
+)
 
 
 def module():

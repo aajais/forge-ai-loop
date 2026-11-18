@@ -1,0 +1,51 @@
+{
+  "calibrated_on": "2026-10-22",
+  "judge": {
+    "rubric_version": "bufo-astra-v5",
+    "rubric_hash": "3e89d3db7ca42c1d6af67d0e38f79c7271f310565dbc6c1b1851b614d7a3b0cf",
+    "schema_hash": "694e23a8ebcae180c11365e63185a69655757af92476b6f6044c01b632d6cc23",
+    "judge_model": "gpt-6-astra",
+    "samples": 3,
+    "threshold": 0.65,
+    "confidence_floor": 0.6
+  },
+  "packet": {
+    "dir": "runs/distill/calibration-v1/packet-v4",
+    "items_sha256": "a0425b490eb8c40e7daff5e0b542b80d31b8d55111b6184cb63dc52d4c4e8ce0",
+    "n": 40,
+    "seed": 20261024,
+    "queue": "01a164a4-4e58-7cce-8b78-dfbbeeb84b24"
+  },
+  "reviewer": "user (ajaiswal)",
+  "decisions": "runs/distill/calibration-v1/decisions-user-v4.json",
+  "report": "runs/distill/calibration-v1/key-v4/agreement-user.json",
+  "gate": {
+    "agreement_ok": true,
+    "no_judge_pass_reviewer_missing": true,
+    "passed": true
+  },
+  "strict_pass_agreement": 0.875,
+  "vs_reference_agreement": 0.85,
+  "confusion": {
+    "judge_pass_reviewer_pass": 15,
+    "judge_pass_reviewer_fail": 1,
+    "judge_fail_reviewer_pass": 4,
+    "judge_fail_reviewer_fail": 20
+  },
+  "label_amendments": [
+    {
+      "packet": "v3",
+      "item": 14,
+      "change": "missing [3] -> none",
+      "reason": "airplane visible but badly proportioned; craft note typed into the missing field (user, chat, 2026-10-22)"
+    },
+    {
+      "packet": "v4",
+      "item": 29,
+      "change": "missing [2,3] -> none; pass stays fail",
+      "reason": "utensil arm crosses in front of the scoop; craft fault, requirements literally met (user, chat, 2026-10-22)"
+    }
+  ],
+  "development_set": "packet v3 (40 items) used for rubric revisions v2-v5; not part of this verdict",
+  "note": "The judge configuration still records calibration_status 'uncalibrated' because changing that field would invalidate replay of the v5 k=3 scored rows; Stage B derives status from this record."
+}

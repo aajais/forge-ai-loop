@@ -38,7 +38,7 @@ def main():
         if path.exists() and path.read_text() != data:
             raise ValueError("Existing blinded packet changed")
         path.write_text(data)
-    font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+    font = ImageFont.truetype(str(Path(__file__).resolve().parents[2] / "assets/fonts/DejaVuSans.ttf"), 16)
     for start in range(0, len(inputs), 4):
         sheet = Image.new("RGB", (1080, 1480), "#eef0ed")
         draw = ImageDraw.Draw(sheet)

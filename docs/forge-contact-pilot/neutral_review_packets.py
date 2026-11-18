@@ -68,7 +68,7 @@ def create(directory, *, reviewers=3):
         "packet_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "blinding": "Model identities and original image paths omitted from reviewer inputs.",
     })
-    font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+    font = ImageFont.truetype(str(Path(__file__).resolve().parents[2] / "assets/fonts/DejaVuSans.ttf"), 16)
     for reviewer in range(reviewers):
         folder = root / f"reviewer-{reviewer}"
         batch = inputs[reviewer::reviewers]

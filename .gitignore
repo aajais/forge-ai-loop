@@ -17,7 +17,17 @@ dist/
 htmlcov/
 
 # Generated outputs, traces and caches (never upload)
-runs/
+# runs/ stays local except two small records that the code reads:
+# the judge calibration record and the Stage B checkpoint sidecar.
+runs/*
+!runs/distill/
+runs/distill/*
+!runs/distill/calibration-v1/
+runs/distill/calibration-v1/*
+!runs/distill/calibration-v1/calibration-record.json
+!runs/distill/stage-b/
+runs/distill/stage-b/*
+!runs/distill/stage-b/checkpoints.json
 wandb/
 *.wandb
 data/

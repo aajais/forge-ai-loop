@@ -14,7 +14,7 @@ def main():
     directory = ROOT / "runs/forge-iteration2"
     rows = [json.loads(line) for line in (directory / "teacher/manifest.jsonl").read_text().splitlines()]
     assert len(rows) == len({r["prompt_id"] for r in rows}) == 104
-    font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+    font = ImageFont.truetype(str(Path(__file__).resolve().parents[2] / "assets/fonts/DejaVuSans.ttf"), 16)
     for number in range(3):
         selected = sorted(rows, key=lambda r: r["prompt_id"])[number::3]
         out = directory / "reviews" / f"reviewer-{number}"

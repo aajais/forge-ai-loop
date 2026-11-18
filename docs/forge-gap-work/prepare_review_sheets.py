@@ -26,7 +26,7 @@ def main():
                        "png_sha256":hashlib.sha256(png.read_bytes()).hexdigest() if png and png.exists() else None,
                        "valid":r["valid"],"conversation_url":r.get("conversation_url")})
     (out/"inputs.json").write_text(json.dumps(inputs,indent=2)+"\n")
-    font=ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc",16)
+    font=ImageFont.truetype(str(Path(__file__).resolve().parents[2] / "assets/fonts/DejaVuSans.ttf"), 16)
     for start in range(0,len(inputs),6):
         batch=inputs[start:start+6]
         canvas=Image.new("RGB",(1080,2160),"#eef0ed")

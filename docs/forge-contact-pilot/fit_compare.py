@@ -255,7 +255,7 @@ def create_packets(data):
     folder = data["root"] / "fit-comparison/visual-review"
     items, key, images, protocol = packet_values(data)
     outputs = images | {folder / "unblinding-key.json": encoded(key), folder / "protocol.json": encoded(protocol)}
-    font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+    font = ImageFont.truetype(str(Path(__file__).resolve().parents[2] / "assets/fonts/DejaVuSans.ttf"), 16)
     for reviewer in range(3):
         packet = folder / f"reviewer-{reviewer}"
         batch = items[reviewer::3]

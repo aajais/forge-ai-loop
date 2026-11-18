@@ -41,7 +41,7 @@ def main():
         if target.exists() and target.read_text() != data:
             raise ValueError("Refusing to replace a fixed blind-review sample")
         target.write_text(data)
-    font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+    font = ImageFont.truetype(str(Path(__file__).resolve().parents[2] / "assets/fonts/DejaVuSans.ttf"), 16)
     for start in range(0, len(inputs), 4):
         canvas = Image.new("RGB", (1080, 1480), "#eef0ed")
         draw = ImageDraw.Draw(canvas)

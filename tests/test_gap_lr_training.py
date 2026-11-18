@@ -23,6 +23,8 @@ spec.loader.exec_module(runner)
 
 @pytest.fixture
 def workspace(tmp_path, monkeypatch):
+    if not (runner.ORIGINAL / "training/reviewed-examples.jsonl").exists():
+        pytest.skip("requires local experiment evidence under runs/forge-gap/training")
     original = tmp_path / "original"
     for suffix in (
         "training/reviewed-examples.jsonl",

@@ -48,7 +48,7 @@ def main():
             raise ValueError("Existing review sample changed")
         path.write_text(data)
     save(out / "unblinding-key.json", key)
-    font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+    font = ImageFont.truetype(str(Path(__file__).resolve().parents[2] / "assets/fonts/DejaVuSans.ttf"), 16)
     for reviewer in range(3):
         folder = out / f"reviewer-{reviewer}"
         folder.mkdir(exist_ok=True)

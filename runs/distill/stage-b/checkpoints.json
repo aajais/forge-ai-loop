@@ -1,0 +1,180 @@
+[
+  {
+    "arm_name": "sft_j3",
+    "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-j3-20261023:v1",
+    "forge_job_id": "d69b1e4f-ead2-4ba8-b82d-87712dc84c76",
+    "forge_dataset_id": "280e22a6-ae6b-401e-aafe-cc43182eae49",
+    "sft_config": {
+      "epochs": 1,
+      "batch_size": 2,
+      "learning_rate": 0.0001,
+      "lora_rank": 1,
+      "assistant_turns": "all"
+    },
+    "adapter_rank_observed": 1,
+    "checkpoint_version": "v1"
+  },
+  {
+    "arm_name": "sft_j1",
+    "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-j1-20261023:v3",
+    "forge_job_id": "b074a332-7117-4bf6-95aa-5c2574b08d52",
+    "forge_dataset_id": "280e22a6-ae6b-401e-aafe-cc43182eae49",
+    "sft_config": {
+      "epochs": 3,
+      "batch_size": 2,
+      "learning_rate": 0.0001,
+      "lora_rank": 1,
+      "assistant_turns": "all"
+    },
+    "adapter_rank_observed": 1,
+    "checkpoint_version": "v3"
+  },
+  {
+    "arm_name": "sft_n3",
+    "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-n3-20261023:v1",
+    "forge_job_id": "a16e9b62-80b1-42f0-a1d6-57cebd862c8d",
+    "forge_dataset_id": "280e22a6-ae6b-401e-aafe-cc43182eae49",
+    "sft_config": {
+      "epochs": 1,
+      "batch_size": 2,
+      "learning_rate": 0.0001,
+      "lora_rank": 8,
+      "assistant_turns": "all"
+    },
+    "base_model": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B",
+    "adapter_rank_observed": 8,
+    "checkpoint_version": "v1"
+  },
+  {
+    "arm_name": "sft_q3",
+    "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v1",
+    "forge_job_id": "da6bd91a-d7b8-478c-ad00-f6f540925537",
+    "forge_dataset_id": "280e22a6-ae6b-401e-aafe-cc43182eae49",
+    "sft_config": {
+      "epochs": 1,
+      "batch_size": 2,
+      "learning_rate": 0.0001,
+      "lora_rank": 8,
+      "assistant_turns": "all"
+    },
+    "base_model": "Qwen/Qwen3.8-27B",
+    "adapter_rank_observed": 8,
+    "checkpoint_version": "v1"
+  },
+  {
+    "arm_name": "sft_q1",
+    "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q1-20261023:v3",
+    "forge_job_id": "1dffa2b8-83c5-4c9e-9bf6-2662bd095089",
+    "forge_dataset_id": "280e22a6-ae6b-401e-aafe-cc43182eae49",
+    "sft_config": {
+      "epochs": 3,
+      "batch_size": 2,
+      "learning_rate": 0.0001,
+      "lora_rank": 8,
+      "assistant_turns": "all"
+    },
+    "base_model": "Qwen/Qwen3.8-27B",
+    "adapter_rank_observed": 8,
+    "checkpoint_version": "v3"
+  },
+  {
+    "arm_name": "rl_q3",
+    "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v22",
+    "forge_job_id": "d06a4af4-0f1b-4cf6-9121-620e693694fe",
+    "forge_dataset_id": "280e22a6-ae6b-401e-aafe-cc43182eae49",
+    "rl_config": {
+      "steps": 21,
+      "rollouts_per_step": 4,
+      "learning_rate": 5e-06,
+      "reward": "astra",
+      "max_tokens": 20000,
+      "disable_thinking": false,
+      "initial_checkpoint": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v1",
+      "blocks": [
+        {
+          "block": 1,
+          "steps": 5,
+          "tasks_per_step": 1,
+          "rollouts": 4,
+          "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v6",
+          "training_job_ids": [
+            "930f54f6-5750-4d9e-b9bc-c0054cbd7335",
+            "f325081d-d10b-48e8-9b00-51e1588e3072",
+            "eba4dafc-3663-49bc-a359-c292149bb941",
+            "cc29fcd9-de4a-49f2-80f6-105457fc8eea",
+            "694533ab-5d82-4547-913a-437c38a99b3b"
+          ],
+          "start_step": 1,
+          "end_step": 6,
+          "produced_steps": "2-6"
+        },
+        {
+          "block": 2,
+          "steps": 16,
+          "tasks_per_step": 2,
+          "rollouts": 4,
+          "artifact": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v22",
+          "training_job_ids": [
+            "5c462567-6135-43a7-a978-eb55b717f5c3",
+            "b7cf5f23-c40e-4581-af1e-7e6f8a4cb19b",
+            "565e121d-3c78-4671-947f-a95755a10c94",
+            "ea46b720-2c4d-4252-bfc6-e8765d7d6e38",
+            "7d228415-b04f-4eff-878f-c6bdac91ec33",
+            "975993f5-4f7b-452b-ac53-424e407f93da",
+            "377be113-19b3-40f8-9822-fd8aa6d858a3",
+            "1d604f84-54be-454b-99f0-e791df4b3cb7",
+            "0c6abef8-4a36-49c0-9920-692bc98bc070",
+            "719840d0-68fb-41ab-a90d-1fc2dee9d589",
+            "9d3f2a33-67bc-4a04-b18a-c1dc2c51cf2a",
+            "85654f09-c593-4b02-a7e3-4b3fd1de5b02",
+            "26657eaa-0167-4c88-98a4-1169e0dac520",
+            "ce18311e-3eac-4cc4-86c9-95f999a7ac55",
+            "07606cc1-11e2-40e0-ac81-d8fa2b3dd5d6",
+            "d06a4af4-0f1b-4cf6-9121-620e693694fe"
+          ],
+          "start_step": 6,
+          "end_step": 22,
+          "produced_steps": "7-22"
+        }
+      ],
+      "rollouts_per_step_note": "block 1 value (1 task x 4); see blocks[]: block 2 ran 2 tasks x 4 = 8 rollouts per step",
+      "step_convention": "start_step/end_step = registered model step before/after the block; produced_steps = the steps its updates created (one per update)"
+    },
+    "sft_config": {
+      "epochs": 1,
+      "batch_size": 2,
+      "learning_rate": 0.0001,
+      "lora_rank": 8,
+      "assistant_turns": "all"
+    },
+    "base_model": "Qwen/Qwen3.8-27B",
+    "parent_forge_job_id": "da6bd91a-d7b8-478c-ad00-f6f540925537",
+    "checkpoint_version": "v22",
+    "adapter_rank_observed": 8,
+    "art_model_id": "0bd80ce2-968d-46e2-8cf5-6f474cb2aaad",
+    "rl_dataset_ref": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stage-b-rl-train-tasks:v0",
+    "training_job_ids": [
+      "930f54f6-5750-4d9e-b9bc-c0054cbd7335",
+      "f325081d-d10b-48e8-9b00-51e1588e3072",
+      "eba4dafc-3663-49bc-a359-c292149bb941",
+      "cc29fcd9-de4a-49f2-80f6-105457fc8eea",
+      "694533ab-5d82-4547-913a-437c38a99b3b",
+      "5c462567-6135-43a7-a978-eb55b717f5c3",
+      "b7cf5f23-c40e-4581-af1e-7e6f8a4cb19b",
+      "565e121d-3c78-4671-947f-a95755a10c94",
+      "ea46b720-2c4d-4252-bfc6-e8765d7d6e38",
+      "7d228415-b04f-4eff-878f-c6bdac91ec33",
+      "975993f5-4f7b-452b-ac53-424e407f93da",
+      "377be113-19b3-40f8-9822-fd8aa6d858a3",
+      "1d604f84-54be-454b-99f0-e791df4b3cb7",
+      "0c6abef8-4a36-49c0-9920-692bc98bc070",
+      "719840d0-68fb-41ab-a90d-1fc2dee9d589",
+      "9d3f2a33-67bc-4a04-b18a-c1dc2c51cf2a",
+      "85654f09-c593-4b02-a7e3-4b3fd1de5b02",
+      "26657eaa-0167-4c88-98a4-1169e0dac520",
+      "ce18311e-3eac-4cc4-86c9-95f999a7ac55",
+      "07606cc1-11e2-40e0-ac81-d8fa2b3dd5d6",
+      "d06a4af4-0f1b-4cf6-9121-620e693694fe"
+    ]
+  }
+]
