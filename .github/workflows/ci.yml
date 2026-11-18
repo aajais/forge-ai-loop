@@ -22,7 +22,7 @@ jobs:
           enable-cache: true
 
       - name: Sync dependencies from lockfile
-        run: uv sync --locked
+        run: uv sync --locked --extra rl
 
       - name: Ruff lint
         run: uv run ruff check src scripts tests
