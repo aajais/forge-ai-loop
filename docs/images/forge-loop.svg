@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="300" viewBox="0 0 1160 300" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1160" height="300" rx="12" fill="#ffffff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/>
+    </marker>
+  </defs>
+  <g text-anchor="middle">
+    <g>
+      <rect x="20" y="90" width="210" height="96" rx="10" fill="#eef4ff" stroke="#2374ff" stroke-width="2"/>
+      <text x="125" y="122" font-size="19" font-weight="700" fill="#111827">1. Run</text>
+      <text x="125" y="148" font-size="15" fill="#374151">Bufo studio agent</text>
+      <text x="125" y="169" font-size="13" fill="#6b7280">plan_scene → render_svg → PNG</text>
+    </g>
+    <g>
+      <rect x="250" y="90" width="210" height="96" rx="10" fill="#eef4ff" stroke="#2374ff" stroke-width="2"/>
+      <text x="355" y="122" font-size="19" font-weight="700" fill="#111827">2. Observe</text>
+      <text x="355" y="148" font-size="15" fill="#374151">Weave traces · Agent Lens</text>
+      <text x="355" y="169" font-size="13" fill="#6b7280">every tool call and image</text>
+    </g>
+    <g>
+      <rect x="480" y="90" width="210" height="96" rx="10" fill="#eef4ff" stroke="#2374ff" stroke-width="2"/>
+      <text x="585" y="122" font-size="19" font-weight="700" fill="#111827">3. Curate</text>
+      <text x="585" y="148" font-size="15" fill="#374151">Judged teacher trajectories</text>
+      <text x="585" y="169" font-size="13" fill="#6b7280">911 accepted trajectories</text>
+    </g>
+    <g>
+      <rect x="710" y="90" width="210" height="96" rx="10" fill="#eef4ff" stroke="#2374ff" stroke-width="2"/>
+      <text x="815" y="122" font-size="19" font-weight="700" fill="#111827">4. Improve</text>
+      <text x="815" y="148" font-size="15" fill="#374151">Forge distillation (SFT)</text>
+      <text x="815" y="169" font-size="13" fill="#6b7280">optional Serverless RL</text>
+    </g>
+    <g>
+      <rect x="940" y="90" width="200" height="96" rx="10" fill="#eef4ff" stroke="#2374ff" stroke-width="2"/>
+      <text x="1040" y="122" font-size="19" font-weight="700" fill="#111827">5. Evaluate</text>
+      <text x="1040" y="148" font-size="15" fill="#374151">Weave Evaluations</text>
+      <text x="1040" y="169" font-size="13" fill="#6b7280">paired, frozen, judged</text>
+    </g>
+  </g>
+  <g stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#a)">
+    <line x1="230" y1="138" x2="248" y2="138"/>
+    <line x1="460" y1="138" x2="478" y2="138"/>
+    <line x1="690" y1="138" x2="708" y2="138"/>
+    <line x1="920" y1="138" x2="938" y2="138"/>
+  </g>
+  <path d="M1040,186 L1040,236 L125,236 L125,190" stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#a)" stroke-dasharray="6 5"/>
+  <text x="580" y="262" font-size="14" text-anchor="middle" fill="#374151">Ship the checkpoint that measured better back into the studio, then look for the next failure</text>
+  <g font-size="13" fill="#6b7280" text-anchor="middle">
+    <text x="125" y="70">FastAPI app · CPU sandbox render</text>
+    <text x="355" y="70">OTel agent traces</text>
+    <text x="585" y="70">gpt-6.1-sol teacher · astra judge</text>
+    <text x="815" y="70">Qwen3.8-27B student</text>
+    <text x="1040" y="70">48-prompt validation set</text>
+  </g>
+</svg>
