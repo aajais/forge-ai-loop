@@ -1,0 +1,61 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Generated outputs, traces and caches (never upload)
+runs/
+wandb/
+*.wandb
+data/
+artifacts/
+.art/
+.cache/
+*.log
+
+# Documentation contains tested experiment tools; keep it versioned.
+# Exclude local source backups and generated recording files instead.
+docs/**/before/
+docs/**/*-before/
+demo/**/edit/
+demo/**/qa/
+demo/**/*.mov
+demo/**/*.mp4
+demo/**/*.aiff
+demo/**/*.progress
+demo/**/capture-*.json
+
+# Fetched reference images and Slack exports
+# Re-create with: uv run python scripts/fetch_reference_bufos.py
+assets/reference_bufos/
+assets/slack_bufo_emoji_names.txt
+
+# Node
+node_modules/
+
+# Local tooling and editors
+.claude/settings.local.json
+.superpowers/
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright MCP snapshots
+.playwright-mcp/

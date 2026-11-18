@@ -1,0 +1,21 @@
+[
+  ".env.example",
+  "README.md",
+  "aria_prompts/01_steer_agent_lens_insights.md",
+  "aria_prompts/03_curate_visual_dataset.md",
+  "aria_prompts/04_forge_loop.md",
+  "config/models.yaml",
+  "src/bufogen/agent.py",
+  "src/bufogen/benchmark.py",
+  "src/bufogen/eval.py",
+  "src/bufogen/loop_report.py",
+  "src/bufogen/models.py",
+  "src/bufogen/pipeline_run.py",
+  "src/bufogen/report.py",
+  "src/bufogen/static/app.js",
+  "src/bufogen/static/index.html",
+  "src/bufogen/static/style.css",
+  "src/bufogen/ui.py",
+  "tests/chat_ui.test.cjs",
+  "tests/test_model_names.py"
+]

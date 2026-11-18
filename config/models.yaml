@@ -1,0 +1,154 @@
+open_base:
+  label: google/gemma-4-26B-A4B-it
+  model: google/gemma-4-26B-A4B-it
+  model_env: OPEN_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+open_tuned:
+  label: ft-google/gemma-4-26B-A4B-it
+  base_model: google/gemma-4-26B-A4B-it
+  base_model_env: OPEN_TUNED_BASE_MODEL
+  tuning_method: sft
+  model: ''
+  model_env: OPEN_TUNED_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+closed_quality_bar:
+  label: gpt-6.1-sol
+  model: gpt-6.1-sol
+  model_env: SOL_MODEL
+  provider: openai
+  base_url: https://api.openai.com/v1
+  base_url_env: OPENAI_BASE_URL
+  api_key_env: OPENAI_API_KEY
+  supports_tools: true
+forge_proxy:
+  label: bufo-gen (routing alias; model pending)
+  model: bufo-gen
+  model_env: FORGE_PROXY_MODEL
+  provider: forge
+  base_url: https://proxy.training.coreweave.com/v1
+  base_url_env: FORGE_PROXY_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+open_rl:
+  label: ft-google/gemma-4-26B-A4B-it
+  base_model: google/gemma-4-26B-A4B-it
+  base_model_env: OPEN_RL_BASE_MODEL
+  tuning_method: sft+rl
+  model: ''
+  model_env: OPEN_RL_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+# Stage B sweep arms. The benchmark builds these from `--checkpoint <label>=<artifact>` (never from
+# this file); the entries record the exact artifacts, which also live in
+# runs/distill/stage-b/checkpoints.json, so presentation/base-model identity is explicit.
+sft_j1:
+  label: ft-google/gemma-4-26B-A4B-it
+  base_model: google/gemma-4-26B-A4B-it
+  tuning_method: sft
+  model: wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-j1-20261023:v3
+  model_env: SFT_J1_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+sft_j3:
+  label: ft-google/gemma-4-26B-A4B-it
+  base_model: google/gemma-4-26B-A4B-it
+  tuning_method: sft
+  model: wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-j3-20261023:v1
+  model_env: SFT_J3_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+# Task 14 secondary student: Forge fixes the LoRA rank per base model (Qwen3.8-27B: rank 8).
+qwen_base:
+  label: Qwen/Qwen3.8-27B
+  model: Qwen/Qwen3.8-27B
+  model_env: QWEN_BASE_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+sft_q3:
+  label: ft-Qwen/Qwen3.8-27B
+  base_model: Qwen/Qwen3.8-27B
+  tuning_method: sft
+  model: wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v1
+  model_env: SFT_Q3_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+# Epoch test on the rank-8 Qwen path (user, 2026-10-24): J1 recipe (3 epochs) on the same 911 rows;
+# evaluated under the T16 frozen config (thinking on, 20k tokens). Model set once the job deploys.
+sft_q1:
+  label: ft-Qwen/Qwen3.8-27B
+  base_model: Qwen/Qwen3.8-27B
+  tuning_method: sft
+  model: wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q1-20261023:v3
+  model_env: SFT_Q1_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+nemotron_base:
+  label: nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B
+  model: nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B
+  model_env: NEMOTRON_BASE_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+sft_n3:
+  label: ft-nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B
+  base_model: nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B
+  tuning_method: sft
+  model: wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-n3-20261023:v1
+  model_env: SFT_N3_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+# Evaluated Qwen RL checkpoint (first completed block). Environment overrides remain supported.
+# Nemotron RL stays unavailable until a real checkpoint is configured.
+rl_q3:
+  label: rl-Qwen/Qwen3.8-27B
+  base_model: Qwen/Qwen3.8-27B
+  tuning_method: rl
+  model: wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v6
+  model_env: RL_Q3_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true
+rl_n3:
+  label: rl-nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B
+  base_model: nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B
+  tuning_method: rl
+  model: wandb-artifact:///wandb-smle/bufo-gen/PENDING
+  model_env: RL_N3_MODEL
+  provider: coreweave
+  base_url: https://api.inference.wandb.ai/v1
+  base_url_env: INFERENCE_BASE_URL
+  api_key_env: WANDB_API_KEY
+  supports_tools: true

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "bufo+1",
+    "url": "https://bufo.fun/bufos/bufo%2B1.png",
+    "tags": [
+      "encouragement",
+      "agree",
+      "core"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-ack",
+    "url": "https://bufo.fun/bufos/bufo-ack.png",
+    "tags": [
+      "acknowledgement",
+      "core"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-all-good",
+    "url": "https://bufo.fun/bufos/bufo-all-good.png",
+    "tags": [
+      "cry",
+      "sad",
+      "core",
+      "acknowledgement"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-all-warm-and-fuzzy-inside",
+    "url": "https://bufo.fun/bufos/bufo-all-warm-and-fuzzy-inside.png",
+    "tags": [
+      "love",
+      "core",
+      "happy"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-approve",
+    "url": "https://bufo.fun/bufos/bufo-approve.png",
+    "tags": [
+      "approve",
+      "core",
+      "encouragement",
+      "agree"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-awkward-smile",
+    "url": "https://bufo.fun/bufos/bufo-awkward-smile.png",
+    "tags": [
+      "awkward",
+      "discomfort",
+      "core"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-back-pat",
+    "url": "https://bufo.fun/bufos/bufo-back-pat.png",
+    "tags": [
+      "encouragement",
+      "core",
+      "feel-better"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-blank-stare",
+    "url": "https://bufo.fun/bufos/bufo-blank-stare.png",
+    "tags": [
+      "core",
+      "disbelief",
+      "anxiety",
+      "shock"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-bless-back",
+    "url": "https://bufo.fun/bufos/bufo-bless-back.png",
+    "tags": [
+      "gratitude",
+      "core"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-bless",
+    "url": "https://bufo.fun/bufos/bufo-bless.png",
+    "tags": [
+      "gratitude",
+      "core"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-brain",
+    "url": "https://bufo.fun/bufos/bufo-brain.png",
+    "tags": [
+      "high-quality",
+      "smart",
+      "core"
+    ],
+    "slack_membership_verified": false
+  },
+  {
+    "name": "bufo-breakdown",
+    "url": "https://bufo.fun/bufos/bufo-breakdown.png",
+    "tags": [
+      "cry",
+      "sad",
+      "core"
+    ],
+    "slack_membership_verified": false
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "changed_existing": {},
+  "added": {
+    "pyarrow": "26.0.0"
+  }
+}

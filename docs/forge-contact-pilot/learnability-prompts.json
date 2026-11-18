@@ -1,0 +1,438 @@
+[
+  {
+    "id": "contact-learn-train-umbrella-carrying",
+    "family": "umbrella_carrying",
+    "split": "train",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a closed yellow umbrella by its curved black handle with one hand. The folded canopy points upward.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A closed yellow umbrella has a curved black handle",
+      "One hand visibly grips the black umbrella handle"
+    ]
+  },
+  {
+    "id": "contact-learn-train-magnifier-holding",
+    "family": "magnifier_holding",
+    "split": "train",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a magnifying glass by its red handle with one hand, away from its face.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A magnifying glass has a round transparent lens and a red handle",
+      "One hand visibly grips the red magnifying-glass handle"
+    ]
+  },
+  {
+    "id": "contact-learn-train-handbell-ringing",
+    "family": "handbell_ringing",
+    "split": "train",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a small gold handbell by its brown handle with one hand, with the bell mouth pointing downward.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A gold bell has a brown handle and a downward-facing mouth",
+      "One hand visibly grips the brown bell handle"
+    ]
+  },
+  {
+    "id": "contact-learn-train-spatula-holding",
+    "family": "spatula_holding",
+    "split": "train",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a kitchen spatula by its blue handle with one hand. Its broad slotted silver blade is visible above the handle.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A kitchen spatula has a blue handle and a broad slotted silver blade",
+      "One hand visibly grips the blue spatula handle"
+    ]
+  },
+  {
+    "id": "contact-learn-train-flag-waving",
+    "family": "flag_waving",
+    "split": "train",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a short brown flagpole with one hand. A red triangular flag is attached near the pole tip.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A red triangular flag is attached near the tip of a brown pole",
+      "One hand visibly grips the flagpole below the flag"
+    ]
+  },
+  {
+    "id": "contact-learn-train-duster-holding",
+    "family": "duster_holding",
+    "split": "train",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a feather duster by its orange handle with one hand. A purple feather tuft is visible at its far end.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A feather duster has an orange handle and a purple tuft",
+      "One hand visibly grips the orange duster handle"
+    ]
+  },
+  {
+    "id": "contact-learn-train-steering-practice",
+    "family": "steering_practice",
+    "split": "train",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a small black steering wheel in front of its belly with both hands, one gripping each side of the circular rim.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "One hand visibly grips the left side of the black steering-wheel rim",
+      "The other hand visibly grips the right side of the same steering-wheel rim"
+    ]
+  },
+  {
+    "id": "contact-learn-train-parcel-carrying",
+    "family": "parcel_carrying",
+    "split": "train",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo carries a closed orange cardboard box in front of its belly with both hands, one holding each lower corner.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A closed orange cardboard box is visible in front of Bufo",
+      "One hand visibly holds the lower-left corner of the box",
+      "The other hand visibly holds the lower-right corner of the same box"
+    ]
+  },
+  {
+    "id": "contact-learn-train-ladder-carrying",
+    "family": "ladder_carrying",
+    "split": "train",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a short yellow ladder upright in front of its belly with both hands, one gripping each outer rail below the top rung.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A short yellow ladder has two outer rails joined by rungs",
+      "One hand visibly grips the left outer rail",
+      "The other hand visibly grips the right outer rail of the same ladder"
+    ]
+  },
+  {
+    "id": "contact-learn-train-accordion-playing",
+    "family": "accordion_playing",
+    "split": "train",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a small red accordion in front of its belly, one hand gripping the outer handle on each end. The folded bellows remain visible between the red ends.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "Red accordion ends are joined by visible folded bellows",
+      "One hand visibly grips the left outer handle",
+      "The other hand visibly grips the right outer handle of the same accordion"
+    ]
+  },
+  {
+    "id": "contact-learn-train-towel-display",
+    "family": "towel_display",
+    "split": "train",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds up a small blue towel in front of its belly with both hands, one pinching each upper corner.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A blue towel hangs between Bufo's hands",
+      "One hand visibly pinches the towel's upper-left corner",
+      "The other hand visibly pinches the same towel's upper-right corner"
+    ]
+  },
+  {
+    "id": "contact-learn-train-binocular-holding",
+    "family": "binocular_holding",
+    "split": "train",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds black binoculars below its face with both hands, one gripping each barrel. Show the bridge connecting the two barrels.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "Black binoculars have two barrels joined by a visible bridge",
+      "One hand visibly grips the left barrel",
+      "The other hand visibly grips the right barrel"
+    ]
+  },
+  {
+    "id": "contact-learn-train-screw-fastening",
+    "family": "screw_fastening",
+    "split": "train",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips the red handle of a screwdriver. Its silver tip touches the head of a visible screw set into a blue wooden block beside Bufo.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the red screwdriver handle",
+      "The silver screwdriver tip visibly touches the screw head",
+      "The screw is set into the blue wooden block"
+    ]
+  },
+  {
+    "id": "contact-learn-train-tooth-model-brushing",
+    "family": "tooth_model_brushing",
+    "split": "train",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips a green toothbrush while its white bristles touch the side of a large freestanding white tooth model beside Bufo.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the green toothbrush handle",
+      "The toothbrush bristles visibly touch the white tooth model"
+    ]
+  },
+  {
+    "id": "contact-learn-train-crayon-coloring",
+    "family": "crayon_coloring",
+    "split": "train",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips a red crayon whose pointed tip touches a red mark on a white sheet of paper on a small upright board beside Bufo.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the red crayon body",
+      "The crayon's pointed tip visibly touches the red mark",
+      "The red mark is on the white paper attached to the upright board"
+    ]
+  },
+  {
+    "id": "contact-learn-train-drum-striking",
+    "family": "drum_striking",
+    "split": "train",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips a brown drumstick whose rounded tip touches the white top skin of a small red drum beside Bufo.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the brown drumstick shaft",
+      "The drumstick's rounded tip visibly touches the drum's white top skin",
+      "The drum has a red body below its white top skin"
+    ]
+  },
+  {
+    "id": "contact-learn-train-clay-sculpting",
+    "family": "clay_sculpting",
+    "split": "train",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips the blue handle of a sculpting tool. Its blunt silver tip touches a green lump of clay on a low work block beside Bufo.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the blue sculpting-tool handle",
+      "The silver tool tip visibly touches the green clay",
+      "The green clay rests on the work block"
+    ]
+  },
+  {
+    "id": "contact-learn-train-apple-forking",
+    "family": "apple_forking",
+    "split": "train",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips the blue handle of a silver fork whose tine tips enter a red apple chunk beside Bufo. Show the hand and fork-to-apple contact clearly.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the fork's blue handle",
+      "The silver fork's tine tips visibly enter the red apple chunk"
+    ]
+  },
+  {
+    "id": "contact-learn-train-plant-pot-steadying",
+    "family": "plant_pot_steadying",
+    "split": "train",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo steadies the rim of a small orange flowerpot with one hand while the pot base rests directly on a low bench. A green leafy plant grows from the pot.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A green leafy plant grows from an orange flowerpot",
+      "A hand visibly touches the flowerpot rim",
+      "The flowerpot base rests directly on the bench top"
+    ]
+  },
+  {
+    "id": "contact-learn-train-toy-car-parking",
+    "family": "toy_car_parking",
+    "split": "train",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo touches the roof of a small red toy car with one hand while its black wheels rest directly on a low blue block.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly touches the red toy car's roof",
+      "The toy car's black wheels rest directly on the blue block's top"
+    ]
+  },
+  {
+    "id": "contact-learn-train-snow-globe-steadying",
+    "family": "snow_globe_steadying",
+    "split": "train",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo steadies the side of a round transparent snow globe with one hand while its purple base rests directly on a low pedestal. A small white snowman is visible inside the globe.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A transparent globe contains a small white snowman",
+      "A hand visibly touches the side of the globe",
+      "The globe's purple base rests directly on the pedestal top"
+    ]
+  },
+  {
+    "id": "contact-learn-train-teapot-steadying",
+    "family": "teapot_steadying",
+    "split": "train",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds the curved handle of a green teapot with one hand while the teapot base rests directly on a low stool. Keep its spout visible on the opposite side.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A green teapot has a curved handle and a visible opposite spout",
+      "A hand visibly grips the teapot handle",
+      "The teapot base rests directly on the stool top"
+    ]
+  },
+  {
+    "id": "contact-learn-train-chess-piece-positioning",
+    "family": "chess_piece_positioning",
+    "split": "train",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo touches the round top of a large white chess pawn with one hand while the pawn base rests directly on a visible square of a small chessboard.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly touches the white pawn's round top",
+      "The pawn base rests directly on a square of the chessboard"
+    ]
+  },
+  {
+    "id": "contact-learn-train-stapler-pressing",
+    "family": "stapler_pressing",
+    "split": "train",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo presses the top of a closed red stapler with one hand while its black base rests directly on a low desk.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly touches the red stapler's top",
+      "The stapler's black base rests directly on the desk top"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-tambourine-holding",
+    "family": "tambourine_holding",
+    "split": "heldout",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a small purple tambourine by the bottom of its rim with one hand. Show silver jingles spaced around the rim.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A purple tambourine has visible silver jingles around its rim",
+      "One hand visibly grips the bottom of the tambourine rim"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-suitcase-carrying",
+    "family": "suitcase_carrying",
+    "split": "heldout",
+    "relation_class": "single_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo carries a small blue suitcase by its brown top handle with one hand. The suitcase hangs clear of the ground.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A small blue suitcase has a brown top handle",
+      "One hand visibly grips the brown suitcase handle",
+      "The suitcase hangs above the ground"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-skateboard-display",
+    "family": "skateboard_display",
+    "split": "heldout",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a small red skateboard horizontally in front of its belly with both hands, one gripping each end. Show its black wheels below the deck.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A red skateboard deck is horizontal with black wheels below it",
+      "One hand visibly grips the left end of the deck",
+      "The other hand visibly grips the right end of the same deck"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-picture-frame-display",
+    "family": "picture_frame_display",
+    "split": "heldout",
+    "relation_class": "two_hand_grip",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo holds a small empty gold rectangular picture frame in front of its belly with both hands, one gripping each side rail. Bufo remains visible through the open center.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A gold rectangular picture frame has an open center",
+      "One hand visibly grips the frame's left side rail",
+      "The other hand visibly grips the frame's right side rail",
+      "Bufo is visible through the frame's open center"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-pizza-cutting",
+    "family": "pizza_cutting",
+    "split": "heldout",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips the red handle of a pizza cutter whose silver circular blade touches the top of a small pizza on a low board beside Bufo.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the red pizza-cutter handle",
+      "The silver circular blade visibly touches the pizza's top",
+      "The pizza rests on the low board"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-wig-combing",
+    "family": "wig_combing",
+    "split": "heldout",
+    "relation_class": "tool_target_contact",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo grips the purple handle of a comb while its teeth touch the yellow hair of a wig on a small stand beside Bufo.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A hand visibly grips the comb's purple handle",
+      "The comb teeth visibly touch the wig's yellow hair",
+      "The yellow wig rests on the small stand"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-clock-steadying",
+    "family": "clock_steadying",
+    "split": "heldout",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo steadies the side of a small round yellow alarm clock with one hand while the clock's two feet rest directly on a low shelf. Show the clock face and hands.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A round yellow alarm clock has a visible face and hands",
+      "A hand visibly touches the clock's side",
+      "Both clock feet rest directly on the shelf top"
+    ]
+  },
+  {
+    "id": "contact-learn-heldout-juice-carton-steadying",
+    "family": "juice_carton_steadying",
+    "split": "heldout",
+    "relation_class": "supported_object",
+    "prompt": "Draw one canonical full-body Bufo on a plain pale background. Keep the face, both feet, and every requested contact visible. Bufo steadies the side of a blue juice carton with one hand while its flat base rests directly on a low table. Show a white drinking straw emerging from the carton top.",
+    "requirements": [
+      "Exactly one recognizable full-body Bufo is present with its face and both feet visible",
+      "The background is plain and pale",
+      "A blue juice carton has a white straw emerging from its top",
+      "A hand visibly touches the carton's side",
+      "The carton base rests directly on the table top"
+    ]
+  }
+]

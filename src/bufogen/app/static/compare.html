@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Compare models · Bufo studio</title><link rel="stylesheet" href="/static/style.css?v=8"><script src="/static/demo-models.js?v=1" defer></script><script src="/static/generation-client.js?v=1" defer></script><script src="/static/compare.js?v=3" defer></script></head>
+<body class="comparison-page">
+<header class="comparison-header"><a class="wordmark" href="/"><span class="mark" aria-hidden="true">b.</span> Bufo studio</a><a href="/">Back to chat</a></header>
+<main class="comparison-main">
+<div class="comparison-intro"><h1>One idea. Four models.</h1><p>Compare base Qwen, one-epoch SFT, SFT + RL, and the Sol teacher. Each model draws from the same prompt in a fresh conversation.</p></div>
+<form id="compare-form" class="comparison-form"><label for="compare-prompt">Describe your Bufo</label><textarea id="compare-prompt" maxlength="4000" rows="3" placeholder="Draw Bufo on an airport apron, holding two orange batons, with an airplane behind him and a smaller Bufo watching on the right." required></textarea><div class="comparison-controls"><button id="run-models" type="submit" disabled>Run all 4 models</button><span id="comparison-status" role="status">Loading models…</span></div><p class="comparison-help">Starts a new generation on each available model. Results appear independently; some models may take several minutes.</p></form>
+<div id="comparison-notice" role="alert" hidden></div><button id="reload-models" type="button" hidden>Retry loading models</button>
+<div class="comparison-history"><label for="saved-comparisons">Saved comparisons</label><select id="saved-comparisons"><option value="">Current comparison</option></select></div>
+<section id="comparison-results" aria-label="Model comparison results" aria-live="polite" aria-relevant="additions"></section>
+</main>
+</body></html>

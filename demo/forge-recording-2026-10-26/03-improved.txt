@@ -1,0 +1,1 @@
+Now open the same prompt from the one epoch fine tuned Qwen checkpoint. Its saved verdict passes. We can inspect the actual image and tool sequence, rather than relying on a friendly final sentence. This pair makes the behavior change concrete. It is an illustrative example; the full validation cohort is what measures the improvement.

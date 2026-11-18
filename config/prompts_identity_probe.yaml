@@ -1,0 +1,12 @@
+- id: identity-probe-gardener
+  theme: identity
+  prompt: A bufo tending a garden of tiny GPUs, holding a CoreWeave blue watering can with water visibly pouring onto the GPUs. Preserve the original bufo character.
+- id: identity-probe-profile
+  theme: pose
+  prompt: The original bufo in a three-quarter side view, peeking around the right edge of a blue server rack. Only one eye and half the muzzle should be visible, but it must still be unmistakably bufo.
+- id: identity-probe-small
+  theme: scale
+  prompt: A small full-body bufo, no more than one third of the canvas height, standing beside exactly three blue GPUs. Bufo holds a tiny white sign reading OK. Preserve the recognizable bufo face at emoji size.
+- id: identity-probe-expression
+  theme: expression
+  prompt: The original bufo looking exhausted after an overnight incident, one hand supporting its broad cheek and the other holding a blue coffee mug. Half-closed raised eyes and a long low mouth seam. A small monitor behind it reads 03:00.

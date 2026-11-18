@@ -1,0 +1,58 @@
+[
+  {
+    "scene": "01-intro",
+    "source_start_s": 255,
+    "source_end_s": 271,
+    "output_start_s": 0.0,
+    "output_duration_s": 21.625,
+    "last_frame_hold_s": 5.625
+  },
+  {
+    "scene": "02-observe",
+    "source_start_s": 279,
+    "source_end_s": 307,
+    "output_start_s": 21.625,
+    "output_duration_s": 28.708333333333332,
+    "last_frame_hold_s": 0.7083333333333321
+  },
+  {
+    "scene": "03-improved",
+    "source_start_s": 314,
+    "source_end_s": 328,
+    "output_start_s": 50.33333333333333,
+    "output_duration_s": 22.125,
+    "last_frame_hold_s": 8.125
+  },
+  {
+    "scene": "04-curate",
+    "source_start_s": 334,
+    "source_end_s": 351,
+    "output_start_s": 72.45833333333333,
+    "output_duration_s": 32.291666666666664,
+    "last_frame_hold_s": 15.291666666666664
+  },
+  {
+    "scene": "05-improve",
+    "source_start_s": 355,
+    "source_end_s": 376,
+    "output_start_s": 104.75,
+    "output_duration_s": 25.458333333333332,
+    "last_frame_hold_s": 4.458333333333332
+  },
+  {
+    "scene": "06-evaluate",
+    "source_start_s": 380,
+    "source_end_s": 402,
+    "output_start_s": 130.20833333333334,
+    "output_duration_s": 39.333333333333336,
+    "last_frame_hold_s": 17.333333333333336
+  },
+  {
+    "scene": "07-route",
+    "source_start_s": 410,
+    "source_end_s": 419,
+    "output_start_s": 169.54166666666669,
+    "output_duration_s": 34.541666666666664,
+    "last_frame_hold_s": 25.541666666666664
+  }
+]

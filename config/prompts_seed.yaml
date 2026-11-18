@@ -1,0 +1,57 @@
+- id: p01
+  theme: gpu
+  prompt: A green bufo tending a garden of tiny GPUs, with a CoreWeave blue watering
+    can.
+- id: p02
+  theme: cloud
+  prompt: A green bufo riding a fluffy cloud with a blue scarf.
+- id: p03
+  theme: network
+  prompt: A green bufo untangling network cables in a server rack, blue labels.
+- id: p04
+  theme: training
+  prompt: A green bufo lifting GPU weights, wearing a blue sweatband.
+- id: p05
+  theme: storage
+  prompt: A green bufo carefully stacking glowing data cubes into a blue bucket.
+- id: p06
+  theme: inference
+  prompt: A green bufo delivering an answer on a blue rocket scooter.
+- id: p07
+  theme: cooling
+  prompt: A green bufo relaxing beside liquid-cooled servers with a blue drink.
+- id: p08
+  theme: kubernetes
+  prompt: A green bufo steering a ship carrying a cluster of servers, blue wheel.
+- id: p09
+  theme: observability
+  prompt: A green bufo examining a latency chart through a magnifying glass, blue
+    chart.
+- id: p10
+  theme: registry
+  prompt: A green bufo filing model checkpoints in a tidy blue cabinet.
+- id: p11
+  theme: text
+  prompt: A green bufo holding a sign with exactly the text HELLO FORGE in blue.
+- id: p12
+  theme: text
+  prompt: A green bufo wearing a shirt labeled GPU CLUB, blue lettering.
+- id: p13
+  theme: complex
+  prompt: Three green bufos fixing a glowing server rack at night, blue tools.
+- id: p14
+  theme: complex
+  prompt: A green bufo at a launch console with a rocket and a latency chart, blue
+    accents.
+- id: p15
+  theme: style
+  prompt: A simple green bufo sticker with a bold outline and a blue cloud pin.
+- id: p16
+  theme: style
+  prompt: A geometric green bufo with pixel-like shapes and a blue GPU prop.
+- id: p17
+  theme: cooling
+  prompt: A green bufo in sunglasses holding a blue cooling fan.
+- id: p18
+  theme: network
+  prompt: Two green bufos connecting servers with a single blue cable.

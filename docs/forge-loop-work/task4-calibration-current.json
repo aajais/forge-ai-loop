@@ -1,0 +1,2731 @@
+{
+  "schema_version": 1,
+  "status": "blocked_calibration",
+  "rl_ready": false,
+  "population_calibrated": false,
+  "scorer_configuration": {
+    "rubric_version": "bufo-scene-v1",
+    "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+    "judge_model": "Qwen/Qwen3.8-27B",
+    "judge_provider": "coreweave",
+    "judge_base_url": "https://api.inference.wandb.ai/v1",
+    "temperature": 0,
+    "max_tokens": [
+      3200,
+      6400
+    ],
+    "threshold": 0.65,
+    "calibration_status": "uncalibrated"
+  },
+  "reviewed_count": 17,
+  "positive_count": 15,
+  "negative_count": 2,
+  "judge_errors": 1,
+  "false_positives": 2,
+  "agreement": 0.7647058823529411,
+  "readiness_policy": {
+    "minimum_positive": 1,
+    "minimum_negative": 1,
+    "maximum_false_positives": 0,
+    "maximum_judge_errors": 0,
+    "minimum_agreement": 0.8
+  },
+  "observations": [
+    {
+      "generation_id": "e5f5f4015e8e4c20a64e106084b1a072",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "e5f5f4015e8e4c20a64e106084b1a072",
+        "prompt_id": "train-f1_presentation-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:32:33.696911+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-f1_presentation-01",
+        "partition": "train",
+        "prompt_family": "f1_presentation",
+        "requirements": [
+          {
+            "requirement": "Bufo has a blue polo attached to his torso",
+            "satisfied": true,
+            "evidence": "Blue collared polo follows the torso with aligned sleeves."
+          },
+          {
+            "requirement": "Hand visibly grips a pointer",
+            "satisfied": true,
+            "evidence": "Raised hand wraps visibly around the pointer shaft."
+          },
+          {
+            "requirement": "Pointer tip touches the red Formula 1 car on the screen",
+            "satisfied": true,
+            "evidence": "Light pointer tip lands on the red car body."
+          },
+          {
+            "requirement": "Screen is to the viewer right of Bufo",
+            "satisfied": true,
+            "evidence": "Screen is clearly to the viewer right."
+          },
+          {
+            "requirement": "Both feet are visible",
+            "satisfied": true,
+            "evidence": "Two feet are unobstructed above the ground shadow."
+          },
+          {
+            "requirement": "Screen title reads F1",
+            "satisfied": true,
+            "evidence": "Red F1 text is clear at the screen top."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/4b21510a18e86549265b2816/e5f5f4015e8e4c20a64e106084b1a072.png",
+        "png_sha256": "f6999bbac0a40d7938b5a13b398a519f6991082908c8ffc208db53f21ae9cb36",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Recognizable olive Bufo with heavy brows and wide muzzle stands fully visible in a fitted blue polo. His connected raised arm ends in a hand wrapped around the dark pointer; its tip lands on the red race car. The separate right-hand screen clearly reads F1."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The candidate successfully depicts Bufo with the correct identity features (broad muzzle, olive skin, stout body) in a full-body pose. The composition is clean, with the character on the left and the screen on the right. The specific action requested\u2014gripping a pointer that touches a car on the screen\u2014is clearly visible and physically coherent. The text 'F1' is legible at the top of the screen.",
+        "prompt_checks": [
+          {
+            "requirement": "Bufo has a blue polo attached to his torso",
+            "satisfied": true,
+            "evidence": "Bufo is wearing a blue polo shirt with a white collar that is clearly attached to his torso."
+          },
+          {
+            "requirement": "Hand visibly grips a pointer",
+            "satisfied": true,
+            "evidence": "Bufo's right hand is wrapped around the handle of a black pointer stick."
+          },
+          {
+            "requirement": "Pointer tip touches the red Formula 1 car on the screen",
+            "satisfied": true,
+            "evidence": "The tip of the pointer is positioned directly on the side of the red car displayed on the screen."
+          },
+          {
+            "requirement": "Screen is to the viewer right of Bufo",
+            "satisfied": true,
+            "evidence": "The screen is located on the right side of the image, while Bufo is on the left."
+          },
+          {
+            "requirement": "Both feet are visible",
+            "satisfied": true,
+            "evidence": "Both of Bufo's feet are visible at the bottom of the character, standing on the ground."
+          },
+          {
+            "requirement": "Screen title reads F1",
+            "satisfied": true,
+            "evidence": "The text 'F1' is clearly visible in red at the top of the screen."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Bufo has a blue polo attached to his torso",
+          "Hand visibly grips a pointer",
+          "Pointer tip touches the red Formula 1 car on the screen",
+          "Screen is to the viewer right of Bufo",
+          "Both feet are visible",
+          "Screen title reads F1"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "e5f5f4015e8e4c20a64e106084b1a072",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.9,
+          "reason": "The candidate successfully depicts Bufo with the correct identity features (broad muzzle, olive skin, stout body) in a full-body pose. The composition is clean, with the character on the left and the screen on the right. The specific action requested\u2014gripping a pointer that touches a car on the screen\u2014is clearly visible and physically coherent. The text 'F1' is legible at the top of the screen.",
+          "prompt_checks": [
+            {
+              "requirement": "Bufo has a blue polo attached to his torso",
+              "satisfied": true,
+              "evidence": "Bufo is wearing a blue polo shirt with a white collar that is clearly attached to his torso."
+            },
+            {
+              "requirement": "Hand visibly grips a pointer",
+              "satisfied": true,
+              "evidence": "Bufo's right hand is wrapped around the handle of a black pointer stick."
+            },
+            {
+              "requirement": "Pointer tip touches the red Formula 1 car on the screen",
+              "satisfied": true,
+              "evidence": "The tip of the pointer is positioned directly on the side of the red car displayed on the screen."
+            },
+            {
+              "requirement": "Screen is to the viewer right of Bufo",
+              "satisfied": true,
+              "evidence": "The screen is located on the right side of the image, while Bufo is on the left."
+            },
+            {
+              "requirement": "Both feet are visible",
+              "satisfied": true,
+              "evidence": "Both of Bufo's feet are visible at the bottom of the character, standing on the ground."
+            },
+            {
+              "requirement": "Screen title reads F1",
+              "satisfied": true,
+              "evidence": "The text 'F1' is clearly visible in red at the top of the screen."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "e5f5f4015e8e4c20a64e106084b1a072",
+        "prompt_id": "train-f1_presentation-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "f1_presentation",
+          "split": "train",
+          "requirements": [
+            "Bufo has a blue polo attached to his torso",
+            "Hand visibly grips a pointer",
+            "Pointer tip touches the red Formula 1 car on the screen",
+            "Screen is to the viewer right of Bufo",
+            "Both feet are visible",
+            "Screen title reads F1"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "f6999bbac0a40d7938b5a13b398a519f6991082908c8ffc208db53f21ae9cb36"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.050000000000000044,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "3418b62c51054f7f9ad8cc733194d748",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "3418b62c51054f7f9ad8cc733194d748",
+        "prompt_id": "train-concert_stage-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:32:33.697171+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-concert_stage-01",
+        "partition": "train",
+        "prompt_family": "concert_stage",
+        "requirements": [
+          {
+            "requirement": "Bufo is full-body with both feet visible",
+            "satisfied": true,
+            "evidence": "Both feet and complete head and torso are visible on stage."
+          },
+          {
+            "requirement": "One hand visibly grips a microphone at his mouth",
+            "satisfied": true,
+            "evidence": "Olive fingers wrap the microphone handle beside his mouth."
+          },
+          {
+            "requirement": "Blue jacket is attached to torso and sleeves align with arms",
+            "satisfied": true,
+            "evidence": "Fitted jacket covers torso with sleeves following the lowered and raised arms."
+          },
+          {
+            "requirement": "Two spotlights illuminate the stage",
+            "satisfied": true,
+            "evidence": "Two corner spotlight fixtures cast broad pale beams toward the stage."
+          },
+          {
+            "requirement": "An audience sits below the stage",
+            "satisfied": true,
+            "evidence": "Audience silhouettes form a lower row below the stage edge; their lower bodies are cropped."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/af0a63d3ba20cf09bc919362/3418b62c51054f7f9ad8cc733194d748.png",
+        "png_sha256": "c19dbb1845b5ea2ccf08eb03bf734249b215b6ace8a37e4e4a9c8a4848d3d705",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Large recognizable Bufo stands with both feet on the stage in a coherent blue jacket. A bent sleeved arm and olive hand hold the microphone immediately in front of his mouth. Two overhead lights cast visible beams, and a row of audience silhouettes occupies the lower foreground."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.8,
+        "composition": 0.9,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The candidate successfully depicts Bufo with the correct olive-green skin, broad muzzle, and stout body. The character is wearing a blue jacket and holding a microphone. The scene includes the requested stage elements, spotlights, and audience. The anatomy is coherent, with the jacket sleeves aligning with the arms and the microphone held in a visible hand.",
+        "prompt_checks": [
+          {
+            "requirement": "Bufo is full-body with both feet visible",
+            "satisfied": true,
+            "evidence": "The character is shown from head to toe, and both feet are clearly visible standing on the stage floor."
+          },
+          {
+            "requirement": "One hand visibly grips a microphone at his mouth",
+            "satisfied": true,
+            "evidence": "A green hand is shown gripping the handle of a microphone, which is positioned directly in front of the character's mouth."
+          },
+          {
+            "requirement": "Blue jacket is attached to torso and sleeves align with arms",
+            "satisfied": true,
+            "evidence": "The blue jacket covers the torso, and the sleeves extend down the arms, ending at the wrists where the hands are visible."
+          },
+          {
+            "requirement": "Two spotlights illuminate the stage",
+            "satisfied": true,
+            "evidence": "Two spotlight fixtures are visible at the top of the image, casting beams of light down onto the stage."
+          },
+          {
+            "requirement": "An audience sits below the stage",
+            "satisfied": true,
+            "evidence": "A row of silhouetted figures representing an audience is visible in the foreground, positioned below the stage level."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Bufo is full-body with both feet visible",
+          "One hand visibly grips a microphone at his mouth",
+          "Blue jacket is attached to torso and sleeves align with arms",
+          "Two spotlights illuminate the stage",
+          "An audience sits below the stage"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "3418b62c51054f7f9ad8cc733194d748",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.8,
+          "composition": 0.9,
+          "readability": 0.9,
+          "reason": "The candidate successfully depicts Bufo with the correct olive-green skin, broad muzzle, and stout body. The character is wearing a blue jacket and holding a microphone. The scene includes the requested stage elements, spotlights, and audience. The anatomy is coherent, with the jacket sleeves aligning with the arms and the microphone held in a visible hand.",
+          "prompt_checks": [
+            {
+              "requirement": "Bufo is full-body with both feet visible",
+              "satisfied": true,
+              "evidence": "The character is shown from head to toe, and both feet are clearly visible standing on the stage floor."
+            },
+            {
+              "requirement": "One hand visibly grips a microphone at his mouth",
+              "satisfied": true,
+              "evidence": "A green hand is shown gripping the handle of a microphone, which is positioned directly in front of the character's mouth."
+            },
+            {
+              "requirement": "Blue jacket is attached to torso and sleeves align with arms",
+              "satisfied": true,
+              "evidence": "The blue jacket covers the torso, and the sleeves extend down the arms, ending at the wrists where the hands are visible."
+            },
+            {
+              "requirement": "Two spotlights illuminate the stage",
+              "satisfied": true,
+              "evidence": "Two spotlight fixtures are visible at the top of the image, casting beams of light down onto the stage."
+            },
+            {
+              "requirement": "An audience sits below the stage",
+              "satisfied": true,
+              "evidence": "A row of silhouetted figures representing an audience is visible in the foreground, positioned below the stage level."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "3418b62c51054f7f9ad8cc733194d748",
+        "prompt_id": "train-concert_stage-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "concert_stage",
+          "split": "train",
+          "requirements": [
+            "Bufo is full-body with both feet visible",
+            "One hand visibly grips a microphone at his mouth",
+            "Blue jacket is attached to torso and sleeves align with arms",
+            "Two spotlights illuminate the stage",
+            "An audience sits below the stage"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "c19dbb1845b5ea2ccf08eb03bf734249b215b6ace8a37e4e4a9c8a4848d3d705"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.19999999999999996,
+        "composition": 0.09999999999999998,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "4883f02428c9475bb4589c0dadf7076a",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "4883f02428c9475bb4589c0dadf7076a",
+        "prompt_id": "train-concert_stage-02",
+        "decision": "reject",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:32:48.361448+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-concert_stage-02",
+        "partition": "train",
+        "prompt_family": "concert_stage",
+        "requirements": [
+          {
+            "requirement": "Microphone is held in Bufo\u2019s left hand at his mouth",
+            "satisfied": true,
+            "evidence": "Viewer-right hand, Bufo's left, wraps the microphone handle at his mouth."
+          },
+          {
+            "requirement": "Guitar crosses the chest and is held by the other hand",
+            "satisfied": true,
+            "evidence": "Guitar lies across the chest, with the opposite hand on its body near the strings."
+          },
+          {
+            "requirement": "Blue jacket remains attached to his torso",
+            "satisfied": true,
+            "evidence": "Blue jacket and its sleeves remain attached around the arms and torso."
+          },
+          {
+            "requirement": "Stage and two spotlights remain visible",
+            "satisfied": true,
+            "evidence": "Stage platform and two top-corner spotlights with beams remain visible."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/7d69075632da0c577a36f802/4883f02428c9475bb4589c0dadf7076a.png",
+        "png_sha256": "308bfa1d8a7aabe88f24a3540e96bfb8a94f6458d0983003bf66fdabb5aab306",
+        "visual_quality_pass": true,
+        "sft_eligibility_reason": "Prior conversation targets lack per-turn review qualification; final image passes visual review but cumulative trajectory is ineligible.",
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Recognizable Bufo retains a blue jacket and holds a microphone at the mouth with his left hand on viewer right. His other hand rests on the guitar body across his chest. Both feet, stage edge, and two illuminated spotlights are visible. Reject is for unqualified prior trajectory targets, not this image."
+      },
+      "score": {
+        "bufo_present": null,
+        "similarity": null,
+        "anatomy": null,
+        "composition": null,
+        "readability": null,
+        "constraint_coverage": null,
+        "status": "judge_error",
+        "quality_failure": null,
+        "failure_modes": [
+          "judge_error"
+        ],
+        "error": "ValueError: image judgment failed",
+        "prompt_checks": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Microphone is held in Bufo\u2019s left hand at his mouth",
+          "Guitar crosses the chest and is held by the other hand",
+          "Blue jacket remains attached to his torso",
+          "Stage and two spotlights remain visible"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "4883f02428c9475bb4589c0dadf7076a",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.75,
+          "anatomy": 0.75,
+          "composition": 0.85,
+          "readability": 0.8,
+          "reason": "The candidate depicts a green, stout frog-like character with a broad muzzle and heavy jaw consistent with the Bufo identity. The character is wearing a blue jacket and holding a guitar across the chest. A microphone is held in the character's left hand (viewer's right) and is positioned near the mouth. The scene includes a stage floor and two spotlights in the background. The anatomy is coherent with connected limbs and attached props, though the hand gripping the microphone is somewhat simplified.",
+          "prompt_checks": [
+            {
+              "requirement": "Microphone is held in Bufo's left hand at his mouth",
+              "satisfied": true,
+              "evidence": "The character's left hand (on the right side of the image) is visibly gripping the microphone handle, and the microphone head is positioned directly in front of the character's mouth."
+            },
+            {
+              "requirement": "Guitar crosses the chest and is held by the other hand",
+              "satisfied": true,
+              "evidence": "The guitar body is positioned across the character's torso, and the character's right hand (on the left side of the image) is placed on the guitar neck, indicating it is being held."
+            },
+            {
+              "requirement": "Blue jacket remains attached to his torso",
+              "satisfied": true,
+              "evidence": "A blue jacket with visible lapels and sleeves is drawn over the character's green body, appearing physically attached to the torso and arms."
+            },
+            {
+              "requirement": "Stage and two spotlights remain visible",
+              "satisfied": true,
+              "evidence": "The character is standing on a grey stage floor, and two spotlight fixtures are visible in the upper corners, casting beams of light downwards."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "4883f02428c9475bb4589c0dadf7076a",
+        "prompt_id": "train-concert_stage-02",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "concert_stage",
+          "split": "train",
+          "requirements": [
+            "Microphone is held in Bufo\u2019s left hand at his mouth",
+            "Guitar crosses the chest and is held by the other hand",
+            "Blue jacket remains attached to his torso",
+            "Stage and two spotlights remain visible"
+          ],
+          "turns": [
+            "Draw full-body Bufo singing on a stage with a microphone, blue jacket and two spotlights."
+          ],
+          "status": "completed",
+          "png_sha256": "308bfa1d8a7aabe88f24a3540e96bfb8a94f6458d0983003bf66fdabb5aab306"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": null,
+      "judge_error": "unusable_judgment",
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {}
+    },
+    {
+      "generation_id": "9a76f40d37a542e6bb4f720da9c0d25a",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "9a76f40d37a542e6bb4f720da9c0d25a",
+        "prompt_id": "train-f1_presentation-02",
+        "decision": "reject",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:33:06.214769+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-f1_presentation-02",
+        "partition": "train",
+        "prompt_family": "f1_presentation",
+        "requirements": [
+          {
+            "requirement": "Bare hand touches the front wheel of the red car on the screen",
+            "satisfied": true,
+            "evidence": "Bare index finger visibly overlaps the center of the right/front wheel."
+          },
+          {
+            "requirement": "No pointer stick is visible",
+            "satisfied": true,
+            "evidence": "Only the olive bare arm connects hand and body; there is no pointer shaft."
+          },
+          {
+            "requirement": "Screen title is F1",
+            "satisfied": true,
+            "evidence": "Screen title visibly includes F1 as F1 DESIGN; the extra descriptive word is a minor variation."
+          },
+          {
+            "requirement": "Blue polo remains attached to Bufo",
+            "satisfied": true,
+            "evidence": "Collared blue polo remains fitted to the torso with connected sleeves."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/e44f3724a336400ea5d1fdab/9a76f40d37a542e6bb4f720da9c0d25a.png",
+        "png_sha256": "6bc7ad80a1695a29628954eeea72f39fa7cd4e79e25af451934c08b0114b5da4",
+        "visual_quality_pass": true,
+        "sft_eligibility_reason": "Prior conversation targets lack per-turn review qualification; final image passes visual review but cumulative trajectory is ineligible.",
+        "identity": 4,
+        "anatomy": 3,
+        "composition": 3,
+        "readability": 4,
+        "evidence": "Bufo is recognizable in an attached blue polo, with both feet visible. A very long but continuous bare arm reaches the screen and its index finger directly touches the red car's front wheel. No pointer is visible. The screen says F1 DESIGN, retaining clear F1 text with a minor extra word. Reject is for the unqualified cumulative trajectory."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.8,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The candidate image features a green, stout character with a broad muzzle and small eyes, consistent with the Bufo identity. He is wearing a blue polo shirt and is pointing with a bare hand (no stick) at the front wheel of a red car displayed on a screen. The screen displays the text 'F1 DESIGN'. The character's anatomy is coherent, and the composition is clear.",
+        "prompt_checks": [
+          {
+            "requirement": "Bare hand touches the front wheel of the red car on the screen",
+            "satisfied": true,
+            "evidence": "The character's right arm is extended, and his bare hand is positioned directly over the front wheel of the red car on the screen."
+          },
+          {
+            "requirement": "No pointer stick is visible",
+            "satisfied": true,
+            "evidence": "The character is using his bare hand to point; there is no stick or pointer object in his hand or visible in the scene."
+          },
+          {
+            "requirement": "Screen title is F1",
+            "satisfied": false,
+            "evidence": "The text on the screen reads 'F1 DESIGN', not just 'F1'."
+          },
+          {
+            "requirement": "Blue polo remains attached to Bufo",
+            "satisfied": true,
+            "evidence": "The character is wearing a blue polo shirt with a collar and buttons, which is clearly attached to his body."
+          }
+        ],
+        "constraint_coverage": 0.75,
+        "quality_failure": true,
+        "failure_modes": [
+          "prompt_mismatch"
+        ],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Bare hand touches the front wheel of the red car on the screen",
+          "No pointer stick is visible",
+          "Screen title is F1",
+          "Blue polo remains attached to Bufo"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "9a76f40d37a542e6bb4f720da9c0d25a",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.8,
+          "readability": 0.9,
+          "reason": "The candidate image features a green, stout character with a broad muzzle and small eyes, consistent with the Bufo identity. He is wearing a blue polo shirt and is pointing with a bare hand (no stick) at the front wheel of a red car displayed on a screen. The screen displays the text 'F1 DESIGN'. The character's anatomy is coherent, and the composition is clear.",
+          "prompt_checks": [
+            {
+              "requirement": "Bare hand touches the front wheel of the red car on the screen",
+              "satisfied": true,
+              "evidence": "The character's right arm is extended, and his bare hand is positioned directly over the front wheel of the red car on the screen."
+            },
+            {
+              "requirement": "No pointer stick is visible",
+              "satisfied": true,
+              "evidence": "The character is using his bare hand to point; there is no stick or pointer object in his hand or visible in the scene."
+            },
+            {
+              "requirement": "Screen title is F1",
+              "satisfied": false,
+              "evidence": "The text on the screen reads 'F1 DESIGN', not just 'F1'."
+            },
+            {
+              "requirement": "Blue polo remains attached to Bufo",
+              "satisfied": true,
+              "evidence": "The character is wearing a blue polo shirt with a collar and buttons, which is clearly attached to his body."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "9a76f40d37a542e6bb4f720da9c0d25a",
+        "prompt_id": "train-f1_presentation-02",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "f1_presentation",
+          "split": "train",
+          "requirements": [
+            "Bare hand touches the front wheel of the red car on the screen",
+            "No pointer stick is visible",
+            "Screen title is F1",
+            "Blue polo remains attached to Bufo"
+          ],
+          "turns": [
+            "Draw Bufo in a blue polo presenting a red F1 car on a screen using a pointer."
+          ],
+          "status": "completed",
+          "png_sha256": "6bc7ad80a1695a29628954eeea72f39fa7cd4e79e25af451934c08b0114b5da4"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": false,
+      "judge_error": null,
+      "checklist_disagreements": [
+        "Screen title is F1"
+      ],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.15000000000000002,
+        "composition": 0.050000000000000044,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "7dfc95ca24d944f1a995c0b69279102f",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "7dfc95ca24d944f1a995c0b69279102f",
+        "prompt_id": "train-gpu_garden-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:33:28.782159+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-gpu_garden-01",
+        "partition": "train",
+        "prompt_family": "gpu_garden",
+        "requirements": [
+          {
+            "requirement": "Exactly three GPU seedlings are visible",
+            "satisfied": true,
+            "evidence": "There are exactly three sprouting blue GPU chips in one planter."
+          },
+          {
+            "requirement": "Bufo grips a blue watering can",
+            "satisfied": true,
+            "evidence": "Olive fingers curl at the blue loop handle next to the can rim."
+          },
+          {
+            "requirement": "Water originates at the spout and reaches the middle seedling",
+            "satisfied": true,
+            "evidence": "Three visible blue water strokes descend from the spout onto the center GPU seedling."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/4792ffc03beace370b312515/7dfc95ca24d944f1a995c0b69279102f.png",
+        "png_sha256": "a72d7c1e5a2154527d69681824cd631d430e07ce19b676d9cc7bb3e841122b2b",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Recognizable full-body Bufo holds a blue watering can beside a planter containing three chip-shaped seedlings. His raised hand meets the can's loop handle. Curved blue water streams start at the spout and end directly over the central seedling, with no additional seedlings elsewhere."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.75,
+        "anatomy": 0.85,
+        "composition": 0.9,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The candidate depicts a green, stout character with a broad head, small eyes, and a heavy jaw consistent with the Bufo identity. The character is shown gripping a blue watering can with both hands. Water is visibly flowing from the spout of the can and landing directly on the middle of the three seedlings in the planter box. The anatomy is coherent with no missing limbs or duplicated parts, and the composition clearly separates the character from the planter.",
+        "prompt_checks": [
+          {
+            "requirement": "Exactly three GPU seedlings are visible",
+            "satisfied": true,
+            "evidence": "There are three distinct small plants with square, chip-like tops visible in the brown planter box."
+          },
+          {
+            "requirement": "Bufo grips a blue watering can",
+            "satisfied": true,
+            "evidence": "The character's hands are visibly wrapped around the handle and body of the blue watering can."
+          },
+          {
+            "requirement": "Water originates at the spout and reaches the middle seedling",
+            "satisfied": true,
+            "evidence": "Blue water droplets are shown emerging from the spout and falling directly onto the center seedling."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Exactly three GPU seedlings are visible",
+          "Bufo grips a blue watering can",
+          "Water originates at the spout and reaches the middle seedling"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "7dfc95ca24d944f1a995c0b69279102f",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.75,
+          "anatomy": 0.85,
+          "composition": 0.9,
+          "readability": 0.9,
+          "reason": "The candidate depicts a green, stout character with a broad head, small eyes, and a heavy jaw consistent with the Bufo identity. The character is shown gripping a blue watering can with both hands. Water is visibly flowing from the spout of the can and landing directly on the middle of the three seedlings in the planter box. The anatomy is coherent with no missing limbs or duplicated parts, and the composition clearly separates the character from the planter.",
+          "prompt_checks": [
+            {
+              "requirement": "Exactly three GPU seedlings are visible",
+              "satisfied": true,
+              "evidence": "There are three distinct small plants with square, chip-like tops visible in the brown planter box."
+            },
+            {
+              "requirement": "Bufo grips a blue watering can",
+              "satisfied": true,
+              "evidence": "The character's hands are visibly wrapped around the handle and body of the blue watering can."
+            },
+            {
+              "requirement": "Water originates at the spout and reaches the middle seedling",
+              "satisfied": true,
+              "evidence": "Blue water droplets are shown emerging from the spout and falling directly onto the center seedling."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "7dfc95ca24d944f1a995c0b69279102f",
+        "prompt_id": "train-gpu_garden-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "gpu_garden",
+          "split": "train",
+          "requirements": [
+            "Exactly three GPU seedlings are visible",
+            "Bufo grips a blue watering can",
+            "Water originates at the spout and reaches the middle seedling"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "a72d7c1e5a2154527d69681824cd631d430e07ce19b676d9cc7bb3e841122b2b"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.25,
+        "anatomy": 0.15000000000000002,
+        "composition": 0.09999999999999998,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "6295eced50a64ceebbd5b2f629e0a68b",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "6295eced50a64ceebbd5b2f629e0a68b",
+        "prompt_id": "train-office_coffee-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:33:42.472369+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-office_coffee-01",
+        "partition": "train",
+        "prompt_family": "office_coffee",
+        "requirements": [
+          {
+            "requirement": "Bufo is seated at a desk",
+            "satisfied": true,
+            "evidence": "Bufo is positioned low behind the desk with chair supports under him and feet below the tabletop."
+          },
+          {
+            "requirement": "Hand contacts the blue mug handle",
+            "satisfied": true,
+            "evidence": "Olive fingers visibly occupy and contact the blue loop mug handle."
+          },
+          {
+            "requirement": "Laptop text reads GPU",
+            "satisfied": true,
+            "evidence": "White uppercase GPU is clear on the laptop screen."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/0b190ba0109ab0f570829652/6295eced50a64ceebbd5b2f629e0a68b.png",
+        "png_sha256": "18f986689a5903ccc0ab0ba403928bc070223748fba04f415b8ffc2990eaae62",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 3,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Bufo appears seated behind a wooden desk with lower legs and chair supports visible. A raised olive hand is inside the blue mug handle beside an open laptop. GPU is large and clearly legible on the screen; all key objects have separate readable silhouettes."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.95,
+        "status": "ok",
+        "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, broad head, and stout body. The character is seated at a desk, and the right hand is clearly shown gripping the handle of a blue mug. A laptop is present on the desk with the text 'GPU' clearly visible on the screen. The anatomy is coherent with no missing limbs or duplicated parts.",
+        "prompt_checks": [
+          {
+            "requirement": "Bufo is seated at a desk",
+            "satisfied": true,
+            "evidence": "The character is positioned behind a wooden desk with legs visible underneath, indicating a seated posture."
+          },
+          {
+            "requirement": "Hand contacts the blue mug handle",
+            "satisfied": true,
+            "evidence": "The character's right hand is wrapped around the handle of the blue mug, showing clear physical contact."
+          },
+          {
+            "requirement": "Laptop text reads GPU",
+            "satisfied": true,
+            "evidence": "The laptop screen clearly displays the text 'GPU' in white letters."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Bufo is seated at a desk",
+          "Hand contacts the blue mug handle",
+          "Laptop text reads GPU"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "6295eced50a64ceebbd5b2f629e0a68b",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.95,
+          "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, broad head, and stout body. The character is seated at a desk, and the right hand is clearly shown gripping the handle of a blue mug. A laptop is present on the desk with the text 'GPU' clearly visible on the screen. The anatomy is coherent with no missing limbs or duplicated parts.",
+          "prompt_checks": [
+            {
+              "requirement": "Bufo is seated at a desk",
+              "satisfied": true,
+              "evidence": "The character is positioned behind a wooden desk with legs visible underneath, indicating a seated posture."
+            },
+            {
+              "requirement": "Hand contacts the blue mug handle",
+              "satisfied": true,
+              "evidence": "The character's right hand is wrapped around the handle of the blue mug, showing clear physical contact."
+            },
+            {
+              "requirement": "Laptop text reads GPU",
+              "satisfied": true,
+              "evidence": "The laptop screen clearly displays the text 'GPU' in white letters."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "6295eced50a64ceebbd5b2f629e0a68b",
+        "prompt_id": "train-office_coffee-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "office_coffee",
+          "split": "train",
+          "requirements": [
+            "Bufo is seated at a desk",
+            "Hand contacts the blue mug handle",
+            "Laptop text reads GPU"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "18f986689a5903ccc0ab0ba403928bc070223748fba04f415b8ffc2990eaae62"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.15000000000000002,
+        "composition": 0.050000000000000044,
+        "readability": 0.050000000000000044
+      }
+    },
+    {
+      "generation_id": "5905ed227e7a4735837472431a1b4100",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "5905ed227e7a4735837472431a1b4100",
+        "prompt_id": "train-skate_park-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:35:07.430892+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-skate_park-01",
+        "partition": "train",
+        "prompt_family": "skate_park",
+        "requirements": [
+          {
+            "requirement": "Both feet contact the skateboard",
+            "satisfied": true,
+            "evidence": "Both foot soles meet the top of the board."
+          },
+          {
+            "requirement": "Skateboard is blue and above a ramp",
+            "satisfied": true,
+            "evidence": "Blue skateboard deck and wheels are visibly above the tan ramp."
+          },
+          {
+            "requirement": "Both arms are spread",
+            "satisfied": true,
+            "evidence": "Both arms extend outward to opposite sides with spread fingers."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/b340174705e9a9ec9cfab40a/5905ed227e7a4735837472431a1b4100.png",
+        "png_sha256": "2a8a736e7bd7161582e31e963e1d46f58a661a96530609ef3a76334bbba0f350",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Recognizable olive Bufo balances with two visible feet resting on a blue skateboard deck. The wheels are in midair directly over a low tan ramp. Two connected arms stretch outward with open hands, making the balancing action clear."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.95,
+        "status": "ok",
+        "reason": "The candidate successfully captures the Bufo identity with the correct olive-green color, broad head, and small glossy eyes. The anatomy is coherent with connected limbs and a stout body. The composition is clear, showing the character balancing on a blue skateboard over a ramp with arms spread out.",
+        "prompt_checks": [
+          {
+            "requirement": "Both feet contact the skateboard",
+            "satisfied": true,
+            "evidence": "Both of the character's feet are clearly drawn resting on the top surface of the blue skateboard."
+          },
+          {
+            "requirement": "Skateboard is blue and above a ramp",
+            "satisfied": true,
+            "evidence": "The skateboard is distinctly blue and is positioned in the air directly above a tan-colored ramp structure."
+          },
+          {
+            "requirement": "Both arms are spread",
+            "satisfied": true,
+            "evidence": "Both arms are extended outward to the sides of the body, consistent with a balancing pose."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Both feet contact the skateboard",
+          "Skateboard is blue and above a ramp",
+          "Both arms are spread"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "5905ed227e7a4735837472431a1b4100",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.95,
+          "reason": "The candidate successfully captures the Bufo identity with the correct olive-green color, broad head, and small glossy eyes. The anatomy is coherent with connected limbs and a stout body. The composition is clear, showing the character balancing on a blue skateboard over a ramp with arms spread out.",
+          "prompt_checks": [
+            {
+              "requirement": "Both feet contact the skateboard",
+              "satisfied": true,
+              "evidence": "Both of the character's feet are clearly drawn resting on the top surface of the blue skateboard."
+            },
+            {
+              "requirement": "Skateboard is blue and above a ramp",
+              "satisfied": true,
+              "evidence": "The skateboard is distinctly blue and is positioned in the air directly above a tan-colored ramp structure."
+            },
+            {
+              "requirement": "Both arms are spread",
+              "satisfied": true,
+              "evidence": "Both arms are extended outward to the sides of the body, consistent with a balancing pose."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "5905ed227e7a4735837472431a1b4100",
+        "prompt_id": "train-skate_park-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "skate_park",
+          "split": "train",
+          "requirements": [
+            "Both feet contact the skateboard",
+            "Skateboard is blue and above a ramp",
+            "Both arms are spread"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "2a8a736e7bd7161582e31e963e1d46f58a661a96530609ef3a76334bbba0f350"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.050000000000000044,
+        "readability": 0.050000000000000044
+      }
+    },
+    {
+      "generation_id": "18d9dfd153724d89a78020692d879d57",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "18d9dfd153724d89a78020692d879d57",
+        "prompt_id": "train-pizza_kitchen-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:37:47.697032+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-pizza_kitchen-01",
+        "partition": "train",
+        "prompt_family": "pizza_kitchen",
+        "requirements": [
+          {
+            "requirement": "Exactly two Bufos are visible",
+            "satisfied": true,
+            "evidence": "Exactly two distinct Bufo heads and bodies are present, one on each side."
+          },
+          {
+            "requirement": "Left Bufo grips one pizza slice",
+            "satisfied": true,
+            "evidence": "Small olive fingers of the left Bufo grip the lifted triangular slice near its tip."
+          },
+          {
+            "requirement": "Cheese strand connects slice to the remaining pizza",
+            "satisfied": true,
+            "evidence": "Pale yellow strands descend continuously from the lifted slice to the pizza surface."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/fc2ae1ba2f74e5feaaeb9160/18d9dfd153724d89a78020692d879d57.png",
+        "png_sha256": "aeeed5b5247934dcf91bfd4ec260906896f2fe4a74c980da6bcea6822fe480e4",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 3,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Two recognizable Bufos sit behind a shared round pizza. The left Bufo holds a lifted triangular slice near his mouth with small olive fingers at its lower edge. Two pale cheese strands visibly connect that slice to the remaining pizza. The table hides much of the arms, but the grip and shared action are readable."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The image clearly depicts two distinct Bufo characters sitting at a table. They retain the core identity features: broad flattened muzzles, heavy low jaws, and small glossy eyes. The left Bufo is shown holding a pizza slice, and a distinct cheese strand connects the slice to the main pizza on the table, satisfying the specific action requirements.",
+        "prompt_checks": [
+          {
+            "requirement": "Exactly two Bufos are visible",
+            "satisfied": true,
+            "evidence": "Two distinct Bufo characters are seated at the table, one on the left and one on the right."
+          },
+          {
+            "requirement": "Left Bufo grips one pizza slice",
+            "satisfied": true,
+            "evidence": "The Bufo on the left side of the image is holding a triangular pizza slice in its hand."
+          },
+          {
+            "requirement": "Cheese strand connects slice to the remaining pizza",
+            "satisfied": true,
+            "evidence": "A visible line of cheese stretches from the slice held by the left Bufo down to the pizza on the table."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Exactly two Bufos are visible",
+          "Left Bufo grips one pizza slice",
+          "Cheese strand connects slice to the remaining pizza"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "18d9dfd153724d89a78020692d879d57",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.9,
+          "reason": "The image clearly depicts two distinct Bufo characters sitting at a table. They retain the core identity features: broad flattened muzzles, heavy low jaws, and small glossy eyes. The left Bufo is shown holding a pizza slice, and a distinct cheese strand connects the slice to the main pizza on the table, satisfying the specific action requirements.",
+          "prompt_checks": [
+            {
+              "requirement": "Exactly two Bufos are visible",
+              "satisfied": true,
+              "evidence": "Two distinct Bufo characters are seated at the table, one on the left and one on the right."
+            },
+            {
+              "requirement": "Left Bufo grips one pizza slice",
+              "satisfied": true,
+              "evidence": "The Bufo on the left side of the image is holding a triangular pizza slice in its hand."
+            },
+            {
+              "requirement": "Cheese strand connects slice to the remaining pizza",
+              "satisfied": true,
+              "evidence": "A visible line of cheese stretches from the slice held by the left Bufo down to the pizza on the table."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "18d9dfd153724d89a78020692d879d57",
+        "prompt_id": "train-pizza_kitchen-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "pizza_kitchen",
+          "split": "train",
+          "requirements": [
+            "Exactly two Bufos are visible",
+            "Left Bufo grips one pizza slice",
+            "Cheese strand connects slice to the remaining pizza"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "aeeed5b5247934dcf91bfd4ec260906896f2fe4a74c980da6bcea6822fe480e4"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.15000000000000002,
+        "composition": 0.050000000000000044,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "99dffb4a2b624d5289cdf525c0e1a0da",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "99dffb4a2b624d5289cdf525c0e1a0da",
+        "prompt_id": "train-basketball_court-01",
+        "decision": "reject",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:39:26.383844+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-basketball_court-01",
+        "partition": "train",
+        "prompt_family": "basketball_court",
+        "requirements": [
+          {
+            "requirement": "One hand contacts an orange basketball below the waist",
+            "satisfied": false,
+            "evidence": "Hand touches the ball at roughly sleeve/upper-torso height; ball center is above the jersey hem/waist, not below it."
+          },
+          {
+            "requirement": "Court lines are visible",
+            "satisfied": true,
+            "evidence": "White sideline and court arc markings are clearly visible."
+          },
+          {
+            "requirement": "Blue jersey attaches to torso",
+            "satisfied": true,
+            "evidence": "Blue numbered jersey follows the torso with shoulder trim around the attached arms."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/80fd33e0d1c9acc44235f8bd/99dffb4a2b624d5289cdf525c0e1a0da.png",
+        "png_sha256": "99dd9d6542932b7bc11713b5006eccf2ab782a49c2c8783c49020424f0ce0319",
+        "visual_quality_pass": false,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 3,
+        "readability": 4,
+        "evidence": "Recognizable Bufo wears a coherent blue jersey on a clearly marked basketball court, and one hand touches the orange ball. However the extended hand and top of the ball are at upper-torso level, while most of the ball is beside the jersey rather than below the waist. This misses the required low dribbling contact position."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.9,
+        "readability": 0.95,
+        "status": "ok",
+        "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, broad muzzle, and stout body proportions. The character is wearing a blue jersey and is positioned on a basketball court with visible lines and a hoop. The character's right hand is clearly shown contacting an orange basketball, satisfying the dribbling action requirement.",
+        "prompt_checks": [
+          {
+            "requirement": "One hand contacts an orange basketball below the waist",
+            "satisfied": true,
+            "evidence": "The character's right hand is visibly gripping the top of an orange basketball, which is positioned at the character's hip level (below the waist)."
+          },
+          {
+            "requirement": "Court lines are visible",
+            "satisfied": true,
+            "evidence": "White painted lines are clearly visible on the wooden floor, including the three-point arc and boundary lines."
+          },
+          {
+            "requirement": "Blue jersey attaches to torso",
+            "satisfied": true,
+            "evidence": "A blue jersey with the text 'CW 01' is drawn over the character's upper body, with sleeves covering the shoulders and the hem resting on the mid-torso."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "One hand contacts an orange basketball below the waist",
+          "Court lines are visible",
+          "Blue jersey attaches to torso"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "99dffb4a2b624d5289cdf525c0e1a0da",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.9,
+          "readability": 0.95,
+          "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, broad muzzle, and stout body proportions. The character is wearing a blue jersey and is positioned on a basketball court with visible lines and a hoop. The character's right hand is clearly shown contacting an orange basketball, satisfying the dribbling action requirement.",
+          "prompt_checks": [
+            {
+              "requirement": "One hand contacts an orange basketball below the waist",
+              "satisfied": true,
+              "evidence": "The character's right hand is visibly gripping the top of an orange basketball, which is positioned at the character's hip level (below the waist)."
+            },
+            {
+              "requirement": "Court lines are visible",
+              "satisfied": true,
+              "evidence": "White painted lines are clearly visible on the wooden floor, including the three-point arc and boundary lines."
+            },
+            {
+              "requirement": "Blue jersey attaches to torso",
+              "satisfied": true,
+              "evidence": "A blue jersey with the text 'CW 01' is drawn over the character's upper body, with sleeves covering the shoulders and the hem resting on the mid-torso."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "99dffb4a2b624d5289cdf525c0e1a0da",
+        "prompt_id": "train-basketball_court-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "basketball_court",
+          "split": "train",
+          "requirements": [
+            "One hand contacts an orange basketball below the waist",
+            "Court lines are visible",
+            "Blue jersey attaches to torso"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "99dd9d6542932b7bc11713b5006eccf2ab782a49c2c8783c49020424f0ce0319"
+        }
+      },
+      "reviewed_pass": false,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [
+        "One hand contacts an orange basketball below the waist"
+      ],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.15000000000000002,
+        "readability": 0.050000000000000044
+      }
+    },
+    {
+      "generation_id": "bd4d2c1e9c9b48c0af38f88aef2725f0",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "bd4d2c1e9c9b48c0af38f88aef2725f0",
+        "prompt_id": "train-workshop_repair-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:39:37.827467+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-workshop_repair-01",
+        "partition": "train",
+        "prompt_family": "workshop_repair",
+        "requirements": [
+          {
+            "requirement": "Wrench touches a bolt on a blue robot",
+            "satisfied": true,
+            "evidence": "Wrench head surrounds the grey hexagonal fitting at the blue robot's left shoulder."
+          },
+          {
+            "requirement": "Hand grips the wrench",
+            "satisfied": true,
+            "evidence": "Olive fingers visibly curl around the diagonal grey wrench handle."
+          },
+          {
+            "requirement": "Bufo is full-body beside a workbench",
+            "satisfied": true,
+            "evidence": "Bufo's entire head, torso and two feet are visible to the left of the workbench."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/baf9c972c59bed0a8b2ef358/bd4d2c1e9c9b48c0af38f88aef2725f0.png",
+        "png_sha256": "fd75f8fd23b966ebc915ea5100615b9ffdf15346c5a9ebe98ab411d4f656ca6e",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Full-body Bufo stands beside a separate workbench carrying a blue robot. His raised connected arm ends in a clear grip around a grey wrench. The wrench jaws meet the hexagonal fitting at the robot's shoulder; small motion marks reinforce the tightening action."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.85,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The candidate image clearly depicts the character Bufo in a vector art style. The character retains the core identity features: broad flattened muzzle, heavy low jaw, small glossy raised eyes, and olive-green skin. The anatomy is coherent with connected limbs and a stout body. The composition is clean, with Bufo standing beside a workbench and a blue robot. The action of tightening a bolt is visually supported by the wrench touching the robot's arm and Bufo's hand gripping the wrench.",
+        "prompt_checks": [
+          {
+            "requirement": "Wrench touches a bolt on a blue robot",
+            "satisfied": true,
+            "evidence": "The silver wrench held by Bufo is shown making direct contact with a joint/bolt on the blue robot's arm, with small yellow impact lines indicating the action."
+          },
+          {
+            "requirement": "Hand grips the wrench",
+            "satisfied": true,
+            "evidence": "Bufo's right hand is visibly wrapped around the handle of the wrench, showing a clear grip."
+          },
+          {
+            "requirement": "Bufo is full-body beside a workbench",
+            "satisfied": true,
+            "evidence": "Bufo is shown from head to feet (full body) standing on the floor to the left of a brown workbench."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Wrench touches a bolt on a blue robot",
+          "Hand grips the wrench",
+          "Bufo is full-body beside a workbench"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "bd4d2c1e9c9b48c0af38f88aef2725f0",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.85,
+          "readability": 0.9,
+          "reason": "The candidate image clearly depicts the character Bufo in a vector art style. The character retains the core identity features: broad flattened muzzle, heavy low jaw, small glossy raised eyes, and olive-green skin. The anatomy is coherent with connected limbs and a stout body. The composition is clean, with Bufo standing beside a workbench and a blue robot. The action of tightening a bolt is visually supported by the wrench touching the robot's arm and Bufo's hand gripping the wrench.",
+          "prompt_checks": [
+            {
+              "requirement": "Wrench touches a bolt on a blue robot",
+              "satisfied": true,
+              "evidence": "The silver wrench held by Bufo is shown making direct contact with a joint/bolt on the blue robot's arm, with small yellow impact lines indicating the action."
+            },
+            {
+              "requirement": "Hand grips the wrench",
+              "satisfied": true,
+              "evidence": "Bufo's right hand is visibly wrapped around the handle of the wrench, showing a clear grip."
+            },
+            {
+              "requirement": "Bufo is full-body beside a workbench",
+              "satisfied": true,
+              "evidence": "Bufo is shown from head to feet (full body) standing on the floor to the left of a brown workbench."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "bd4d2c1e9c9b48c0af38f88aef2725f0",
+        "prompt_id": "train-workshop_repair-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "workshop_repair",
+          "split": "train",
+          "requirements": [
+            "Wrench touches a bolt on a blue robot",
+            "Hand grips the wrench",
+            "Bufo is full-body beside a workbench"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "fd75f8fd23b966ebc915ea5100615b9ffdf15346c5a9ebe98ab411d4f656ca6e"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.15000000000000002,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "1e1bd58e3c6c4baf96421f6a45358dc9",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "1e1bd58e3c6c4baf96421f6a45358dc9",
+        "prompt_id": "train-video_call-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:40:53.553568+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-video_call-01",
+        "partition": "train",
+        "prompt_family": "video_call",
+        "requirements": [
+          {
+            "requirement": "Only head and shoulders of Bufo are visible behind laptop",
+            "satisfied": true,
+            "evidence": "Only Bufo's head and the tops of shoulders are visible above the laptop."
+          },
+          {
+            "requirement": "Laptop label reads HELLO",
+            "satisfied": true,
+            "evidence": "The screen reads exactly HELLO in large white capitals."
+          },
+          {
+            "requirement": "No detached hands or limbs are visible",
+            "satisfied": true,
+            "evidence": "No exposed or detached hands or other limbs are present."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/e96b04efa66afeeb6d7a5406/1e1bd58e3c6c4baf96421f6a45358dc9.png",
+        "png_sha256": "6c7b95946f64b56a53d951738b7ad19db4c87cc03ab9fdce9759594d18353c57",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "The laptop cleanly occludes Bufo below the shoulders, leaving his distinctive green face and small shoulder contours above it. Large white HELLO fills the blue screen. No hands, feet or disconnected limb pieces appear."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.95,
+        "status": "ok",
+        "reason": "The candidate image clearly depicts the character Bufo with the correct olive-green skin, broad head, and small glossy eyes. The character is positioned behind a laptop, with only the head and upper shoulders visible, matching the prompt. The laptop screen displays the text 'HELLO' clearly. No detached limbs or hands are visible.",
+        "prompt_checks": [
+          {
+            "requirement": "Only head and shoulders of Bufo are visible behind laptop",
+            "satisfied": true,
+            "evidence": "The image shows Bufo's head and the top of the shoulders emerging from behind the laptop screen; the rest of the body is obscured."
+          },
+          {
+            "requirement": "Laptop label reads HELLO",
+            "satisfied": true,
+            "evidence": "The text 'HELLO' is clearly visible in white capital letters on the blue laptop screen."
+          },
+          {
+            "requirement": "No detached hands or limbs are visible",
+            "satisfied": true,
+            "evidence": "The image contains only the head and shoulders of the character and the laptop; no other limbs or hands are present."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Only head and shoulders of Bufo are visible behind laptop",
+          "Laptop label reads HELLO",
+          "No detached hands or limbs are visible"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "1e1bd58e3c6c4baf96421f6a45358dc9",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.95,
+          "reason": "The candidate image clearly depicts the character Bufo with the correct olive-green skin, broad head, and small glossy eyes. The character is positioned behind a laptop, with only the head and upper shoulders visible, matching the prompt. The laptop screen displays the text 'HELLO' clearly. No detached limbs or hands are visible.",
+          "prompt_checks": [
+            {
+              "requirement": "Only head and shoulders of Bufo are visible behind laptop",
+              "satisfied": true,
+              "evidence": "The image shows Bufo's head and the top of the shoulders emerging from behind the laptop screen; the rest of the body is obscured."
+            },
+            {
+              "requirement": "Laptop label reads HELLO",
+              "satisfied": true,
+              "evidence": "The text 'HELLO' is clearly visible in white capital letters on the blue laptop screen."
+            },
+            {
+              "requirement": "No detached hands or limbs are visible",
+              "satisfied": true,
+              "evidence": "The image contains only the head and shoulders of the character and the laptop; no other limbs or hands are present."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "1e1bd58e3c6c4baf96421f6a45358dc9",
+        "prompt_id": "train-video_call-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "video_call",
+          "split": "train",
+          "requirements": [
+            "Only head and shoulders of Bufo are visible behind laptop",
+            "Laptop label reads HELLO",
+            "No detached hands or limbs are visible"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "6c7b95946f64b56a53d951738b7ad19db4c87cc03ab9fdce9759594d18353c57"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.050000000000000044,
+        "readability": 0.050000000000000044
+      }
+    },
+    {
+      "generation_id": "7feacda8810645cc87a58ed9332da486",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "7feacda8810645cc87a58ed9332da486",
+        "prompt_id": "train-rainy_commute-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:41:07.072866+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Atrain-rainy_commute-01",
+        "partition": "train",
+        "prompt_family": "rainy_commute",
+        "requirements": [
+          {
+            "requirement": "Bufo occupies less than one third of image height",
+            "satisfied": true,
+            "evidence": "Visible Bufo runs approximately from y=309 to y=478, about 169/512 of image height, excluding the umbrella."
+          },
+          {
+            "requirement": "Bufo is at lower left",
+            "satisfied": true,
+            "evidence": "Character sits close to the left and bottom edges."
+          },
+          {
+            "requirement": "Hand grips shaft of a blue umbrella above his head",
+            "satisfied": true,
+            "evidence": "Olive fingers wrap the dark umbrella shaft; blue canopy is above the head."
+          },
+          {
+            "requirement": "Rain and city buildings appear",
+            "satisfied": true,
+            "evidence": "Many diagonal rain strokes cross a background of windowed city towers."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/2d4aaa0bbc21927bca6fab59/7feacda8810645cc87a58ed9332da486.png",
+        "png_sha256": "f56fafb244dfcae150f37ba6359f09b7b7f0830e42881f0bf3e9e12ddeb8f2f0",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "A small recognizable Bufo stands in the lower-left foreground under a blue umbrella. His figure spans approximately 169 pixels of the 512-pixel image, just under one third of its height. An olive hand wraps the vertical shaft beside his torso; rain streaks and layered city buildings fill the scene."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, stout body, and characteristic facial features (small glossy eyes, heavy jaw). The character is positioned in the lower-left quadrant and is holding a blue umbrella shaft with a visible hand grip. The background features a rainy city scene with buildings and rain streaks, meeting all visual requirements.",
+        "prompt_checks": [
+          {
+            "requirement": "Bufo occupies less than one third of image height",
+            "satisfied": true,
+            "evidence": "The character's height is approximately 30% of the total canvas height, fitting within the constraint."
+          },
+          {
+            "requirement": "Bufo is at lower left",
+            "satisfied": true,
+            "evidence": "The character is positioned in the bottom-left quadrant of the image."
+          },
+          {
+            "requirement": "Hand grips shaft of a blue umbrella above his head",
+            "satisfied": true,
+            "evidence": "A hand is clearly visible gripping the vertical shaft of the blue umbrella, which is positioned above the character's head."
+          },
+          {
+            "requirement": "Rain and city buildings appear",
+            "satisfied": true,
+            "evidence": "The background contains multiple grey city buildings with windows and diagonal white lines representing falling rain."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Bufo occupies less than one third of image height",
+          "Bufo is at lower left",
+          "Hand grips shaft of a blue umbrella above his head",
+          "Rain and city buildings appear"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "7feacda8810645cc87a58ed9332da486",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.9,
+          "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, stout body, and characteristic facial features (small glossy eyes, heavy jaw). The character is positioned in the lower-left quadrant and is holding a blue umbrella shaft with a visible hand grip. The background features a rainy city scene with buildings and rain streaks, meeting all visual requirements.",
+          "prompt_checks": [
+            {
+              "requirement": "Bufo occupies less than one third of image height",
+              "satisfied": true,
+              "evidence": "The character's height is approximately 30% of the total canvas height, fitting within the constraint."
+            },
+            {
+              "requirement": "Bufo is at lower left",
+              "satisfied": true,
+              "evidence": "The character is positioned in the bottom-left quadrant of the image."
+            },
+            {
+              "requirement": "Hand grips shaft of a blue umbrella above his head",
+              "satisfied": true,
+              "evidence": "A hand is clearly visible gripping the vertical shaft of the blue umbrella, which is positioned above the character's head."
+            },
+            {
+              "requirement": "Rain and city buildings appear",
+              "satisfied": true,
+              "evidence": "The background contains multiple grey city buildings with windows and diagonal white lines representing falling rain."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "7feacda8810645cc87a58ed9332da486",
+        "prompt_id": "train-rainy_commute-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "rainy_commute",
+          "split": "train",
+          "requirements": [
+            "Bufo occupies less than one third of image height",
+            "Bufo is at lower left",
+            "Hand grips shaft of a blue umbrella above his head",
+            "Rain and city buildings appear"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "f56fafb244dfcae150f37ba6359f09b7b7f0830e42881f0bf3e9e12ddeb8f2f0"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.050000000000000044,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "f3cf2869a48543f5974a6ec9c29d1314",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "f3cf2869a48543f5974a6ec9c29d1314",
+        "prompt_id": "validation-airport_marshaller-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:41:17.012558+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Avalidation-airport_marshaller-01",
+        "partition": "validation",
+        "prompt_family": "airport_marshaller",
+        "requirements": [
+          {
+            "requirement": "Both feet are visible",
+            "satisfied": true,
+            "evidence": "Both green feet are fully visible below the vest."
+          },
+          {
+            "requirement": "Exactly two orange signal wands are visible",
+            "satisfied": true,
+            "evidence": "Exactly two orange wands appear, one on each side."
+          },
+          {
+            "requirement": "Each raised hand grips one wand",
+            "satisfied": true,
+            "evidence": "Both raised olive hands visibly curl around dark wand handles."
+          },
+          {
+            "requirement": "A plane appears behind Bufo",
+            "satisfied": true,
+            "evidence": "A passenger jet spans the background behind Bufo's head."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/57a7b1351789af1ac37d4e05/f3cf2869a48543f5974a6ec9c29d1314.png",
+        "png_sha256": "efabbd0b8b3595c704abdde57d714330e7d32ab9562af00517b82960304a0ee3",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Full-body recognizable Bufo in a reflective vest stands on the apron, with both connected arms raised. Each hand wraps a separate orange wand handle. Both feet remain visible and a complete passenger aircraft is clearly behind him. Acceptance preserves the validation partition and does not authorize use for training."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.95,
+        "status": "ok",
+        "reason": "The candidate successfully depicts the Bufo character in a full-body vector style. The identity is preserved through the broad, flattened muzzle, heavy jaw, and small glossy eyes. The anatomy is coherent with connected limbs and a stout body. The composition is clear, with the character centered and the plane clearly visible in the background. The specific action of holding the wands is visually supported by the hands gripping the handles.",
+        "prompt_checks": [
+          {
+            "requirement": "Both feet are visible",
+            "satisfied": true,
+            "evidence": "The character is shown in a full-body view, and both feet are clearly visible at the bottom of the figure, standing on the apron."
+          },
+          {
+            "requirement": "Exactly two orange signal wands are visible",
+            "satisfied": true,
+            "evidence": "There are precisely two orange wands, one held in each of the character's hands."
+          },
+          {
+            "requirement": "Each raised hand grips one wand",
+            "satisfied": true,
+            "evidence": "Both arms are raised, and the hands are drawn wrapping around the black handles of the orange wands, indicating a grip."
+          },
+          {
+            "requirement": "A plane appears behind Bufo",
+            "satisfied": true,
+            "evidence": "A large white airplane is depicted in the background, positioned behind the character."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Both feet are visible",
+          "Exactly two orange signal wands are visible",
+          "Each raised hand grips one wand",
+          "A plane appears behind Bufo"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "f3cf2869a48543f5974a6ec9c29d1314",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.95,
+          "reason": "The candidate successfully depicts the Bufo character in a full-body vector style. The identity is preserved through the broad, flattened muzzle, heavy jaw, and small glossy eyes. The anatomy is coherent with connected limbs and a stout body. The composition is clear, with the character centered and the plane clearly visible in the background. The specific action of holding the wands is visually supported by the hands gripping the handles.",
+          "prompt_checks": [
+            {
+              "requirement": "Both feet are visible",
+              "satisfied": true,
+              "evidence": "The character is shown in a full-body view, and both feet are clearly visible at the bottom of the figure, standing on the apron."
+            },
+            {
+              "requirement": "Exactly two orange signal wands are visible",
+              "satisfied": true,
+              "evidence": "There are precisely two orange wands, one held in each of the character's hands."
+            },
+            {
+              "requirement": "Each raised hand grips one wand",
+              "satisfied": true,
+              "evidence": "Both arms are raised, and the hands are drawn wrapping around the black handles of the orange wands, indicating a grip."
+            },
+            {
+              "requirement": "A plane appears behind Bufo",
+              "satisfied": true,
+              "evidence": "A large white airplane is depicted in the background, positioned behind the character."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "f3cf2869a48543f5974a6ec9c29d1314",
+        "prompt_id": "validation-airport_marshaller-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "airport_marshaller",
+          "split": "validation",
+          "requirements": [
+            "Both feet are visible",
+            "Exactly two orange signal wands are visible",
+            "Each raised hand grips one wand",
+            "A plane appears behind Bufo"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "efabbd0b8b3595c704abdde57d714330e7d32ab9562af00517b82960304a0ee3"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.050000000000000044,
+        "readability": 0.050000000000000044
+      }
+    },
+    {
+      "generation_id": "cea205136e2b460b8155a3f541153eb3",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "cea205136e2b460b8155a3f541153eb3",
+        "prompt_id": "validation-ice_cream_cart-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:42:51.615130+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Avalidation-ice_cream_cart-01",
+        "partition": "validation",
+        "prompt_family": "ice_cream_cart",
+        "requirements": [
+          {
+            "requirement": "Bufo stands beside an ice cream cart",
+            "satisfied": true,
+            "evidence": "Bufo stands on the left beside the blue wheeled cart and canopy."
+          },
+          {
+            "requirement": "Hand visibly grips an ice cream scoop",
+            "satisfied": true,
+            "evidence": "Olive fingers visibly wrap the pale scoop handle."
+          },
+          {
+            "requirement": "Pink strawberry ice cream touches a cone",
+            "satisfied": true,
+            "evidence": "Single pink strawberry mound rests directly on the cone and is contacted by the scoop bowl."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/2f8c7fa0c80fe21c78aab872/cea205136e2b460b8155a3f541153eb3.png",
+        "png_sha256": "ddd3100041b757de60873114840a083968ba63799fb405487b9e5df7dfe20181",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Full-body Bufo in a blue apron stands beside a wheeled ICE CREAM cart. His raised hand wraps a metal scoop handle and the scoop bowl contacts a pink ice cream mound seated directly on a waffle cone. Objects and arm connections are clear. Validation partition is preserved."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.95,
+        "status": "ok",
+        "reason": "The candidate successfully depicts Bufo with the correct identity features (broad muzzle, olive skin, stout body) in a vector style. The scene is clearly composed with Bufo standing next to an ice cream cart. The specific action requested is visually supported: Bufo's hand is shown gripping the handle of a scoop, and the scoop is in direct contact with the pink ice cream in the cone.",
+        "prompt_checks": [
+          {
+            "requirement": "Bufo stands beside an ice cream cart",
+            "satisfied": true,
+            "evidence": "Bufo is standing on the left side of the image, directly adjacent to a blue cart labeled 'ICE CREAM' on the right."
+          },
+          {
+            "requirement": "Hand visibly grips an ice cream scoop",
+            "satisfied": true,
+            "evidence": "Bufo's right hand is clearly wrapped around the handle of a metal ice cream scoop."
+          },
+          {
+            "requirement": "Pink strawberry ice cream touches a cone",
+            "satisfied": true,
+            "evidence": "A pink scoop of ice cream is sitting directly on top of a waffle cone, and the metal scoop is touching the ice cream."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Bufo stands beside an ice cream cart",
+          "Hand visibly grips an ice cream scoop",
+          "Pink strawberry ice cream touches a cone"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "cea205136e2b460b8155a3f541153eb3",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.95,
+          "reason": "The candidate successfully depicts Bufo with the correct identity features (broad muzzle, olive skin, stout body) in a vector style. The scene is clearly composed with Bufo standing next to an ice cream cart. The specific action requested is visually supported: Bufo's hand is shown gripping the handle of a scoop, and the scoop is in direct contact with the pink ice cream in the cone.",
+          "prompt_checks": [
+            {
+              "requirement": "Bufo stands beside an ice cream cart",
+              "satisfied": true,
+              "evidence": "Bufo is standing on the left side of the image, directly adjacent to a blue cart labeled 'ICE CREAM' on the right."
+            },
+            {
+              "requirement": "Hand visibly grips an ice cream scoop",
+              "satisfied": true,
+              "evidence": "Bufo's right hand is clearly wrapped around the handle of a metal ice cream scoop."
+            },
+            {
+              "requirement": "Pink strawberry ice cream touches a cone",
+              "satisfied": true,
+              "evidence": "A pink scoop of ice cream is sitting directly on top of a waffle cone, and the metal scoop is touching the ice cream."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "cea205136e2b460b8155a3f541153eb3",
+        "prompt_id": "validation-ice_cream_cart-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "ice_cream_cart",
+          "split": "validation",
+          "requirements": [
+            "Bufo stands beside an ice cream cart",
+            "Hand visibly grips an ice cream scoop",
+            "Pink strawberry ice cream touches a cone"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "ddd3100041b757de60873114840a083968ba63799fb405487b9e5df7dfe20181"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.050000000000000044,
+        "readability": 0.050000000000000044
+      }
+    },
+    {
+      "generation_id": "27fb3539a67643aca3fc529c6e75aedb",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "27fb3539a67643aca3fc529c6e75aedb",
+        "prompt_id": "validation-florist_arranging-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:43:02.633074+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Avalidation-florist_arranging-01",
+        "partition": "validation",
+        "prompt_family": "florist_arranging",
+        "requirements": [
+          {
+            "requirement": "Hand grips the yellow sunflower stem",
+            "satisfied": true,
+            "evidence": "Olive fingers curl around the green stem immediately beneath the yellow sunflower."
+          },
+          {
+            "requirement": "Stem passes through a blue vase opening",
+            "satisfied": true,
+            "evidence": "Stem visibly enters the dark oval opening within the blue vase rim."
+          },
+          {
+            "requirement": "A florist counter is visible",
+            "satisfied": true,
+            "evidence": "A wooden counter supports the vase under a FLOWER SHOP sign."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/2f98d5d89b3f0d088840700d/27fb3539a67643aca3fc529c6e75aedb.png",
+        "png_sha256": "0b58a5278d2dccbb8bca6933fd7b47164df0d8b637a8a4e75ea9528e084eb059",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Recognizable full-body Bufo wears a blue apron at a flower-shop counter. A connected extended arm ends in fingers wrapped around the single yellow sunflower's green stem. The stem descends through the visible opening of a blue vase resting on the counter. Validation partition is preserved."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.9,
+        "composition": 0.95,
+        "readability": 0.95,
+        "status": "ok",
+        "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, broad head, and stout body. The character is shown in a clear action of placing a sunflower into a blue vase. The hand is visibly gripping the stem, and the stem passes through the vase opening. A florist counter is clearly visible in the foreground, and the 'FLOWER SHOP' sign reinforces the setting.",
+        "prompt_checks": [
+          {
+            "requirement": "Hand grips the yellow sunflower stem",
+            "satisfied": true,
+            "evidence": "The character's right hand is clearly wrapped around the green stem of the yellow sunflower."
+          },
+          {
+            "requirement": "Stem passes through a blue vase opening",
+            "satisfied": true,
+            "evidence": "The green stem is shown entering the top opening of the blue vase."
+          },
+          {
+            "requirement": "A florist counter is visible",
+            "satisfied": true,
+            "evidence": "A wooden counter is visible in the bottom right corner, and a 'FLOWER SHOP' sign is present in the background."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Hand grips the yellow sunflower stem",
+          "Stem passes through a blue vase opening",
+          "A florist counter is visible"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "27fb3539a67643aca3fc529c6e75aedb",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.9,
+          "composition": 0.95,
+          "readability": 0.95,
+          "reason": "The candidate successfully depicts the Bufo character with the correct olive-green skin, broad head, and stout body. The character is shown in a clear action of placing a sunflower into a blue vase. The hand is visibly gripping the stem, and the stem passes through the vase opening. A florist counter is clearly visible in the foreground, and the 'FLOWER SHOP' sign reinforces the setting.",
+          "prompt_checks": [
+            {
+              "requirement": "Hand grips the yellow sunflower stem",
+              "satisfied": true,
+              "evidence": "The character's right hand is clearly wrapped around the green stem of the yellow sunflower."
+            },
+            {
+              "requirement": "Stem passes through a blue vase opening",
+              "satisfied": true,
+              "evidence": "The green stem is shown entering the top opening of the blue vase."
+            },
+            {
+              "requirement": "A florist counter is visible",
+              "satisfied": true,
+              "evidence": "A wooden counter is visible in the bottom right corner, and a 'FLOWER SHOP' sign is present in the background."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "27fb3539a67643aca3fc529c6e75aedb",
+        "prompt_id": "validation-florist_arranging-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "florist_arranging",
+          "split": "validation",
+          "requirements": [
+            "Hand grips the yellow sunflower stem",
+            "Stem passes through a blue vase opening",
+            "A florist counter is visible"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "0b58a5278d2dccbb8bca6933fd7b47164df0d8b637a8a4e75ea9528e084eb059"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.09999999999999998,
+        "composition": 0.050000000000000044,
+        "readability": 0.050000000000000044
+      }
+    },
+    {
+      "generation_id": "6a37e031158941f89a851825e47ae006",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "6a37e031158941f89a851825e47ae006",
+        "prompt_id": "validation-locksmith-01",
+        "decision": "accept",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/pilot_visual_review",
+        "reviewed_at": "2026-10-15T15:43:29.677733+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aclosed_quality_bar%3Avalidation-locksmith-01",
+        "partition": "validation",
+        "prompt_family": "locksmith",
+        "requirements": [
+          {
+            "requirement": "One hand grips a brass key inserted into the padlock keyhole",
+            "satisfied": true,
+            "evidence": "Near hand wraps the brass key bow; shaft terminates visibly in the blue padlock's dark keyhole."
+          },
+          {
+            "requirement": "The other hand contacts the blue padlock",
+            "satisfied": true,
+            "evidence": "Opposite hand and fingers rest directly on the lock's upper/right body."
+          },
+          {
+            "requirement": "A locksmith counter is visible",
+            "satisfied": true,
+            "evidence": "A broad wooden counter fills the foreground with a KEY CUTTING placard and locksmith sign behind."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/712e0c3eaba044fd4104b273/6a37e031158941f89a851825e47ae006.png",
+        "png_sha256": "8d2a855122bcc6c0b619807e9792167cce371536d96b096ceb9d0e90c7d873e8",
+        "visual_quality_pass": true,
+        "identity": 4,
+        "anatomy": 4,
+        "composition": 4,
+        "readability": 4,
+        "evidence": "Recognizable Bufo leans behind a locksmith counter with both arms connected to his body. One olive hand grips the round bow of a brass key, whose shaft enters the black keyhole in a blue padlock. The other hand rests across the lock body. LOCKSMITH and KEY CUTTING labels reinforce the setting. Validation partition is preserved."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.8,
+        "composition": 0.9,
+        "readability": 0.9,
+        "status": "ok",
+        "reason": "The candidate features the distinct Bufo identity with the broad, flattened head, heavy jaw, and small glossy eyes. The character is depicted in a vector style, wearing a blue shirt, and is positioned at a counter. The anatomy is coherent with connected limbs and appropriate proportions for the character design. The composition is clear, with the character, tools, and signage well-arranged. The action of turning a key is clearly readable.",
+        "prompt_checks": [
+          {
+            "requirement": "One hand grips a brass key inserted into the padlock keyhole",
+            "satisfied": true,
+            "evidence": "The character's right hand is visibly gripping a brass key, which is inserted into the keyhole of the blue padlock."
+          },
+          {
+            "requirement": "The other hand contacts the blue padlock",
+            "satisfied": true,
+            "evidence": "The character's left hand is placed on the side of the blue padlock, steadying it on the counter."
+          },
+          {
+            "requirement": "A locksmith counter is visible",
+            "satisfied": true,
+            "evidence": "A brown counter surface is visible in the foreground, with a 'KEY CUTTING' sign attached to the front, and a 'LOCKSMITH' sign in the background."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "One hand grips a brass key inserted into the padlock keyhole",
+          "The other hand contacts the blue padlock",
+          "A locksmith counter is visible"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "6a37e031158941f89a851825e47ae006",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.8,
+          "composition": 0.9,
+          "readability": 0.9,
+          "reason": "The candidate features the distinct Bufo identity with the broad, flattened head, heavy jaw, and small glossy eyes. The character is depicted in a vector style, wearing a blue shirt, and is positioned at a counter. The anatomy is coherent with connected limbs and appropriate proportions for the character design. The composition is clear, with the character, tools, and signage well-arranged. The action of turning a key is clearly readable.",
+          "prompt_checks": [
+            {
+              "requirement": "One hand grips a brass key inserted into the padlock keyhole",
+              "satisfied": true,
+              "evidence": "The character's right hand is visibly gripping a brass key, which is inserted into the keyhole of the blue padlock."
+            },
+            {
+              "requirement": "The other hand contacts the blue padlock",
+              "satisfied": true,
+              "evidence": "The character's left hand is placed on the side of the blue padlock, steadying it on the counter."
+            },
+            {
+              "requirement": "A locksmith counter is visible",
+              "satisfied": true,
+              "evidence": "A brown counter surface is visible in the foreground, with a 'KEY CUTTING' sign attached to the front, and a 'LOCKSMITH' sign in the background."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "6a37e031158941f89a851825e47ae006",
+        "prompt_id": "validation-locksmith-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "locksmith",
+          "split": "validation",
+          "requirements": [
+            "One hand grips a brass key inserted into the padlock keyhole",
+            "The other hand contacts the blue padlock",
+            "A locksmith counter is visible"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "8d2a855122bcc6c0b619807e9792167cce371536d96b096ceb9d0e90c7d873e8"
+        }
+      },
+      "reviewed_pass": true,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.19999999999999996,
+        "composition": 0.09999999999999998,
+        "readability": 0.09999999999999998
+      }
+    },
+    {
+      "generation_id": "a4c47892125443f4a70723b3e7ea586d",
+      "review": {
+        "schema_version": 1,
+        "source_generation_id": "a4c47892125443f4a70723b3e7ea586d",
+        "prompt_id": "train-concert_stage-01",
+        "decision": "reject",
+        "reviewer_kind": "assistant",
+        "reviewer_id": "codex/root",
+        "reviewed_at": "2026-10-15T15:39:32.371362+00:00",
+        "source_ref": "https://wandb.ai/wandb-smle/bufo-gen/weave/agents/conversations/05266853b35d40bcb0d77531e6d89aab%3Aopen_base%3Atrain-concert_stage-01",
+        "partition": "train",
+        "prompt_family": "concert_stage",
+        "requirements": [
+          {
+            "requirement": "Bufo is full-body with both feet visible",
+            "satisfied": true,
+            "evidence": "Both feet are visible at the bottom."
+          },
+          {
+            "requirement": "One hand visibly grips a microphone at his mouth",
+            "satisfied": false,
+            "evidence": "The microphone head is below the mouth; hand/microphone contact is ambiguous."
+          },
+          {
+            "requirement": "Blue jacket is attached to torso and sleeves align with arms",
+            "satisfied": false,
+            "evidence": "Blue jacket appears as overlapping box panels, and a dark horizontal stage band cuts across its chest and sleeves."
+          },
+          {
+            "requirement": "Two spotlights illuminate the stage",
+            "satisfied": true,
+            "evidence": "Two visible light cones descend from stage lights."
+          },
+          {
+            "requirement": "An audience sits below the stage",
+            "satisfied": false,
+            "evidence": "Dark audience-like circles intersect the torso-level band; no legible audience sits below the stage."
+          }
+        ],
+        "image_path": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/runs/forge-loop/pilot/images/17bb89680300b14380e74106/a4c47892125443f4a70723b3e7ea586d.png",
+        "png_sha256": "80ae21af98b10b2de89991347937948faedb5fdbfb9a989f3458d3f97ed0e1cd",
+        "visual_quality_pass": false,
+        "identity": 4,
+        "anatomy": 2,
+        "composition": 2,
+        "readability": 3,
+        "evidence": "Directly inspected PNG. Recognizable full-body Bufo, but microphone is below mouth; jacket is boxy and sliced by a foreground band; audience positioning is not legible. Reject for clothing/contact/composition and prompt fulfillment, not identity."
+      },
+      "score": {
+        "bufo_present": true,
+        "similarity": 0.85,
+        "anatomy": 0.75,
+        "composition": 0.8,
+        "readability": 0.85,
+        "status": "ok",
+        "reason": "The candidate successfully depicts the Bufo character with the correct olive skin, broad muzzle, and stout body. The character is full-body with feet visible and is wearing a blue jacket. A microphone is held at the mouth, and musical notes indicate singing. Two spotlights are visible from the top, and an audience is depicted below the stage. The anatomy is coherent, though the hand gripping the microphone is somewhat simplified and blends into the jacket.",
+        "prompt_checks": [
+          {
+            "requirement": "Bufo is full-body with both feet visible",
+            "satisfied": true,
+            "evidence": "The character is shown from head to toe, with both green feet clearly visible at the bottom of the image."
+          },
+          {
+            "requirement": "One hand visibly grips a microphone at his mouth",
+            "satisfied": true,
+            "evidence": "A hand is shown holding a microphone directly in front of the character's mouth."
+          },
+          {
+            "requirement": "Blue jacket is attached to torso and sleeves align with arms",
+            "satisfied": true,
+            "evidence": "The blue jacket covers the torso, and the sleeves are positioned over the arms, with the right arm bent to hold the microphone."
+          },
+          {
+            "requirement": "Two spotlights illuminate the stage",
+            "satisfied": true,
+            "evidence": "Two distinct beams of light are visible originating from the top of the frame, illuminating the character."
+          },
+          {
+            "requirement": "An audience sits below the stage",
+            "satisfied": true,
+            "evidence": "A row of dark, rounded shapes representing an audience is visible in the foreground, below the stage line."
+          }
+        ],
+        "constraint_coverage": 1.0,
+        "quality_failure": false,
+        "failure_modes": [],
+        "rubric_version": "bufo-scene-v1",
+        "calibration_status": "uncalibrated",
+        "threshold": 0.65,
+        "scorer_configuration": {
+          "rubric_version": "bufo-scene-v1",
+          "rubric_hash": "9a567f46f96f7a0f67ae724d955bf5475ae93334ed3e013029af04a896866b89",
+          "judge_model": "Qwen/Qwen3.8-27B",
+          "judge_provider": "coreweave",
+          "judge_base_url": "https://api.inference.wandb.ai/v1",
+          "temperature": 0,
+          "max_tokens": [
+            3200,
+            6400
+          ],
+          "threshold": 0.65,
+          "calibration_status": "uncalibrated"
+        },
+        "requirements": [
+          "Bufo is full-body with both feet visible",
+          "One hand visibly grips a microphone at his mouth",
+          "Blue jacket is attached to torso and sleeves align with arms",
+          "Two spotlights illuminate the stage",
+          "An audience sits below the stage"
+        ],
+        "judge_model": "Qwen/Qwen3.8-27B",
+        "generation_id": "a4c47892125443f4a70723b3e7ea586d",
+        "raw_judgment": {
+          "bufo_present": true,
+          "similarity": 0.85,
+          "anatomy": 0.75,
+          "composition": 0.8,
+          "readability": 0.85,
+          "reason": "The candidate successfully depicts the Bufo character with the correct olive skin, broad muzzle, and stout body. The character is full-body with feet visible and is wearing a blue jacket. A microphone is held at the mouth, and musical notes indicate singing. Two spotlights are visible from the top, and an audience is depicted below the stage. The anatomy is coherent, though the hand gripping the microphone is somewhat simplified and blends into the jacket.",
+          "prompt_checks": [
+            {
+              "requirement": "Bufo is full-body with both feet visible",
+              "satisfied": true,
+              "evidence": "The character is shown from head to toe, with both green feet clearly visible at the bottom of the image."
+            },
+            {
+              "requirement": "One hand visibly grips a microphone at his mouth",
+              "satisfied": true,
+              "evidence": "A hand is shown holding a microphone directly in front of the character's mouth."
+            },
+            {
+              "requirement": "Blue jacket is attached to torso and sleeves align with arms",
+              "satisfied": true,
+              "evidence": "The blue jacket covers the torso, and the sleeves are positioned over the arms, with the right arm bent to hold the microphone."
+            },
+            {
+              "requirement": "Two spotlights illuminate the stage",
+              "satisfied": true,
+              "evidence": "Two distinct beams of light are visible originating from the top of the frame, illuminating the character."
+            },
+            {
+              "requirement": "An audience sits below the stage",
+              "satisfied": true,
+              "evidence": "A row of dark, rounded shapes representing an audience is visible in the foreground, below the stage line."
+            }
+          ]
+        }
+      },
+      "generation": {
+        "id": "a4c47892125443f4a70723b3e7ea586d",
+        "prompt_id": "train-concert_stage-01",
+        "valid": true,
+        "error": null,
+        "benchmark_metadata": {
+          "run_id": "05266853b35d40bcb0d77531e6d89aab",
+          "configuration_hash": "f2fd36af0a5fcf405ca5416551da7f321ed53416011602e0373202853560e0f7",
+          "family": "concert_stage",
+          "split": "train",
+          "requirements": [
+            "Bufo is full-body with both feet visible",
+            "One hand visibly grips a microphone at his mouth",
+            "Blue jacket is attached to torso and sleeves align with arms",
+            "Two spotlights illuminate the stage",
+            "An audience sits below the stage"
+          ],
+          "turns": [],
+          "status": "completed",
+          "png_sha256": "80ae21af98b10b2de89991347937948faedb5fdbfb9a989f3458d3f97ed0e1cd"
+        }
+      },
+      "reviewed_pass": false,
+      "predicted_pass": true,
+      "judge_error": null,
+      "checklist_disagreements": [
+        "One hand visibly grips a microphone at his mouth",
+        "Blue jacket is attached to torso and sleeves align with arms",
+        "An audience sits below the stage"
+      ],
+      "absolute_metric_errors": {
+        "similarity": 0.15000000000000002,
+        "anatomy": 0.25,
+        "composition": 0.30000000000000004,
+        "readability": 0.09999999999999998
+      }
+    }
+  ],
+  "excluded_reviews": [],
+  "evidence_sha256": "a7a93776526b9f4e7d05f8b251bd45b5463237a5c7bea2565366e01635e06204"
+}

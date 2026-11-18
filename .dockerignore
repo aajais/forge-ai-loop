@@ -1,0 +1,21 @@
+# Keeps the build context small for:
+#   docker build -f scripts/train_entrypoints/Dockerfile .
+.git
+.venv
+.cache
+.pytest_cache
+.ruff_cache
+__pycache__
+*.pyc
+.env
+.env.*
+runs
+wandb
+data
+assets/reference_bufos
+node_modules
+.art
+.superpowers
+artifacts
+demo
+*.log

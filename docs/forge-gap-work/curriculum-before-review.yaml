@@ -1,0 +1,2499 @@
+- id: gap-train-concert_stage-base
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Keep the main
+    action large and clear.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+- id: gap-train-concert_stage-fullbody
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Show the whole
+    body with both feet inside the frame.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-concert_stage-clothing
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Add a fitted
+    blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-concert_stage-observer
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Add one smaller
+    Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-concert_stage-sign
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Add a sign at
+    the top that reads exactly READY.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+  - A top sign reads exactly READY
+- id: gap-train-concert_stage-rail
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Put a low foreground
+    rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-concert_stage-small
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Place Bufo on
+    the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-concert_stage-minimal
+  family: concert_stage
+  split: train
+  prompt: Draw Bufo on a concert stage, singing into a blue microphone held at his mouth. Use a plain
+    pale background and only the props necessary for the scene and action. Keep the whole figure connected.
+  requirements:
+  - A hand grips the microphone
+  - The microphone touches or is immediately in front of the mouth
+  - The microphone is blue
+  - Stage spotlights are visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-f1_presentation-base
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Keep the main action large and clear.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+- id: gap-train-f1_presentation-fullbody
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-f1_presentation-clothing
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-f1_presentation-observer
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-f1_presentation-sign
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+  - A top sign reads exactly READY
+- id: gap-train-f1_presentation-rail
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-f1_presentation-small
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Place Bufo on the viewer left at less than one third of the image height, keeping the action
+    readable.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-f1_presentation-minimal
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving an F1 presentation, holding a pointer whose tip touches a red race car on a
+    screen. Use a plain pale background and only the props necessary for the scene and action. Keep the
+    whole figure connected.
+  requirements:
+  - A hand grips a pointer
+  - The pointer tip touches the red car on the screen
+  - A presentation screen and red race car are visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-gpu_garden-base
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Keep the main action large and clear.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+- id: gap-train-gpu_garden-fullbody
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Show the whole body with both feet inside the frame.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-gpu_garden-clothing
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-gpu_garden-observer
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-gpu_garden-sign
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Add a sign at the top that reads exactly READY.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+  - A top sign reads exactly READY
+- id: gap-train-gpu_garden-rail
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-gpu_garden-small
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Place Bufo on the viewer left at less than one third of the image height, keeping the action
+    readable.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-gpu_garden-minimal
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo in a GPU garden, watering the middle of exactly three GPU seedlings with a blue watering
+    can. Use a plain pale background and only the props necessary for the scene and action. Keep the whole
+    figure connected.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - A hand grips the blue watering can
+  - Water connects the can spout to the middle seedling
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-office_coffee-base
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Keep the
+    main action large and clear.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+- id: gap-train-office_coffee-fullbody
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Show the
+    whole body with both feet inside the frame.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-office_coffee-clothing
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Add a fitted
+    blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-office_coffee-observer
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Add one
+    smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-office_coffee-sign
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Add a sign
+    at the top that reads exactly READY.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+  - A top sign reads exactly READY
+- id: gap-train-office_coffee-rail
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Put a low
+    foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-office_coffee-small
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Place Bufo
+    on the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-office_coffee-minimal
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo at an office desk, holding a blue mug by its handle beside an open laptop. Use a plain
+    pale background and only the props necessary for the scene and action. Keep the whole figure connected.
+  requirements:
+  - A hand contacts the mug handle
+  - The mug is blue
+  - An open laptop sits on the desk
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-skate_park-base
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Keep
+    the main action large and clear.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+- id: gap-train-skate_park-fullbody
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Show
+    the whole body with both feet inside the frame.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-skate_park-clothing
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Add
+    a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-skate_park-observer
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Add
+    one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-skate_park-sign
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Add
+    a sign at the top that reads exactly READY.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+  - A top sign reads exactly READY
+- id: gap-train-skate_park-rail
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Put
+    a low rail behind the ramp, with the board and both feet fully visible.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+  - A low rail is behind the ramp
+  - Board and both feet remain visible
+- id: gap-train-skate_park-small
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Place
+    Bufo on the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-skate_park-minimal
+  family: skate_park
+  split: train
+  prompt: Draw Bufo at a skate park, balancing with both feet on one blue skateboard above a ramp. Use
+    a plain pale background and only the props necessary for the scene and action. Keep the whole figure
+    connected.
+  requirements:
+  - Both feet contact the same skateboard
+  - The skateboard is blue
+  - A ramp is visible below the board
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-pizza_kitchen-base
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Keep the main action large and clear.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+- id: gap-train-pizza_kitchen-fullbody
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-pizza_kitchen-clothing
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands
+    visible.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-pizza_kitchen-observer
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Add one smaller Bufo watching on the viewer right; only the main Bufo performs
+    the action.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-pizza_kitchen-sign
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+  - A top sign reads exactly READY
+- id: gap-train-pizza_kitchen-rail
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Put a low foreground rail across the lower legs; keep the face, hands and main
+    action unobscured.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-pizza_kitchen-small
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Place Bufo on the viewer left at less than one third of the image height, keeping
+    the action readable.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-pizza_kitchen-minimal
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Bufo in a pizza kitchen, lifting one pizza slice with a cheese strand connecting it to
+    the rest of the pizza. Use a plain pale background and only the props necessary for the scene and
+    action. Keep the whole figure connected.
+  requirements:
+  - A hand grips one pizza slice
+  - A visible cheese strand joins the slice to the remaining pizza
+  - A kitchen counter or oven is visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-basketball_court-base
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Keep the main action large and clear.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+- id: gap-train-basketball_court-fullbody
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-basketball_court-clothing
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands
+    visible.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-basketball_court-observer
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Add one smaller Bufo watching on the viewer right; only the main Bufo performs
+    the action.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-basketball_court-sign
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+  - A top sign reads exactly READY
+- id: gap-train-basketball_court-rail
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Put a low foreground rail across the lower legs; keep the face, hands and main
+    action unobscured.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-basketball_court-small
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Place Bufo on the viewer left at less than one third of the image height, keeping
+    the action readable.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-basketball_court-minimal
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo on a basketball court, dribbling an orange basketball with a hand contacting its top
+    below waist height. Use a plain pale background and only the props necessary for the scene and action.
+    Keep the whole figure connected.
+  requirements:
+  - A hand contacts the top of the orange ball
+  - The ball is below Bufo's waist
+  - Basketball court lines are visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-workshop_repair-base
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Keep
+    the main action large and clear.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+- id: gap-train-workshop_repair-fullbody
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Show
+    the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-workshop_repair-clothing
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Add
+    a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-workshop_repair-observer
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Add
+    one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-workshop_repair-sign
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Add
+    a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+  - A top sign reads exactly READY
+- id: gap-train-workshop_repair-rail
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Put
+    a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-workshop_repair-small
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Place
+    Bufo on the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-workshop_repair-minimal
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo in a robot workshop, using a wrench to tighten a visible bolt on a blue robot. Use
+    a plain pale background and only the props necessary for the scene and action. Keep the whole figure
+    connected.
+  requirements:
+  - A hand grips the wrench
+  - The wrench contacts a bolt on the robot
+  - The robot is blue
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-rainy_commute-base
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Keep
+    the main action large and clear.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+- id: gap-train-rainy_commute-fullbody
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Show
+    the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-rainy_commute-clothing
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Add a
+    fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-rainy_commute-observer
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Add one
+    smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-rainy_commute-sign
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Add a
+    sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+  - A top sign reads exactly READY
+- id: gap-train-rainy_commute-rail
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Put a
+    low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-rainy_commute-small
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Place
+    Bufo on the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-rainy_commute-minimal
+  family: rainy_commute
+  split: train
+  prompt: Draw Bufo on a rainy city street, holding the shaft of a blue umbrella above his head. Use a
+    plain pale background and only the props necessary for the scene and action. Keep the whole figure
+    connected.
+  requirements:
+  - A hand grips the umbrella shaft
+  - The blue canopy is above the head
+  - Rain and city buildings are visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-video_call-base
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Keep
+    the main action large and clear.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+- id: gap-train-video_call-fullbody
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Show
+    the whole body with both feet inside the frame.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-video_call-clothing
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Add
+    a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-video_call-observer
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Add
+    one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-video_call-sign
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Add
+    a sign at the top that reads exactly READY.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+  - A top sign reads exactly READY
+- id: gap-train-video_call-rail
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Put
+    a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-video_call-small
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Place
+    Bufo on the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-video_call-minimal
+  family: video_call
+  split: train
+  prompt: Draw Bufo at a video-call desk, waving one open hand beside an open laptop labeled HELLO. Use
+    a plain pale background and only the props necessary for the scene and action. Keep the whole figure
+    connected.
+  requirements:
+  - One open hand is raised in a wave
+  - An open laptop is visible
+  - The laptop visibly reads HELLO
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-film_set-base
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Keep the main action large and clear.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+- id: gap-train-film_set-fullbody
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Show the whole body with both feet inside the frame.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-film_set-clothing
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-film_set-observer
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-film_set-sign
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Add a sign at the top that reads exactly READY.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+  - A top sign reads exactly READY
+- id: gap-train-film_set-rail
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-film_set-small
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Place Bufo on the viewer left at less than one third of the image height, keeping the action
+    readable.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-film_set-minimal
+  family: film_set
+  split: train
+  prompt: Draw Bufo on a film set, holding a black-and-white clapperboard with both hands, one on each
+    side. Use a plain pale background and only the props necessary for the scene and action. Keep the
+    whole figure connected.
+  requirements:
+  - Both hands touch opposite sides of the clapperboard
+  - The clapperboard is recognizable
+  - A film camera on a tripod is visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-ping_pong-base
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Keep the main action large and clear.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+- id: gap-train-ping_pong-fullbody
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-ping_pong-clothing
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-ping_pong-observer
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-ping_pong-sign
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+  - A top sign reads exactly READY
+- id: gap-train-ping_pong-rail
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-ping_pong-small
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Place Bufo on the viewer left at less than one third of the image height, keeping the action
+    readable.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-ping_pong-minimal
+  family: ping_pong
+  split: train
+  prompt: Draw Bufo at a table-tennis table, holding a red paddle directly behind a small white ball above
+    the table. Use a plain pale background and only the props necessary for the scene and action. Keep
+    the whole figure connected.
+  requirements:
+  - A hand grips the red paddle handle
+  - A white ball sits immediately in front of the paddle
+  - A table and central net are visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-archery_range-base
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Keep the main action large and clear.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+- id: gap-train-archery_range-fullbody
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Show the whole body with both feet inside the frame.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-archery_range-clothing
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Add a fitted blue vest attached to Bufo's torso; keep the face and
+    acting hands visible.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-archery_range-observer
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Add one smaller Bufo watching on the viewer right; only the main
+    Bufo performs the action.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-archery_range-sign
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Add a sign at the top that reads exactly READY.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+  - A top sign reads exactly READY
+- id: gap-train-archery_range-rail
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Put a low foreground rail across the lower legs; keep the face, hands
+    and main action unobscured.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-archery_range-small
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Place Bufo on the viewer left at less than one third of the image
+    height, keeping the action readable.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-archery_range-minimal
+  family: archery_range
+  split: train
+  prompt: Draw Bufo at an archery range, holding a bow in one hand and pulling its string with the other,
+    with an arrow aimed at a target. Use a plain pale background and only the props necessary for the
+    scene and action. Keep the whole figure connected.
+  requirements:
+  - One hand grips the bow
+  - The other hand touches the drawn string
+  - An arrow lies on the bow aimed toward a visible target
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-laundry_room-base
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Keep the main action large and clear.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+- id: gap-train-laundry_room-fullbody
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-laundry_room-clothing
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-laundry_room-observer
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-laundry_room-sign
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+  - A top sign reads exactly READY
+- id: gap-train-laundry_room-rail
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-laundry_room-small
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Place Bufo on the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-laundry_room-minimal
+  family: laundry_room
+  split: train
+  prompt: Draw Bufo in a laundry room, lifting a blue shirt out of a red laundry basket with both hands.
+    Use a plain pale background and only the props necessary for the scene and action. Keep the whole
+    figure connected.
+  requirements:
+  - Both hands grip the blue shirt
+  - The shirt rises above a red laundry basket
+  - A washing machine is visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-bakery-base
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Keep the main action large and clear.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+- id: gap-train-bakery-fullbody
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-bakery-clothing
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-bakery-observer
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-bakery-sign
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+  - A top sign reads exactly READY
+- id: gap-train-bakery-rail
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-bakery-small
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Place Bufo on the viewer left at less than one third of the image height, keeping the action readable.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-bakery-minimal
+  family: bakery
+  split: train
+  prompt: Draw Bufo in a bakery, using both hands to press a rolling pin onto a round piece of dough.
+    Use a plain pale background and only the props necessary for the scene and action. Keep the whole
+    figure connected.
+  requirements:
+  - Both hands grip the rolling pin
+  - The rolling pin contacts the dough
+  - A round piece of dough rests on a work surface
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-train-tennis_court-base
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Keep the main action large and clear.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+- id: gap-train-tennis_court-fullbody
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-train-tennis_court-clothing
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-train-tennis_court-observer
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-train-tennis_court-sign
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+  - A top sign reads exactly READY
+- id: gap-train-tennis_court-rail
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-train-tennis_court-small
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Place Bufo on the viewer left at less than one third of the image height, keeping the action
+    readable.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+  - Bufo is on the viewer left
+  - Bufo is less than one third of image height
+- id: gap-train-tennis_court-minimal
+  family: tennis_court
+  split: train
+  prompt: Draw Bufo on a tennis court, holding a blue racket with its strings touching a yellow tennis
+    ball. Use a plain pale background and only the props necessary for the scene and action. Keep the
+    whole figure connected.
+  requirements:
+  - A hand grips the racket handle
+  - The strings contact a yellow ball
+  - A tennis net or court lines are visible
+  - The background is plain and pale
+  - Bufo's head, torso and limbs form one connected figure
+- id: gap-validation-airport_marshaller-base
+  family: airport_marshaller
+  split: validation
+  prompt: Draw Bufo on an airport apron, holding two orange signal batons, one in each raised hand. Keep
+    the main action large and clear.
+  requirements:
+  - Exactly two orange batons are visible
+  - Each raised hand grips one baton
+  - An airplane is visible behind Bufo
+- id: gap-validation-airport_marshaller-fullbody
+  family: airport_marshaller
+  split: validation
+  prompt: Draw Bufo on an airport apron, holding two orange signal batons, one in each raised hand. Show
+    the whole body with both feet inside the frame.
+  requirements:
+  - Exactly two orange batons are visible
+  - Each raised hand grips one baton
+  - An airplane is visible behind Bufo
+  - The whole body and both feet are visible inside the frame
+- id: gap-validation-airport_marshaller-clothing
+  family: airport_marshaller
+  split: validation
+  prompt: Draw Bufo on an airport apron, holding two orange signal batons, one in each raised hand. Add
+    a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Exactly two orange batons are visible
+  - Each raised hand grips one baton
+  - An airplane is visible behind Bufo
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-validation-airport_marshaller-observer
+  family: airport_marshaller
+  split: validation
+  prompt: Draw Bufo on an airport apron, holding two orange signal batons, one in each raised hand. Add
+    one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Exactly two orange batons are visible
+  - Each raised hand grips one baton
+  - An airplane is visible behind Bufo
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-validation-airport_marshaller-sign
+  family: airport_marshaller
+  split: validation
+  prompt: Draw Bufo on an airport apron, holding two orange signal batons, one in each raised hand. Add
+    a sign at the top that reads exactly READY.
+  requirements:
+  - Exactly two orange batons are visible
+  - Each raised hand grips one baton
+  - An airplane is visible behind Bufo
+  - A top sign reads exactly READY
+- id: gap-validation-airport_marshaller-rail
+  family: airport_marshaller
+  split: validation
+  prompt: Draw Bufo on an airport apron, holding two orange signal batons, one in each raised hand. Put
+    a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - Exactly two orange batons are visible
+  - Each raised hand grips one baton
+  - An airplane is visible behind Bufo
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-validation-florist_arranging-base
+  family: florist_arranging
+  split: validation
+  prompt: Draw Bufo in a flower shop, inserting a red flower stem into a blue vase while holding the vase
+    with the other hand. Keep the main action large and clear.
+  requirements:
+  - One hand grips the red flower stem
+  - The stem enters the blue vase
+  - The other hand touches the vase
+- id: gap-validation-florist_arranging-fullbody
+  family: florist_arranging
+  split: validation
+  prompt: Draw Bufo in a flower shop, inserting a red flower stem into a blue vase while holding the vase
+    with the other hand. Show the whole body with both feet inside the frame.
+  requirements:
+  - One hand grips the red flower stem
+  - The stem enters the blue vase
+  - The other hand touches the vase
+  - The whole body and both feet are visible inside the frame
+- id: gap-validation-florist_arranging-clothing
+  family: florist_arranging
+  split: validation
+  prompt: Draw Bufo in a flower shop, inserting a red flower stem into a blue vase while holding the vase
+    with the other hand. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands
+    visible.
+  requirements:
+  - One hand grips the red flower stem
+  - The stem enters the blue vase
+  - The other hand touches the vase
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-validation-florist_arranging-observer
+  family: florist_arranging
+  split: validation
+  prompt: Draw Bufo in a flower shop, inserting a red flower stem into a blue vase while holding the vase
+    with the other hand. Add one smaller Bufo watching on the viewer right; only the main Bufo performs
+    the action.
+  requirements:
+  - One hand grips the red flower stem
+  - The stem enters the blue vase
+  - The other hand touches the vase
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-validation-florist_arranging-sign
+  family: florist_arranging
+  split: validation
+  prompt: Draw Bufo in a flower shop, inserting a red flower stem into a blue vase while holding the vase
+    with the other hand. Add a sign at the top that reads exactly READY.
+  requirements:
+  - One hand grips the red flower stem
+  - The stem enters the blue vase
+  - The other hand touches the vase
+  - A top sign reads exactly READY
+- id: gap-validation-florist_arranging-rail
+  family: florist_arranging
+  split: validation
+  prompt: Draw Bufo in a flower shop, inserting a red flower stem into a blue vase while holding the vase
+    with the other hand. Put a low foreground rail across the lower legs; keep the face, hands and main
+    action unobscured.
+  requirements:
+  - One hand grips the red flower stem
+  - The stem enters the blue vase
+  - The other hand touches the vase
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-validation-ice_cream_cart-base
+  family: ice_cream_cart
+  split: validation
+  prompt: Draw Bufo beside an ice-cream cart, holding a cone in one hand while using the other to place
+    a pink scoop on top. Keep the main action large and clear.
+  requirements:
+  - One hand grips the cone
+  - The other hand holds a scoop utensil
+  - A pink scoop touches the top of the cone
+  - An ice-cream cart is visible
+- id: gap-validation-ice_cream_cart-fullbody
+  family: ice_cream_cart
+  split: validation
+  prompt: Draw Bufo beside an ice-cream cart, holding a cone in one hand while using the other to place
+    a pink scoop on top. Show the whole body with both feet inside the frame.
+  requirements:
+  - One hand grips the cone
+  - The other hand holds a scoop utensil
+  - A pink scoop touches the top of the cone
+  - An ice-cream cart is visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-validation-ice_cream_cart-clothing
+  family: ice_cream_cart
+  split: validation
+  prompt: Draw Bufo beside an ice-cream cart, holding a cone in one hand while using the other to place
+    a pink scoop on top. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands
+    visible.
+  requirements:
+  - One hand grips the cone
+  - The other hand holds a scoop utensil
+  - A pink scoop touches the top of the cone
+  - An ice-cream cart is visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-validation-ice_cream_cart-observer
+  family: ice_cream_cart
+  split: validation
+  prompt: Draw Bufo beside an ice-cream cart, holding a cone in one hand while using the other to place
+    a pink scoop on top. Add one smaller Bufo watching on the viewer right; only the main Bufo performs
+    the action.
+  requirements:
+  - One hand grips the cone
+  - The other hand holds a scoop utensil
+  - A pink scoop touches the top of the cone
+  - An ice-cream cart is visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-validation-ice_cream_cart-sign
+  family: ice_cream_cart
+  split: validation
+  prompt: Draw Bufo beside an ice-cream cart, holding a cone in one hand while using the other to place
+    a pink scoop on top. Add a sign at the top that reads exactly READY.
+  requirements:
+  - One hand grips the cone
+  - The other hand holds a scoop utensil
+  - A pink scoop touches the top of the cone
+  - An ice-cream cart is visible
+  - A top sign reads exactly READY
+- id: gap-validation-ice_cream_cart-rail
+  family: ice_cream_cart
+  split: validation
+  prompt: Draw Bufo beside an ice-cream cart, holding a cone in one hand while using the other to place
+    a pink scoop on top. Put a low foreground rail across the lower legs; keep the face, hands and main
+    action unobscured.
+  requirements:
+  - One hand grips the cone
+  - The other hand holds a scoop utensil
+  - A pink scoop touches the top of the cone
+  - An ice-cream cart is visible
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-validation-locksmith-base
+  family: locksmith
+  split: validation
+  prompt: Draw Bufo at a locksmith bench, inserting a gold key into a large blue padlock held in the other
+    hand. Keep the main action large and clear.
+  requirements:
+  - A hand grips a gold key
+  - The key tip enters the padlock keyhole
+  - The other hand holds the blue padlock
+- id: gap-validation-locksmith-fullbody
+  family: locksmith
+  split: validation
+  prompt: Draw Bufo at a locksmith bench, inserting a gold key into a large blue padlock held in the other
+    hand. Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips a gold key
+  - The key tip enters the padlock keyhole
+  - The other hand holds the blue padlock
+  - The whole body and both feet are visible inside the frame
+- id: gap-validation-locksmith-clothing
+  family: locksmith
+  split: validation
+  prompt: Draw Bufo at a locksmith bench, inserting a gold key into a large blue padlock held in the other
+    hand. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips a gold key
+  - The key tip enters the padlock keyhole
+  - The other hand holds the blue padlock
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-validation-locksmith-observer
+  family: locksmith
+  split: validation
+  prompt: Draw Bufo at a locksmith bench, inserting a gold key into a large blue padlock held in the other
+    hand. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips a gold key
+  - The key tip enters the padlock keyhole
+  - The other hand holds the blue padlock
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-validation-locksmith-sign
+  family: locksmith
+  split: validation
+  prompt: Draw Bufo at a locksmith bench, inserting a gold key into a large blue padlock held in the other
+    hand. Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips a gold key
+  - The key tip enters the padlock keyhole
+  - The other hand holds the blue padlock
+  - A top sign reads exactly READY
+- id: gap-validation-locksmith-rail
+  family: locksmith
+  split: validation
+  prompt: Draw Bufo at a locksmith bench, inserting a gold key into a large blue padlock held in the other
+    hand. Put a low foreground rail across the lower legs; keep the face, hands and main action unobscured.
+  requirements:
+  - A hand grips a gold key
+  - The key tip enters the padlock keyhole
+  - The other hand holds the blue padlock
+  - A foreground rail occludes part of the lower legs
+  - Face, hands and main action are visible
+- id: gap-heldout-sushi_bar-base
+  family: sushi_bar
+  split: heldout
+  prompt: Draw Bufo at a sushi counter, using chopsticks to lift one piece of sushi above a blue plate.
+    Keep the main action large and clear.
+  requirements:
+  - A hand grips the chopsticks
+  - Both chopstick tips contact one sushi piece
+  - The sushi is above a blue plate
+- id: gap-heldout-sushi_bar-fullbody
+  family: sushi_bar
+  split: heldout
+  prompt: Draw Bufo at a sushi counter, using chopsticks to lift one piece of sushi above a blue plate.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the chopsticks
+  - Both chopstick tips contact one sushi piece
+  - The sushi is above a blue plate
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-sushi_bar-clothing
+  family: sushi_bar
+  split: heldout
+  prompt: Draw Bufo at a sushi counter, using chopsticks to lift one piece of sushi above a blue plate.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the chopsticks
+  - Both chopstick tips contact one sushi piece
+  - The sushi is above a blue plate
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-sushi_bar-observer
+  family: sushi_bar
+  split: heldout
+  prompt: Draw Bufo at a sushi counter, using chopsticks to lift one piece of sushi above a blue plate.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the chopsticks
+  - Both chopstick tips contact one sushi piece
+  - The sushi is above a blue plate
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-sushi_bar-sign
+  family: sushi_bar
+  split: heldout
+  prompt: Draw Bufo at a sushi counter, using chopsticks to lift one piece of sushi above a blue plate.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the chopsticks
+  - Both chopstick tips contact one sushi piece
+  - The sushi is above a blue plate
+  - A top sign reads exactly READY
+- id: gap-heldout-soccer_pitch-base
+  family: soccer_pitch
+  split: heldout
+  prompt: Draw Bufo on a soccer pitch, stopping a black-and-white soccer ball under one foot. Keep the
+    main action large and clear.
+  requirements:
+  - One foot contacts the top of the soccer ball
+  - The other foot is planted on the ground
+  - Soccer pitch markings are visible
+- id: gap-heldout-soccer_pitch-fullbody
+  family: soccer_pitch
+  split: heldout
+  prompt: Draw Bufo on a soccer pitch, stopping a black-and-white soccer ball under one foot. Show the
+    whole body with both feet inside the frame.
+  requirements:
+  - One foot contacts the top of the soccer ball
+  - The other foot is planted on the ground
+  - Soccer pitch markings are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-soccer_pitch-clothing
+  family: soccer_pitch
+  split: heldout
+  prompt: Draw Bufo on a soccer pitch, stopping a black-and-white soccer ball under one foot. Add a fitted
+    blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - One foot contacts the top of the soccer ball
+  - The other foot is planted on the ground
+  - Soccer pitch markings are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-soccer_pitch-observer
+  family: soccer_pitch
+  split: heldout
+  prompt: Draw Bufo on a soccer pitch, stopping a black-and-white soccer ball under one foot. Add one
+    smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - One foot contacts the top of the soccer ball
+  - The other foot is planted on the ground
+  - Soccer pitch markings are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-soccer_pitch-sign
+  family: soccer_pitch
+  split: heldout
+  prompt: Draw Bufo on a soccer pitch, stopping a black-and-white soccer ball under one foot. Add a sign
+    at the top that reads exactly READY.
+  requirements:
+  - One foot contacts the top of the soccer ball
+  - The other foot is planted on the ground
+  - Soccer pitch markings are visible
+  - A top sign reads exactly READY
+- id: gap-heldout-woodcarving-base
+  family: woodcarving
+  split: heldout
+  prompt: Draw Bufo at a woodcarving bench, holding a chisel against a wooden block and a mallet above
+    the chisel handle. Keep the main action large and clear.
+  requirements:
+  - One hand grips a chisel contacting the wood
+  - The other hand grips a mallet
+  - The mallet is aligned above the chisel handle
+- id: gap-heldout-woodcarving-fullbody
+  family: woodcarving
+  split: heldout
+  prompt: Draw Bufo at a woodcarving bench, holding a chisel against a wooden block and a mallet above
+    the chisel handle. Show the whole body with both feet inside the frame.
+  requirements:
+  - One hand grips a chisel contacting the wood
+  - The other hand grips a mallet
+  - The mallet is aligned above the chisel handle
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-woodcarving-clothing
+  family: woodcarving
+  split: heldout
+  prompt: Draw Bufo at a woodcarving bench, holding a chisel against a wooden block and a mallet above
+    the chisel handle. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands
+    visible.
+  requirements:
+  - One hand grips a chisel contacting the wood
+  - The other hand grips a mallet
+  - The mallet is aligned above the chisel handle
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-woodcarving-observer
+  family: woodcarving
+  split: heldout
+  prompt: Draw Bufo at a woodcarving bench, holding a chisel against a wooden block and a mallet above
+    the chisel handle. Add one smaller Bufo watching on the viewer right; only the main Bufo performs
+    the action.
+  requirements:
+  - One hand grips a chisel contacting the wood
+  - The other hand grips a mallet
+  - The mallet is aligned above the chisel handle
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-woodcarving-sign
+  family: woodcarving
+  split: heldout
+  prompt: Draw Bufo at a woodcarving bench, holding a chisel against a wooden block and a mallet above
+    the chisel handle. Add a sign at the top that reads exactly READY.
+  requirements:
+  - One hand grips a chisel contacting the wood
+  - The other hand grips a mallet
+  - The mallet is aligned above the chisel handle
+  - A top sign reads exactly READY
+- id: gap-heldout-birdwatching-base
+  family: birdwatching
+  split: heldout
+  prompt: Draw Bufo in a birdwatching hide, holding binoculars against his eyes with both hands. Keep
+    the main action large and clear.
+  requirements:
+  - Both hands touch the binoculars
+  - The binocular eyepieces contact the eye area
+  - A bird sits visibly on a nearby branch
+- id: gap-heldout-birdwatching-fullbody
+  family: birdwatching
+  split: heldout
+  prompt: Draw Bufo in a birdwatching hide, holding binoculars against his eyes with both hands. Show
+    the whole body with both feet inside the frame.
+  requirements:
+  - Both hands touch the binoculars
+  - The binocular eyepieces contact the eye area
+  - A bird sits visibly on a nearby branch
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-birdwatching-clothing
+  family: birdwatching
+  split: heldout
+  prompt: Draw Bufo in a birdwatching hide, holding binoculars against his eyes with both hands. Add a
+    fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both hands touch the binoculars
+  - The binocular eyepieces contact the eye area
+  - A bird sits visibly on a nearby branch
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-birdwatching-observer
+  family: birdwatching
+  split: heldout
+  prompt: Draw Bufo in a birdwatching hide, holding binoculars against his eyes with both hands. Add one
+    smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both hands touch the binoculars
+  - The binocular eyepieces contact the eye area
+  - A bird sits visibly on a nearby branch
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-birdwatching-sign
+  family: birdwatching
+  split: heldout
+  prompt: Draw Bufo in a birdwatching hide, holding binoculars against his eyes with both hands. Add a
+    sign at the top that reads exactly READY.
+  requirements:
+  - Both hands touch the binoculars
+  - The binocular eyepieces contact the eye area
+  - A bird sits visibly on a nearby branch
+  - A top sign reads exactly READY
+- id: gap-heldout-snowman_building-base
+  family: snowman_building
+  split: heldout
+  prompt: Draw Bufo in a snowy yard, pressing a carrot into the middle snowball of a three-ball snowman.
+    Keep the main action large and clear.
+  requirements:
+  - A hand contacts the carrot
+  - The carrot enters the middle snowball
+  - Exactly three stacked snowballs form the snowman
+- id: gap-heldout-snowman_building-fullbody
+  family: snowman_building
+  split: heldout
+  prompt: Draw Bufo in a snowy yard, pressing a carrot into the middle snowball of a three-ball snowman.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand contacts the carrot
+  - The carrot enters the middle snowball
+  - Exactly three stacked snowballs form the snowman
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-snowman_building-clothing
+  family: snowman_building
+  split: heldout
+  prompt: Draw Bufo in a snowy yard, pressing a carrot into the middle snowball of a three-ball snowman.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand contacts the carrot
+  - The carrot enters the middle snowball
+  - Exactly three stacked snowballs form the snowman
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-snowman_building-observer
+  family: snowman_building
+  split: heldout
+  prompt: Draw Bufo in a snowy yard, pressing a carrot into the middle snowball of a three-ball snowman.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand contacts the carrot
+  - The carrot enters the middle snowball
+  - Exactly three stacked snowballs form the snowman
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-snowman_building-sign
+  family: snowman_building
+  split: heldout
+  prompt: Draw Bufo in a snowy yard, pressing a carrot into the middle snowball of a three-ball snowman.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand contacts the carrot
+  - The carrot enters the middle snowball
+  - Exactly three stacked snowballs form the snowman
+  - A top sign reads exactly READY
+- id: gap-heldout-car_wash-base
+  family: car_wash
+  split: heldout
+  prompt: Draw Bufo at a car wash, pressing a yellow sponge onto the side of a blue car. Keep the main
+    action large and clear.
+  requirements:
+  - A hand grips a yellow sponge
+  - The sponge contacts the blue car
+  - Soap bubbles surround the contact area
+- id: gap-heldout-car_wash-fullbody
+  family: car_wash
+  split: heldout
+  prompt: Draw Bufo at a car wash, pressing a yellow sponge onto the side of a blue car. Show the whole
+    body with both feet inside the frame.
+  requirements:
+  - A hand grips a yellow sponge
+  - The sponge contacts the blue car
+  - Soap bubbles surround the contact area
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-car_wash-clothing
+  family: car_wash
+  split: heldout
+  prompt: Draw Bufo at a car wash, pressing a yellow sponge onto the side of a blue car. Add a fitted
+    blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips a yellow sponge
+  - The sponge contacts the blue car
+  - Soap bubbles surround the contact area
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-car_wash-observer
+  family: car_wash
+  split: heldout
+  prompt: Draw Bufo at a car wash, pressing a yellow sponge onto the side of a blue car. Add one smaller
+    Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips a yellow sponge
+  - The sponge contacts the blue car
+  - Soap bubbles surround the contact area
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-car_wash-sign
+  family: car_wash
+  split: heldout
+  prompt: Draw Bufo at a car wash, pressing a yellow sponge onto the side of a blue car. Add a sign at
+    the top that reads exactly READY.
+  requirements:
+  - A hand grips a yellow sponge
+  - The sponge contacts the blue car
+  - Soap bubbles surround the contact area
+  - A top sign reads exactly READY
+- id: gap-heldout-bowling_alley-base
+  family: bowling_alley
+  split: heldout
+  prompt: Draw Bufo in a bowling alley, holding a red bowling ball against his belly with both hands.
+    Keep the main action large and clear.
+  requirements:
+  - Both hands contact the red bowling ball
+  - The ball is against the belly
+  - Bowling pins stand at the far end of a lane
+- id: gap-heldout-bowling_alley-fullbody
+  family: bowling_alley
+  split: heldout
+  prompt: Draw Bufo in a bowling alley, holding a red bowling ball against his belly with both hands.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - Both hands contact the red bowling ball
+  - The ball is against the belly
+  - Bowling pins stand at the far end of a lane
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-bowling_alley-clothing
+  family: bowling_alley
+  split: heldout
+  prompt: Draw Bufo in a bowling alley, holding a red bowling ball against his belly with both hands.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both hands contact the red bowling ball
+  - The ball is against the belly
+  - Bowling pins stand at the far end of a lane
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-bowling_alley-observer
+  family: bowling_alley
+  split: heldout
+  prompt: Draw Bufo in a bowling alley, holding a red bowling ball against his belly with both hands.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both hands contact the red bowling ball
+  - The ball is against the belly
+  - Bowling pins stand at the far end of a lane
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-bowling_alley-sign
+  family: bowling_alley
+  split: heldout
+  prompt: Draw Bufo in a bowling alley, holding a red bowling ball against his belly with both hands.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - Both hands contact the red bowling ball
+  - The ball is against the belly
+  - Bowling pins stand at the far end of a lane
+  - A top sign reads exactly READY
+- id: gap-heldout-spacewalk-base
+  family: spacewalk
+  split: heldout
+  prompt: Draw Bufo outside a space station, gripping a handrail with one hand while tethered to the station.
+    Keep the main action large and clear.
+  requirements:
+  - A hand grips the station handrail
+  - A tether visibly connects Bufo to the station
+  - Stars and a planet are visible
+- id: gap-heldout-spacewalk-fullbody
+  family: spacewalk
+  split: heldout
+  prompt: Draw Bufo outside a space station, gripping a handrail with one hand while tethered to the station.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the station handrail
+  - A tether visibly connects Bufo to the station
+  - Stars and a planet are visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-spacewalk-clothing
+  family: spacewalk
+  split: heldout
+  prompt: Draw Bufo outside a space station, gripping a handrail with one hand while tethered to the station.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the station handrail
+  - A tether visibly connects Bufo to the station
+  - Stars and a planet are visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-spacewalk-observer
+  family: spacewalk
+  split: heldout
+  prompt: Draw Bufo outside a space station, gripping a handrail with one hand while tethered to the station.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the station handrail
+  - A tether visibly connects Bufo to the station
+  - Stars and a planet are visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-spacewalk-sign
+  family: spacewalk
+  split: heldout
+  prompt: Draw Bufo outside a space station, gripping a handrail with one hand while tethered to the station.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the station handrail
+  - A tether visibly connects Bufo to the station
+  - Stars and a planet are visible
+  - A top sign reads exactly READY
+- id: gap-heldout-pancake_breakfast-base
+  family: pancake_breakfast
+  split: heldout
+  prompt: Draw Bufo at a breakfast stove, holding a spatula under a pancake lifted above a frying pan.
+    Keep the main action large and clear.
+  requirements:
+  - A hand grips the spatula
+  - The spatula supports the pancake
+  - The pancake is above a frying pan
+- id: gap-heldout-pancake_breakfast-fullbody
+  family: pancake_breakfast
+  split: heldout
+  prompt: Draw Bufo at a breakfast stove, holding a spatula under a pancake lifted above a frying pan.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the spatula
+  - The spatula supports the pancake
+  - The pancake is above a frying pan
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-pancake_breakfast-clothing
+  family: pancake_breakfast
+  split: heldout
+  prompt: Draw Bufo at a breakfast stove, holding a spatula under a pancake lifted above a frying pan.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the spatula
+  - The spatula supports the pancake
+  - The pancake is above a frying pan
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-pancake_breakfast-observer
+  family: pancake_breakfast
+  split: heldout
+  prompt: Draw Bufo at a breakfast stove, holding a spatula under a pancake lifted above a frying pan.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the spatula
+  - The spatula supports the pancake
+  - The pancake is above a frying pan
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-pancake_breakfast-sign
+  family: pancake_breakfast
+  split: heldout
+  prompt: Draw Bufo at a breakfast stove, holding a spatula under a pancake lifted above a frying pan.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the spatula
+  - The spatula supports the pancake
+  - The pancake is above a frying pan
+  - A top sign reads exactly READY
+- id: gap-heldout-golf_green-base
+  family: golf_green
+  split: heldout
+  prompt: Draw Bufo on a golf green, holding a putter with both hands and touching a white golf ball with
+    its head. Keep the main action large and clear.
+  requirements:
+  - Both hands grip the putter shaft
+  - The putter head contacts a white ball
+  - A flagged hole is visible
+- id: gap-heldout-golf_green-fullbody
+  family: golf_green
+  split: heldout
+  prompt: Draw Bufo on a golf green, holding a putter with both hands and touching a white golf ball with
+    its head. Show the whole body with both feet inside the frame.
+  requirements:
+  - Both hands grip the putter shaft
+  - The putter head contacts a white ball
+  - A flagged hole is visible
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-golf_green-clothing
+  family: golf_green
+  split: heldout
+  prompt: Draw Bufo on a golf green, holding a putter with both hands and touching a white golf ball with
+    its head. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both hands grip the putter shaft
+  - The putter head contacts a white ball
+  - A flagged hole is visible
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-golf_green-observer
+  family: golf_green
+  split: heldout
+  prompt: Draw Bufo on a golf green, holding a putter with both hands and touching a white golf ball with
+    its head. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both hands grip the putter shaft
+  - The putter head contacts a white ball
+  - A flagged hole is visible
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-golf_green-sign
+  family: golf_green
+  split: heldout
+  prompt: Draw Bufo on a golf green, holding a putter with both hands and touching a white golf ball with
+    its head. Add a sign at the top that reads exactly READY.
+  requirements:
+  - Both hands grip the putter shaft
+  - The putter head contacts a white ball
+  - A flagged hole is visible
+  - A top sign reads exactly READY
+- id: gap-heldout-drum_lesson-base
+  family: drum_lesson
+  split: heldout
+  prompt: Draw Bufo in a music practice room, holding a drumstick in each hand with one tip touching a
+    blue drum. Keep the main action large and clear.
+  requirements:
+  - Each hand grips a drumstick
+  - One drumstick tip touches the blue drumhead
+  - The second stick is raised
+- id: gap-heldout-drum_lesson-fullbody
+  family: drum_lesson
+  split: heldout
+  prompt: Draw Bufo in a music practice room, holding a drumstick in each hand with one tip touching a
+    blue drum. Show the whole body with both feet inside the frame.
+  requirements:
+  - Each hand grips a drumstick
+  - One drumstick tip touches the blue drumhead
+  - The second stick is raised
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-drum_lesson-clothing
+  family: drum_lesson
+  split: heldout
+  prompt: Draw Bufo in a music practice room, holding a drumstick in each hand with one tip touching a
+    blue drum. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Each hand grips a drumstick
+  - One drumstick tip touches the blue drumhead
+  - The second stick is raised
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-drum_lesson-observer
+  family: drum_lesson
+  split: heldout
+  prompt: Draw Bufo in a music practice room, holding a drumstick in each hand with one tip touching a
+    blue drum. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Each hand grips a drumstick
+  - One drumstick tip touches the blue drumhead
+  - The second stick is raised
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-drum_lesson-sign
+  family: drum_lesson
+  split: heldout
+  prompt: Draw Bufo in a music practice room, holding a drumstick in each hand with one tip touching a
+    blue drum. Add a sign at the top that reads exactly READY.
+  requirements:
+  - Each hand grips a drumstick
+  - One drumstick tip touches the blue drumhead
+  - The second stick is raised
+  - A top sign reads exactly READY
+- id: gap-heldout-science_fair-base
+  family: science_fair
+  split: heldout
+  prompt: Draw Bufo at a science fair, pouring red liquid from a tilted beaker into a blue funnel held
+    over a flask. Keep the main action large and clear.
+  requirements:
+  - One hand grips a tilted beaker
+  - A continuous red stream enters a blue funnel
+  - The funnel leads into a flask
+- id: gap-heldout-science_fair-fullbody
+  family: science_fair
+  split: heldout
+  prompt: Draw Bufo at a science fair, pouring red liquid from a tilted beaker into a blue funnel held
+    over a flask. Show the whole body with both feet inside the frame.
+  requirements:
+  - One hand grips a tilted beaker
+  - A continuous red stream enters a blue funnel
+  - The funnel leads into a flask
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-science_fair-clothing
+  family: science_fair
+  split: heldout
+  prompt: Draw Bufo at a science fair, pouring red liquid from a tilted beaker into a blue funnel held
+    over a flask. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - One hand grips a tilted beaker
+  - A continuous red stream enters a blue funnel
+  - The funnel leads into a flask
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-science_fair-observer
+  family: science_fair
+  split: heldout
+  prompt: Draw Bufo at a science fair, pouring red liquid from a tilted beaker into a blue funnel held
+    over a flask. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - One hand grips a tilted beaker
+  - A continuous red stream enters a blue funnel
+  - The funnel leads into a flask
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-science_fair-sign
+  family: science_fair
+  split: heldout
+  prompt: Draw Bufo at a science fair, pouring red liquid from a tilted beaker into a blue funnel held
+    over a flask. Add a sign at the top that reads exactly READY.
+  requirements:
+  - One hand grips a tilted beaker
+  - A continuous red stream enters a blue funnel
+  - The funnel leads into a flask
+  - A top sign reads exactly READY
+- id: gap-heldout-sailing_dinghy-base
+  family: sailing_dinghy
+  split: heldout
+  prompt: Draw Bufo in a small sailing dinghy, pulling a rope attached to the sail with both hands. Keep
+    the main action large and clear.
+  requirements:
+  - Both hands grip the rope
+  - The rope visibly connects to the sail
+  - A small boat floats on water
+- id: gap-heldout-sailing_dinghy-fullbody
+  family: sailing_dinghy
+  split: heldout
+  prompt: Draw Bufo in a small sailing dinghy, pulling a rope attached to the sail with both hands. Show
+    the whole body with both feet inside the frame.
+  requirements:
+  - Both hands grip the rope
+  - The rope visibly connects to the sail
+  - A small boat floats on water
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-sailing_dinghy-clothing
+  family: sailing_dinghy
+  split: heldout
+  prompt: Draw Bufo in a small sailing dinghy, pulling a rope attached to the sail with both hands. Add
+    a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Both hands grip the rope
+  - The rope visibly connects to the sail
+  - A small boat floats on water
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-sailing_dinghy-observer
+  family: sailing_dinghy
+  split: heldout
+  prompt: Draw Bufo in a small sailing dinghy, pulling a rope attached to the sail with both hands. Add
+    one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Both hands grip the rope
+  - The rope visibly connects to the sail
+  - A small boat floats on water
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-sailing_dinghy-sign
+  family: sailing_dinghy
+  split: heldout
+  prompt: Draw Bufo in a small sailing dinghy, pulling a rope attached to the sail with both hands. Add
+    a sign at the top that reads exactly READY.
+  requirements:
+  - Both hands grip the rope
+  - The rope visibly connects to the sail
+  - A small boat floats on water
+  - A top sign reads exactly READY
+- id: gap-heldout-kite_flying-base
+  family: kite_flying
+  split: heldout
+  prompt: Draw Bufo in a grassy field, holding a spool with a taut string connected to a red kite overhead.
+    Keep the main action large and clear.
+  requirements:
+  - A hand grips the spool
+  - An unbroken string connects spool to kite
+  - A red kite is above Bufo
+- id: gap-heldout-kite_flying-fullbody
+  family: kite_flying
+  split: heldout
+  prompt: Draw Bufo in a grassy field, holding a spool with a taut string connected to a red kite overhead.
+    Show the whole body with both feet inside the frame.
+  requirements:
+  - A hand grips the spool
+  - An unbroken string connects spool to kite
+  - A red kite is above Bufo
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-kite_flying-clothing
+  family: kite_flying
+  split: heldout
+  prompt: Draw Bufo in a grassy field, holding a spool with a taut string connected to a red kite overhead.
+    Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - A hand grips the spool
+  - An unbroken string connects spool to kite
+  - A red kite is above Bufo
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-kite_flying-observer
+  family: kite_flying
+  split: heldout
+  prompt: Draw Bufo in a grassy field, holding a spool with a taut string connected to a red kite overhead.
+    Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - A hand grips the spool
+  - An unbroken string connects spool to kite
+  - A red kite is above Bufo
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-kite_flying-sign
+  family: kite_flying
+  split: heldout
+  prompt: Draw Bufo in a grassy field, holding a spool with a taut string connected to a red kite overhead.
+    Add a sign at the top that reads exactly READY.
+  requirements:
+  - A hand grips the spool
+  - An unbroken string connects spool to kite
+  - A red kite is above Bufo
+  - A top sign reads exactly READY
+- id: gap-heldout-chalk_artist-base
+  family: chalk_artist
+  split: heldout
+  prompt: Draw Bufo on a city sidewalk, kneeling and holding blue chalk against a partly drawn yellow
+    sun. Keep the main action large and clear.
+  requirements:
+  - Bufo is kneeling
+  - A hand holds blue chalk touching the pavement drawing
+  - A yellow sun is partly drawn on the pavement
+- id: gap-heldout-chalk_artist-fullbody
+  family: chalk_artist
+  split: heldout
+  prompt: Draw Bufo on a city sidewalk, kneeling and holding blue chalk against a partly drawn yellow
+    sun. Show the whole body with both feet inside the frame.
+  requirements:
+  - Bufo is kneeling
+  - A hand holds blue chalk touching the pavement drawing
+  - A yellow sun is partly drawn on the pavement
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-chalk_artist-clothing
+  family: chalk_artist
+  split: heldout
+  prompt: Draw Bufo on a city sidewalk, kneeling and holding blue chalk against a partly drawn yellow
+    sun. Add a fitted blue vest attached to Bufo's torso; keep the face and acting hands visible.
+  requirements:
+  - Bufo is kneeling
+  - A hand holds blue chalk touching the pavement drawing
+  - A yellow sun is partly drawn on the pavement
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-chalk_artist-observer
+  family: chalk_artist
+  split: heldout
+  prompt: Draw Bufo on a city sidewalk, kneeling and holding blue chalk against a partly drawn yellow
+    sun. Add one smaller Bufo watching on the viewer right; only the main Bufo performs the action.
+  requirements:
+  - Bufo is kneeling
+  - A hand holds blue chalk touching the pavement drawing
+  - A yellow sun is partly drawn on the pavement
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-chalk_artist-sign
+  family: chalk_artist
+  split: heldout
+  prompt: Draw Bufo on a city sidewalk, kneeling and holding blue chalk against a partly drawn yellow
+    sun. Add a sign at the top that reads exactly READY.
+  requirements:
+  - Bufo is kneeling
+  - A hand holds blue chalk touching the pavement drawing
+  - A yellow sun is partly drawn on the pavement
+  - A top sign reads exactly READY
+- id: gap-heldout-bicycle_tuneup-base
+  family: bicycle_tuneup
+  split: heldout
+  prompt: Draw Bufo beside a bicycle repair stand, holding a pump handle with both hands while its hose
+    connects to a blue bicycle tire valve. Keep the main action large and clear.
+  requirements:
+  - Both hands grip the pump handle
+  - A hose connects pump to tire valve
+  - The bicycle frame is blue
+- id: gap-heldout-bicycle_tuneup-fullbody
+  family: bicycle_tuneup
+  split: heldout
+  prompt: Draw Bufo beside a bicycle repair stand, holding a pump handle with both hands while its hose
+    connects to a blue bicycle tire valve. Show the whole body with both feet inside the frame.
+  requirements:
+  - Both hands grip the pump handle
+  - A hose connects pump to tire valve
+  - The bicycle frame is blue
+  - The whole body and both feet are visible inside the frame
+- id: gap-heldout-bicycle_tuneup-clothing
+  family: bicycle_tuneup
+  split: heldout
+  prompt: Draw Bufo beside a bicycle repair stand, holding a pump handle with both hands while its hose
+    connects to a blue bicycle tire valve. Add a fitted blue vest attached to Bufo's torso; keep the face
+    and acting hands visible.
+  requirements:
+  - Both hands grip the pump handle
+  - A hose connects pump to tire valve
+  - The bicycle frame is blue
+  - A blue vest is attached to the torso
+  - Face and acting hands remain unobscured
+- id: gap-heldout-bicycle_tuneup-observer
+  family: bicycle_tuneup
+  split: heldout
+  prompt: Draw Bufo beside a bicycle repair stand, holding a pump handle with both hands while its hose
+    connects to a blue bicycle tire valve. Add one smaller Bufo watching on the viewer right; only the
+    main Bufo performs the action.
+  requirements:
+  - Both hands grip the pump handle
+  - A hose connects pump to tire valve
+  - The bicycle frame is blue
+  - Exactly two Bufos are visible
+  - The smaller observer is to the viewer right
+  - Only the main Bufo performs the action
+- id: gap-heldout-bicycle_tuneup-sign
+  family: bicycle_tuneup
+  split: heldout
+  prompt: Draw Bufo beside a bicycle repair stand, holding a pump handle with both hands while its hose
+    connects to a blue bicycle tire valve. Add a sign at the top that reads exactly READY.
+  requirements:
+  - Both hands grip the pump handle
+  - A hose connects pump to tire valve
+  - The bicycle frame is blue
+  - A top sign reads exactly READY

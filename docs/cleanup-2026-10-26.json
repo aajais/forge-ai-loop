@@ -1,0 +1,906 @@
+{
+  "created_at_utc": "2026-10-26T16:54:30.934779+00:00",
+  "project": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen",
+  "recovery_directory": "/private/tmp/cw-bufo-gen-cleanup-20261026T165423Z",
+  "mode": "move_to_recovery",
+  "preserved": [
+    "src application and training modules",
+    "all tests",
+    "original run evidence and frozen sources",
+    "runs/studio conversation history",
+    "datasets and reference images",
+    ".env and .venv",
+    "ART checkpoint state",
+    "final demo videos, raw recordings, narration and assemblers"
+  ],
+  "entries": [
+    {
+      "path": ".cache",
+      "reason": "Regenerable tool cache",
+      "files": 4,
+      "bytes": 1409273,
+      "status": "moved"
+    },
+    {
+      "path": ".pytest_cache",
+      "reason": "Regenerable tool cache",
+      "files": 5,
+      "bytes": 104345,
+      "status": "moved"
+    },
+    {
+      "path": ".ruff_cache",
+      "reason": "Regenerable tool cache",
+      "files": 28,
+      "bytes": 32296,
+      "status": "moved"
+    },
+    {
+      "path": "runs/restored",
+      "reason": "Generated experiment checkouts; original run evidence and restore tool retained",
+      "files": 178274,
+      "bytes": 6516130782,
+      "status": "moved"
+    },
+    {
+      "path": "scripts/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 21,
+      "bytes": 137199,
+      "status": "moved"
+    },
+    {
+      "path": "scripts/run_pipeline.py",
+      "reason": "Unreferenced legacy wrapper; bufogen CLI and scripts/distill_stage_a.sh retain supported entrypoints",
+      "files": 1,
+      "bytes": 68,
+      "status": "moved"
+    },
+    {
+      "path": "tests/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 91,
+      "bytes": 2623116,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/edit",
+      "reason": "Regenerable rendered segments and overlays; final video, raw capture and assembler retained",
+      "files": 16,
+      "bytes": 9428426,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 2,
+      "bytes": 20668,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/edit",
+      "reason": "Regenerable rendered segments and overlays; final video, raw capture and assembler retained",
+      "files": 18,
+      "bytes": 11113814,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-contact-pilot/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 12,
+      "bytes": 289743,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-demo-work/before",
+      "reason": "Superseded source snapshot",
+      "files": 23,
+      "bytes": 31189421,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-gap-work/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 10,
+      "bytes": 139870,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-gap-work/model-names-before",
+      "reason": "Superseded source snapshot",
+      "files": 18,
+      "bytes": 151308,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-gap-work/model-names-reviewed-display.diff",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 10208,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-gap-work/model-names.diff",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 54728,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-gap-work/rl-combined-runtime.diff",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 13241,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-gap-work/rl-dynamo-before",
+      "reason": "Superseded source snapshot",
+      "files": 5,
+      "bytes": 866544,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-gap-work/rl-dynamo-runtime.diff",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 10771,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-iteration2/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 5,
+      "bytes": 105611,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task1-before",
+      "reason": "Superseded source snapshot",
+      "files": 5,
+      "bytes": 23933,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task1-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 50117,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task2-before",
+      "reason": "Superseded source snapshot",
+      "files": 5,
+      "bytes": 31176,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task2-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 127686,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task3-before",
+      "reason": "Superseded source snapshot",
+      "files": 6,
+      "bytes": 24004,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task3-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 45485,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task4-before",
+      "reason": "Superseded source snapshot",
+      "files": 6,
+      "bytes": 808000,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task4-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 92799,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task4b-before",
+      "reason": "Superseded source snapshot",
+      "files": 3,
+      "bytes": 14834,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task4b-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 16815,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task5-before",
+      "reason": "Superseded source snapshot",
+      "files": 9,
+      "bytes": 98466,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task5-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 91406,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task5docs-before",
+      "reason": "Superseded source snapshot",
+      "files": 2,
+      "bytes": 20565,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task5fix-before",
+      "reason": "Superseded source snapshot",
+      "files": 3,
+      "bytes": 52380,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task5fix-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 13277,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6-before",
+      "reason": "Superseded source snapshot",
+      "files": 1,
+      "bytes": 16024,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 19025,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6dep-before",
+      "reason": "Superseded source snapshot",
+      "files": 4,
+      "bytes": 835613,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6dep-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 20588,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6jobid-before",
+      "reason": "Superseded source snapshot",
+      "files": 3,
+      "bytes": 41333,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6jobid-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 10991,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6showcase-before",
+      "reason": "Superseded source snapshot",
+      "files": 2,
+      "bytes": 36019,
+      "status": "moved"
+    },
+    {
+      "path": "docs/forge-loop-work/task6showcase-diff.txt",
+      "reason": "Historical patch scratch file",
+      "files": 1,
+      "bytes": 4543,
+      "status": "moved"
+    },
+    {
+      "path": "scripts/train_entrypoints/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 1,
+      "bytes": 6105,
+      "status": "moved"
+    },
+    {
+      "path": "src/bufogen/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 50,
+      "bytes": 664553,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/contact.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 178502,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-1.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 23544,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-2.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 26765,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-3.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 27674,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-4.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 23604,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-5.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 21621,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-6.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 24213,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-7.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 16863,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/final-contact.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 220149,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-260.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 11920,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-265.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 11920,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-270.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 11917,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-275.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 12988,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-280.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 14998,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-285.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 14731,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-290.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 14751,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-295.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 14738,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-300.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 14758,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-305.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 14741,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-310.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 12879,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-315.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 15346,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-320.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 15349,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-325.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 15347,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-330.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 1857,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-335.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 11905,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-340.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 11906,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-345.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 9906,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-350.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 9914,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-355.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 7947,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-360.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 7958,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-365.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 7958,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-370.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 9059,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-375.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 9057,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-380.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 13394,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-385.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 13416,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-390.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 13414,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-395.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 13412,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-400.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 13945,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-405.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 2229,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-410.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 8614,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/frame-415.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 8615,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/raw-260.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 272231,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/raw-297.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 327889,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/raw-323.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 317347,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/raw-343.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 287269,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/raw-364.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 244088,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/raw-392.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 260753,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/raw-418.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 218968,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/start-255.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 11918,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/start-279.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 14976,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/start-314.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 15563,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/start-334.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 11912,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/start-355.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 7947,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/start-380.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 13394,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/start-410.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 8614,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/starts.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 82892,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-recording-2026-10-26/qa/timeline.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 363590,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/app-crop.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 42838,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-01.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 31727,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-02.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 59342,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-03.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 63247,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-04.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 50315,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-05.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 37948,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-06.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 48184,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-07.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 62150,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapter-08.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 31673,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/chapters.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 531627,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/evaluation-source.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 68495,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-100.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 47816,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-25.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 30256,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-280.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 27009,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-300.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 27026,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-320.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 27004,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-40.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 30246,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-48.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 32496,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-80.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 48885,
+      "status": "moved"
+    },
+    {
+      "path": "demo/forge-story-2026-10-26/qa/raw-contact.jpg",
+      "reason": "Regenerable visual QA preview; verification receipts retained",
+      "files": 1,
+      "bytes": 346877,
+      "status": "moved"
+    },
+    {
+      "path": "src/bufogen/scorers/__pycache__",
+      "reason": "Regenerable Python bytecode",
+      "files": 8,
+      "bytes": 70445,
+      "status": "moved"
+    }
+  ],
+  "removed_files": 178733,
+  "removed_bytes": 6582105950,
+  "modified_files": [
+    "README.md",
+    ".gitignore",
+    ".dockerignore",
+    "scripts/train_entrypoints/sft_entrypoint.py"
+  ],
+  "validation": {
+    "python_tests": {
+      "before_passed": 1086,
+      "after_passed": 1086
+    },
+    "chat_ui_tests": {
+      "before_passed": 8,
+      "after_passed": 8
+    },
+    "training_contract_after_import_sort": {
+      "passed": 7
+    },
+    "src_scripts_ruff": "passed",
+    "existing_test_lint_findings": 152,
+    "test_lint_findings_unchanged": true,
+    "all_archived_paths_present": true,
+    "all_removed_paths_absent": true,
+    "cache_note": "A Python bytecode cache regenerated during verification was moved separately; running processes may recreate caches."
+  }
+}

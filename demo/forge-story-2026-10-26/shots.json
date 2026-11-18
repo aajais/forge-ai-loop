@@ -1,0 +1,74 @@
+[
+  {
+    "scene": "01-app",
+    "source": "forge-demo-raw-20261026T161322Z.mov",
+    "start_s": 23,
+    "end_s": 50,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Visually inspected raw recording; actual app/trace UI. Closing selection applies to next turn; existing drawing remains labeled as baseline."
+  },
+  {
+    "scene": "02-problem",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "start_s": 279,
+    "end_s": 307,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Previously verified Forge footage"
+  },
+  {
+    "scene": "03-observe",
+    "source": "forge-demo-raw-20261026T161322Z.mov",
+    "start_s": 80,
+    "end_s": 109,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Visually inspected raw recording; actual app/trace UI. Closing selection applies to next turn; existing drawing remains labeled as baseline."
+  },
+  {
+    "scene": "04-curate",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "start_s": 334,
+    "end_s": 351,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Previously verified Forge footage"
+  },
+  {
+    "scene": "05-improve",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "start_s": 355,
+    "end_s": 376,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Previously verified Forge footage"
+  },
+  {
+    "scene": "06-evaluate",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "start_s": 380,
+    "end_s": 402,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Previously verified Forge footage"
+  },
+  {
+    "scene": "07-result",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "start_s": 314,
+    "end_s": 328,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Previously verified Forge footage"
+  },
+  {
+    "scene": "08-app-loop",
+    "source": "forge-demo-raw-20261026T161322Z.mov",
+    "start_s": 284,
+    "end_s": 316,
+    "crop": "3456:1924:0:310",
+    "verified": true,
+    "note": "Visually inspected raw recording; actual app/trace UI. Closing selection applies to next turn; existing drawing remains labeled as baseline."
+  }
+]

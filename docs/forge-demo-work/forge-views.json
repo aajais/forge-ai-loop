@@ -1,0 +1,76 @@
+{
+  "created_at": "2026-10-24",
+  "destination": "wandb-smle/bufo-gen",
+  "method": "authenticated Forge UI in Chrome",
+  "report": "https://forge.coreweave.com/wandb/wandb-smle/bufo-gen/reports/Bufo-Forge-AI-loop-demo--VmlldzoxODE3NjU5MQ",
+  "training_view": "https://forge.coreweave.com/wandb/wandb-smle/bufo-gen/workspace?nw=xecpva84i0s",
+  "evaluation_view": "https://forge.coreweave.com/wandb/wandb-smle/bufo-gen/weave/compare-evaluations?view=comparison_2026-10-24_22-07-09-875",
+  "requested_evaluation_names_not_persisted": {
+    "01a16cd7-6c6d-732f-9d2b-3bec1ea0ff9a": "Qwen/Qwen3.8-27B | base | validation 48",
+    "01a16cd7-b287-77a0-8057-38c1298437d0": "ft-Qwen/Qwen3.8-27B | SFT 1 epoch v1",
+    "01a16e41-4753-761f-9c08-4c1b0e393c48": "ft-Qwen/Qwen3.8-27B | SFT 3 epochs v3"
+  },
+  "evaluation_name_edit_status": "UI accepted edits locally, but source call and comparison reverted after reload. Original names are mapped in the report.",
+  "training_run_filter": "bufo-stageb-sft-q3-20261023",
+  "training_panels": [
+    "train/reward",
+    "train/rollouts_trained"
+  ],
+  "comparison_metrics": [
+    "AstraReferenceJudge.similarity",
+    "AstraReferenceJudge.requirement_coverage",
+    "AstraReferenceJudge.strict_pass",
+    "EfficiencyScorer.render_ok",
+    "EfficiencyScorer.latency_s"
+  ],
+  "remaining_gaps": [
+    "Native conversation Scores image-judge integration",
+    "Shared evaluation dataset publication for native row alignment",
+    "Blinded human confirmation and Registry promotion",
+    "Evaluation display-name edits do not persist through the current Forge UI"
+  ],
+  "paid_jobs_started": false,
+  "routing_changed": false,
+  "post_training_update_2026_10_26": {
+    "method": "authenticated Chrome UI",
+    "default_temperature": {
+      "finetune_id": "da6bd91a-d7b8-478c-ad00-f6f540925537",
+      "value": 0.7,
+      "verified_after_fresh_load": true
+    },
+    "routing": {
+      "version": 1,
+      "qwen_overrides": {
+        "temperature": 0.7,
+        "max_tokens": 20000,
+        "chat_template_kwargs": {
+          "enable_thinking": true
+        }
+      },
+      "weights_preserved": [
+        10,
+        45,
+        45
+      ],
+      "trace_sampling_percent": 100,
+      "verified_after_reload": true,
+      "ui_state": "No unpublished changes",
+      "deployment_revision_not_exposed_in_observed_ui": true
+    },
+    "dataset": {
+      "id": "280e22a6-ae6b-401e-aafe-cc43182eae49",
+      "name": "bufo-gpt-6.1-sol-reviewed-trajectories-911-20261023",
+      "verified_on_fresh_model_detail": true
+    },
+    "native_eval": {
+      "id": "a300e4f8-5177-42ba-9a78-6cfb70fe4747",
+      "name": "Historical caption continuation - 4 examples",
+      "judge_and_results_unchanged": true
+    },
+    "model_display_names": "No separate editor observed; exact IDs and checkpoint mapping added to report",
+    "report_published": true,
+    "smoke_run": false,
+    "pricing_changed": false,
+    "training_started": false
+  }
+}

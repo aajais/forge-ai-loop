@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "expected_prompts": 48,
+  "notes": "Validation-only, immutable frozen evidence. Matched means identical recorded runtime/source/policy; historical manifests did not capture effective client timeout environment overrides. Historical teacher shown descriptively only. No held-out or blinded review material is exported.",
+  "arms": [
+    {
+      "id": "qwen_base",
+      "source": "runs/distill/stage-b/diagnostics/sft_q3-cap20k",
+      "scored_dir": "astra-v5-k3",
+      "backend": "qwen_base",
+      "model_id": "Qwen/Qwen3.8-27B",
+      "label": "Base \u00b7 20k tokens",
+      "role": "matched",
+      "sha256": {
+        "benchmark": "5611903a183407f14620cc059cdcbc86af4f9744ca008fe6c065e2806eccdf2c",
+        "scorer": "03d01bddb72de9d59c09c87dc51b4585604fc5605802f79a6a55a31b97bda72f",
+        "scores": "25b3b9beabd4daa6d03de8321aa5071543b32a6bbcf2d629e113ea292e0adaea"
+      }
+    },
+    {
+      "id": "sol_reference",
+      "source": "runs/distill/arms-v1",
+      "scored_dir": "astra-v5-k3",
+      "backend": "closed_quality_bar",
+      "model_id": "gpt-6.1-sol",
+      "label": "Historical teacher \u00b7 6k tokens",
+      "role": "historical_reference",
+      "sha256": {
+        "benchmark": "6c331b8bca17b474215e5979f0ccf1135ad433529788dfb99802e38fc4495d8f",
+        "scorer": "13b69b15934b2a8f68c0e2ff39a49be52afb48c353a97edac2202b0004b091f8",
+        "scores": "86a30737dc418a0263271d93cf67677c0e283bb84ab1db61396038290777973e"
+      },
+      "caveat": "Historical quality reference, not runtime matched. Teacher used 6,000 tokens per call and provider-default temperature; Qwen arms used 20,000 and temperature 0.7. Teacher client hardcoded a 180-second timeout; later clients support an environment override not captured in benchmark.json. Client and benchmark source hashes differ. Prompt text, requirements, Astra v5 k=3 rubric and per-prompt reference PNG digests match. No paired teacher confidence interval or parity claim is reported."
+    },
+    {
+      "id": "sft_q3",
+      "source": "runs/distill/stage-b/diagnostics/sft_q3-cap20k",
+      "scored_dir": "astra-v5-k3",
+      "backend": "sft_q3",
+      "model_id": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v1",
+      "label": "SFT \u00b7 v1",
+      "role": "matched",
+      "sha256": {
+        "benchmark": "5611903a183407f14620cc059cdcbc86af4f9744ca008fe6c065e2806eccdf2c",
+        "scorer": "03d01bddb72de9d59c09c87dc51b4585604fc5605802f79a6a55a31b97bda72f",
+        "scores": "25b3b9beabd4daa6d03de8321aa5071543b32a6bbcf2d629e113ea292e0adaea"
+      },
+      "lineage_path": "runs/distill/stage-b/checkpoints.json"
+    },
+    {
+      "id": "sft_q1",
+      "source": "runs/distill/stage-b/sweep/sft_q1",
+      "scored_dir": "astra-v5-k3",
+      "backend": "sft_q1",
+      "model_id": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q1-20261023:v3",
+      "label": "SFT \u00b7 v3",
+      "role": "matched",
+      "sha256": {
+        "benchmark": "7963ebca48a04822051fbdbee5433e2f94e859fd130dce8b41de8e57ab06dfe2",
+        "scorer": "03d01bddb72de9d59c09c87dc51b4585604fc5605802f79a6a55a31b97bda72f",
+        "scores": "e25aa2640b0f729f130c61a4442086169a2ffb9c8aaf5b67e44f7148dfcc4519"
+      },
+      "lineage_path": "runs/distill/stage-b/checkpoints.json"
+    },
+    {
+      "id": "rl_q3",
+      "source": "runs/distill/stage-b/rl/rl_q3",
+      "scored_dir": "astra-v5-k3",
+      "backend": "rl_q3",
+      "model_id": "wandb-artifact:///wandb-smle/bufo-gen/bufo-stageb-sft-q3-20261023:v6",
+      "label": "RL \u00b7 first completed block \u00b7 v6",
+      "role": "matched",
+      "sha256": {
+        "benchmark": "6df4d26a03ebbba54c3eb071f4772c3dd5d4e9a1f84d1fec32d531197b59f484",
+        "scorer": "03d01bddb72de9d59c09c87dc51b4585604fc5605802f79a6a55a31b97bda72f",
+        "scores": "7aad1b523d9ba24f4d44665afcc1ed10d19cb63c4d983c5660ea5a63798ab38d"
+      }
+    }
+  ]
+}

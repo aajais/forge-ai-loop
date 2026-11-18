@@ -1,0 +1,203 @@
+1
+00:00:00,500 --> 00:00:05,242
+Meet Bufo. Describe a scene, and this agent plans a drawing, renders
+
+2
+00:00:05,242 --> 00:00:09,983
+it, and returns an image you can use as an emoji. You
+
+3
+00:00:09,983 --> 00:00:14,725
+can change models or continue the conversation to refine the result. The
+
+4
+00:00:14,725 --> 00:00:19,467
+challenge is consistency: Bufo should stay recognizable, and every requested detail should
+
+5
+00:00:19,467 --> 00:00:24,208
+appear. A convincing response does not tell us whether the image actually
+
+6
+00:00:24,208 --> 00:00:25,394
+meets those requirements.
+
+7
+00:00:26,500 --> 00:00:30,959
+Here is a concrete failure from our validation set. We asked for
+
+8
+00:00:30,959 --> 00:00:35,418
+an airport marshaller holding two orange batons, an airplane behind Bufo, and
+
+9
+00:00:35,418 --> 00:00:39,877
+a smaller observer on the right. The baseline rendered an image, but
+
+10
+00:00:39,877 --> 00:00:44,336
+the airplane is not clearly established. To improve this app, we need
+
+11
+00:00:44,336 --> 00:00:48,795
+to connect that failure to its execution, turn useful examples into training
+
+12
+00:00:48,795 --> 00:00:53,254
+data, and measure whether a new model fixes the behavior. That is
+
+13
+00:00:53,254 --> 00:00:54,368
+the Forge loop.
+
+14
+00:00:55,500 --> 00:01:00,493
+Agent Lens gives us the complete conversation and trace. We can follow
+
+15
+00:01:00,493 --> 00:01:05,487
+the request through planning and rendering to the final PNG, and inspect
+
+16
+00:01:05,487 --> 00:01:10,480
+which model produced it. This separates execution problems from visual quality problems.
+
+17
+00:01:10,480 --> 00:01:15,474
+Our saved image evaluations check character similarity and requested details; a successful
+
+18
+00:01:15,474 --> 00:01:20,467
+render alone is not enough. The trace gives us the context we
+
+19
+00:01:20,467 --> 00:01:22,964
+need to investigate and curate examples.
+
+20
+00:01:24,083 --> 00:01:29,420
+For this iteration, we collected and reviewed teacher examples from GPT six
+
+21
+00:01:29,420 --> 00:01:34,758
+point one Sol. This dataset contains nine hundred and eleven trajectories, including
+
+22
+00:01:34,758 --> 00:01:40,095
+the request, planning, drawing tool arguments, tool results, and final response. Keeping
+
+23
+00:01:40,095 --> 00:01:45,432
+the trajectory matters: the student must learn how to construct the scene,
+
+24
+00:01:45,432 --> 00:01:50,769
+not just write a caption. These reviews include automated and assistant review.
+
+25
+00:01:50,769 --> 00:01:55,661
+The separate blinded human confirmation queue has not yet been completed.
+
+26
+00:01:56,792 --> 00:02:01,466
+Forge Post Training connects that dataset to managed distillation. Our student is
+
+27
+00:02:01,466 --> 00:02:06,140
+Qwen three point eight, twenty seven B. The selected run trains all
+
+28
+00:02:06,140 --> 00:02:10,814
+assistant turns for one epoch, with batch size two and learning rate
+
+29
+00:02:10,814 --> 00:02:15,488
+zero point zero zero zero one. The dataset, training run, and versioned
+
+30
+00:02:15,488 --> 00:02:20,162
+checkpoint stay linked. We also tested three epochs and a reinforcement learning
+
+31
+00:02:20,162 --> 00:02:24,836
+update. Neither beat the selected checkpoint on aggregate validation passes. Each experiment
+
+32
+00:02:24,836 --> 00:02:27,952
+has to earn its place in the app.
+
+33
+00:02:29,083 --> 00:02:34,594
+On forty eight validation prompts, base Qwen passed seventeen. The one epoch
+
+34
+00:02:34,594 --> 00:02:40,104
+student passed thirty: an increase from thirty five point four to sixty
+
+35
+00:02:40,104 --> 00:02:45,614
+two point five percent. Three epochs passed twenty seven; reinforcement learning matched
+
+36
+00:02:45,614 --> 00:02:51,125
+thirty. We compare requirement coverage, character similarity, render validity, and latency. This
+
+37
+00:02:51,125 --> 00:02:56,635
+is a measured improvement, with failures still remaining. It does not establish
+
+38
+00:02:56,635 --> 00:03:02,145
+Sol parity: that historical reference used different runtime settings. Human confirmation remains
+
+39
+00:03:02,145 --> 00:03:03,523
+the next check.
+
+40
+00:03:04,625 --> 00:03:09,286
+Return to the airport example. The fine tuned checkpoint now produces a
+
+41
+00:03:09,286 --> 00:03:13,946
+recognizable airplane behind Bufo, along with the batons and smaller observer. Its
+
+42
+00:03:13,946 --> 00:03:18,607
+saved verdict passes. This example makes the improvement visible, while the full
+
+43
+00:03:18,607 --> 00:03:23,268
+evaluation tells us how broadly it holds. Both the drawing and the
+
+44
+00:03:23,268 --> 00:03:27,929
+trace remain available, so we can challenge the score instead of taking
+
+45
+00:03:27,929 --> 00:03:29,094
+it on faith.
+
+46
+00:03:30,208 --> 00:03:35,131
+Back in Bufo, the fine tuned model is available alongside the baseline,
+
+47
+00:03:35,131 --> 00:03:40,054
+using its exact model name. We can try scenes and keep refining
+
+48
+00:03:40,054 --> 00:03:44,977
+the conversation. New failures give us the next examples to investigate. That
+
+49
+00:03:44,977 --> 00:03:49,900
+is how this project uses Forge: run the app, observe its behavior,
+
+50
+00:03:49,900 --> 00:03:54,822
+curate useful trajectories, improve the model, and evaluate the result before advancing
+
+51
+00:03:54,822 --> 00:03:59,745
+it. The loop stays grounded in the image the user actually receives.

@@ -1,0 +1,17 @@
+# Normalize line endings; sources are LF everywhere.
+* text=auto eol=lf
+
+*.py    text diff=python
+*.svg   text
+*.yaml  text
+*.jsonl text
+
+# Binary assets
+*.png   binary
+*.jpg   binary
+*.webp  binary
+*.ttf   binary
+*.wandb binary
+
+# Lockfile: machine-generated, collapse in code review.
+uv.lock linguist-generated=true

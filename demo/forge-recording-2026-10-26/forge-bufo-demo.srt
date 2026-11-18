@@ -1,0 +1,167 @@
+1
+00:00:00,500 --> 00:00:05,631
+This is Bufo, an agent that creates new scenes around a recognizable
+
+2
+00:00:05,631 --> 00:00:10,761
+frog character. The demo follows the AI loop in CoreWeave Forge: run,
+
+3
+00:00:10,761 --> 00:00:15,892
+observe, curate, improve, and evaluate. We will use recorded validation conversations and
+
+4
+00:00:15,892 --> 00:00:21,022
+real training results to show what improved, and what still needs work.
+
+5
+00:00:22,125 --> 00:00:27,143
+Start with this baseline conversation. The request includes two orange signal batons,
+
+6
+00:00:27,143 --> 00:00:32,160
+an airplane behind Bufo, and a smaller observer on the right. The
+
+7
+00:00:32,160 --> 00:00:37,178
+trace preserves the prompt, planning and rendering tools, final response, and generated
+
+8
+00:00:37,178 --> 00:00:42,196
+image. The image renders successfully, but the saved visual judge finds that
+
+9
+00:00:42,196 --> 00:00:47,213
+the airplane is not clearly established. A successful tool call is not
+
+10
+00:00:47,213 --> 00:00:49,722
+the same as a successful task.
+
+11
+00:00:50,833 --> 00:00:55,419
+Now open the same prompt from the one epoch fine tuned Qwen
+
+12
+00:00:55,419 --> 00:01:00,005
+checkpoint. Its saved verdict passes. We can inspect the actual image and
+
+13
+00:01:00,005 --> 00:01:04,591
+tool sequence, rather than relying on a friendly final sentence. This pair
+
+14
+00:01:04,591 --> 00:01:09,177
+makes the behavior change concrete. It is an illustrative example; the full
+
+15
+00:01:09,177 --> 00:01:11,852
+validation cohort is what measures the improvement.
+
+16
+00:01:12,958 --> 00:01:18,377
+The shared training dataset contains nine hundred and eleven reviewed teacher trajectories
+
+17
+00:01:18,377 --> 00:01:23,796
+from GPT six point one Sol. Each example retains the user request,
+
+18
+00:01:23,796 --> 00:01:29,215
+planning tool, drawing tool arguments, tool results, and final response. Training uses
+
+19
+00:01:29,215 --> 00:01:34,634
+all assistant turns, so the model learns the behavior that produces the
+
+20
+00:01:34,634 --> 00:01:40,052
+drawing, not just its caption. Human annotation queues provide a separate review
+
+21
+00:01:40,052 --> 00:01:44,117
+step; the blinded confirmation queue remains reserved for evaluation.
+
+22
+00:01:45,250 --> 00:01:49,882
+In Forge Post Training, the deployed student is Qwen three point eight,
+
+23
+00:01:49,882 --> 00:01:54,514
+twenty seven B. This job uses one epoch, batch size two, and
+
+24
+00:01:54,514 --> 00:01:59,146
+a learning rate of zero point zero zero zero one. The page
+
+25
+00:01:59,146 --> 00:02:03,779
+connects the training dataset, Weights and Biases run, and immutable version one
+
+26
+00:02:03,779 --> 00:02:08,411
+model artifact. A separate three epoch experiment lets us test whether more
+
+27
+00:02:08,411 --> 00:02:09,569
+training actually helps.
+
+28
+00:02:10,708 --> 00:02:16,042
+Here is the saved image evaluation comparison. On the same forty eight
+
+29
+00:02:16,042 --> 00:02:21,376
+validation prompts, base Qwen passes seventeen, while the one epoch student passes
+
+30
+00:02:21,376 --> 00:02:26,709
+thirty: thirty five point four percent to sixty two point five percent.
+
+31
+00:02:26,709 --> 00:02:32,043
+The three epoch student passes twenty seven, so additional epochs do not
+
+32
+00:02:32,043 --> 00:02:37,377
+win this comparison. We inspect requirement coverage, character similarity, render validity, and
+
+33
+00:02:37,377 --> 00:02:42,710
+latency together. These are validation results, not a final release claim. The
+
+34
+00:02:42,710 --> 00:02:48,044
+historical Sol reference used different runtime settings, so this does not establish
+
+35
+00:02:48,044 --> 00:02:48,933
+Sol parity.
+
+36
+00:02:50,042 --> 00:02:55,459
+Routing connects the candidate back to serving. The Qwen target now uses
+
+37
+00:02:55,459 --> 00:03:00,876
+temperature zero point seven, twenty thousand tokens, and thinking enabled, matching the
+
+38
+00:03:00,876 --> 00:03:06,294
+recorded generation settings. Conversation identity keeps related requests together, and trace sampling
+
+39
+00:03:06,294 --> 00:03:11,711
+is set to one hundred percent. The traffic weights are preserved. A
+
+40
+00:03:11,711 --> 00:03:17,128
+fresh proxy smoke test, verified pricing, and final human confirmation are still
+
+41
+00:03:17,128 --> 00:03:22,546
+pending. The result is a connected improvement workflow, with evidence guiding the
+
+42
+00:03:22,546 --> 00:03:23,449
+next iteration.

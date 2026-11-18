@@ -1,0 +1,13 @@
+{
+  "python_tests": 1073,
+  "javascript_tests": 8,
+  "changed_files_ruff": "passed",
+  "repository_ruff": "152 findings outside changed files",
+  "notebook_check": "passed",
+  "notebook_script": "passed",
+  "browser_comparison": "rendered in Chrome",
+  "live_publication": "failed: wandb-core service startup; MCP credentials rejected; shell DNS unavailable",
+  "fresh_inference_e2e": "not run: network blocked",
+  "routing_changed": false,
+  "registry_promoted": false
+}

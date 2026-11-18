@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 176">
+  <defs>
+    <linearGradient id="bufo-neck-fade" x1="0" y1="104" x2="0" y2="128" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="white"/><stop offset="1" stop-color="black"/></linearGradient>
+    <mask id="bufo-neck-blend" maskUnits="userSpaceOnUse" x="0" y="0" width="128" height="128"><rect width="128" height="128" fill="url(#bufo-neck-fade)"/></mask>
+  </defs>
+  <path d="M3 82 C18 75 87 77 106 85 C109 105 119 122 115 139 C114 149 105 158 103 163 C106 166 117 169 117 173 Q116 175 107 175 L82 175 Q74 174 77 166 L80 151 Q64 157 43 151 L38 167 Q39 175 30 175 L5 175 Q0 174 3 170 L19 161 Q9 148 5 136 C0 121 1 97 3 82Z" fill="#577143" stroke="#303F21" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M23 91 C49 83 91 85 102 97 C107 111 112 127 101 140 C89 155 45 156 26 141 C14 131 13 107 23 91Z" fill="#73895A"/>
+  <use href="#bufo-character" mask="url(#bufo-neck-blend)"/>
+</svg>

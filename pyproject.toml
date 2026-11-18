@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cw-bufo-gen"
+version = "0.1.0"
+description = "CoreWeave Forge AI loop for themed SVG bufos"
+requires-python = ">=3.12"
+dependencies = [
+  "openai-agents>=0.4", "weave==0.53.11", "wandb==0.30.0", "cwsandbox[wandb]==1.18.0",
+  # Weave's HTTP exporter requires OTel <1.45; keep its API and SDK aligned.
+  "opentelemetry-api==1.44.0", "opentelemetry-sdk==1.44.0",
+  "opentelemetry-exporter-otlp-proto-http==1.44.0",
+  "pillow>=11", "pyyaml>=6", "numpy>=2", "python-dotenv>=1",
+  "fastapi>=0.115", "uvicorn>=0.34", "httpx>=0.28", "vtracer>=0.6",
+]
+
+[project.optional-dependencies]
+clip = ["torch>=2.6", "transformers>=4.51"]
+rl = ["openpipe-art==0.5.20", "pyarrow==26.0.0", "transformers==5.19.0"]
+
+[tool.uv.sources]
+# PyPI 0.5.20 predates Dynamo's exact training-token metadata support (ART #934).
+openpipe-art = { git = "https://github.com/OpenPipe/ART.git", rev = "45a17cbd2a85cc0333172e652fc1211c6ae3f3da" }
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.25", "ruff>=0.11", "resvg-py==0.5.0"]
+
+[project.scripts]
+bufogen = "bufogen.cli:main"
+bufo-studio = "bufogen.app.ui:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bufogen"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

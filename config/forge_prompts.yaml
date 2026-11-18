@@ -1,0 +1,1376 @@
+# Frozen family-partitioned benchmark definition. No outputs or review labels.
+- id: train-concert_stage-01
+  family: concert_stage
+  split: train
+  prompt: Draw full-body Bufo singing at a concert, gripping a microphone at his mouth, wearing a fitted
+    blue jacket. Include two stage spotlights and a small audience below the stage.
+  requirements:
+  - Bufo is full-body with both feet visible
+  - One hand visibly grips a microphone at his mouth
+  - Blue jacket is attached to torso and sleeves align with arms
+  - Two spotlights illuminate the stage
+  - An audience sits below the stage
+- id: train-f1_presentation-01
+  family: f1_presentation
+  split: train
+  prompt: Draw Bufo giving a Formula 1 presentation in a blue team polo. His hand grips a pointer that
+    touches a red Formula 1 car on a screen to his right. Keep his whole body visible and put F1 at the
+    top of the screen.
+  requirements:
+  - Bufo has a blue polo attached to his torso
+  - Hand visibly grips a pointer
+  - Pointer tip touches the red Formula 1 car on the screen
+  - Screen is to the viewer right of Bufo
+  - Both feet are visible
+  - Screen title reads F1
+- id: train-concert_stage-02
+  family: concert_stage
+  split: train
+  prompt: Move the microphone into Bufo’s left hand, keep it at his mouth, and add a guitar held across
+    his chest. Preserve the blue jacket, stage and spotlights.
+  requirements:
+  - Microphone is held in Bufo’s left hand at his mouth
+  - Guitar crosses the chest and is held by the other hand
+  - Blue jacket remains attached to his torso
+  - Stage and two spotlights remain visible
+  turns:
+  - Draw full-body Bufo singing on a stage with a microphone, blue jacket and two spotlights.
+- id: train-f1_presentation-02
+  family: f1_presentation
+  split: train
+  prompt: Make Bufo point with his bare hand directly at the front wheel of the red car, remove the pointer
+    stick, and preserve the screen title F1 and blue polo.
+  requirements:
+  - Bare hand touches the front wheel of the red car on the screen
+  - No pointer stick is visible
+  - Screen title is F1
+  - Blue polo remains attached to Bufo
+  turns:
+  - Draw Bufo in a blue polo presenting a red F1 car on a screen using a pointer.
+- id: train-gpu_garden-01
+  family: gpu_garden
+  split: train
+  prompt: Draw Bufo watering exactly three GPU seedlings with a blue can, with water flowing from its
+    spout onto the middle seedling.
+  requirements:
+  - Exactly three GPU seedlings are visible
+  - Bufo grips a blue watering can
+  - Water originates at the spout and reaches the middle seedling
+- id: train-office_coffee-01
+  family: office_coffee
+  split: train
+  prompt: Draw Bufo sitting at a desk and holding a blue coffee mug by its handle, next to a laptop marked
+    GPU.
+  requirements:
+  - Bufo is seated at a desk
+  - Hand contacts the blue mug handle
+  - Laptop text reads GPU
+- id: train-skate_park-01
+  family: skate_park
+  split: train
+  prompt: Draw Bufo balancing with both feet on a blue skateboard over a small ramp, arms out.
+  requirements:
+  - Both feet contact the skateboard
+  - Skateboard is blue and above a ramp
+  - Both arms are spread
+- id: train-pizza_kitchen-01
+  family: pizza_kitchen
+  split: train
+  prompt: Draw Two Bufos share one pizza; the left Bufo lifts a slice with a visible cheese strand connecting
+    to the remaining pizza.
+  requirements:
+  - Exactly two Bufos are visible
+  - Left Bufo grips one pizza slice
+  - Cheese strand connects slice to the remaining pizza
+- id: train-basketball_court-01
+  family: basketball_court
+  split: train
+  prompt: Draw Bufo dribbling an orange ball with one hand on a basketball court, wearing a blue jersey.
+  requirements:
+  - One hand contacts an orange basketball below the waist
+  - Court lines are visible
+  - Blue jersey attaches to torso
+- id: train-workshop_repair-01
+  family: workshop_repair
+  split: train
+  prompt: Draw Bufo tightening a bolt on a blue robot with a wrench, fully visible beside the workbench.
+  requirements:
+  - Wrench touches a bolt on a blue robot
+  - Hand grips the wrench
+  - Bufo is full-body beside a workbench
+- id: train-rainy_commute-01
+  family: rainy_commute
+  split: train
+  prompt: Draw Small Bufo under a blue umbrella in the lower left of a rainy city scene, holding the umbrella
+    shaft.
+  requirements:
+  - Bufo occupies less than one third of image height
+  - Bufo is at lower left
+  - Hand grips shaft of a blue umbrella above his head
+  - Rain and city buildings appear
+- id: train-video_call-01
+  family: video_call
+  split: train
+  prompt: Draw Bufo appears behind a laptop with only head and shoulders visible; screen has the exact
+    label HELLO.
+  requirements:
+  - Only head and shoulders of Bufo are visible behind laptop
+  - Laptop label reads HELLO
+  - No detached hands or limbs are visible
+- id: heldout-orchard_harvest-01
+  family: orchard_harvest
+  split: heldout
+  prompt: Draw Bufo in an apple orchard. Bufo picks a red apple from a branch, with a blue fruit basket
+    clearly visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand touches a red apple still on its branch
+  - The fruit basket is blue
+  - The setting is visibly in an apple orchard
+  - Whole body and both feet fit inside the frame
+- id: heldout-orchard_harvest-02
+  family: orchard_harvest
+  split: heldout
+  prompt: Draw Bufo in an apple orchard. Bufo picks a red apple from a branch, with a blue fruit basket
+    clearly visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand touches a red apple still on its branch
+  - The fruit basket is blue
+  - The setting is visibly in an apple orchard
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-orchard_harvest-03
+  family: orchard_harvest
+  split: heldout
+  prompt: Draw Bufo in an apple orchard. Bufo picks a red apple from a branch, with a blue fruit basket
+    clearly visible. Place a low foreground railing across the waist, obscuring the legs; keep the face
+    and working hands unobscured.
+  requirements:
+  - Hand touches a red apple still on its branch
+  - The fruit basket is blue
+  - The setting is visibly in an apple orchard
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-orchard_harvest-04
+  family: orchard_harvest
+  split: heldout
+  prompt: Draw Bufo in an apple orchard. Bufo picks a red apple from a branch, with a blue fruit basket
+    clearly visible. Show Bufo at less than one third of the image height, on the viewer left. A large
+    sign at the top reads OPEN.
+  requirements:
+  - Hand touches a red apple still on its branch
+  - The fruit basket is blue
+  - The setting is visibly in an apple orchard
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-orchard_harvest-05
+  family: orchard_harvest
+  split: heldout
+  prompt: Keep Bufo in an apple orchard doing the same action. Change the fruit basket to red, move Bufo
+    to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand touches a red apple still on its branch
+  - The fruit basket is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in an apple orchard
+  turns:
+  - Draw Bufo in an apple orchard. Bufo picks a red apple from a branch, with a blue fruit basket clearly
+    visible. Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-lighthouse_keeper-01
+  family: lighthouse_keeper
+  split: heldout
+  prompt: Draw Bufo inside a lighthouse. Bufo turns a lamp crank, with a blue lantern clearly visible.
+    Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand grips a crank attached to the lamp
+  - The lantern is blue
+  - The setting is visibly inside a lighthouse
+  - Whole body and both feet fit inside the frame
+- id: heldout-lighthouse_keeper-02
+  family: lighthouse_keeper
+  split: heldout
+  prompt: Draw Bufo inside a lighthouse. Bufo turns a lamp crank, with a blue lantern clearly visible.
+    Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand grips a crank attached to the lamp
+  - The lantern is blue
+  - The setting is visibly inside a lighthouse
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-lighthouse_keeper-03
+  family: lighthouse_keeper
+  split: heldout
+  prompt: Draw Bufo inside a lighthouse. Bufo turns a lamp crank, with a blue lantern clearly visible.
+    Place a low foreground railing across the waist, obscuring the legs; keep the face and working hands
+    unobscured.
+  requirements:
+  - Hand grips a crank attached to the lamp
+  - The lantern is blue
+  - The setting is visibly inside a lighthouse
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-lighthouse_keeper-04
+  family: lighthouse_keeper
+  split: heldout
+  prompt: Draw Bufo inside a lighthouse. Bufo turns a lamp crank, with a blue lantern clearly visible.
+    Show Bufo at less than one third of the image height, on the viewer left. A large sign at the top
+    reads OPEN.
+  requirements:
+  - Hand grips a crank attached to the lamp
+  - The lantern is blue
+  - The setting is visibly inside a lighthouse
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-lighthouse_keeper-05
+  family: lighthouse_keeper
+  split: heldout
+  prompt: Keep Bufo inside a lighthouse doing the same action. Change the lantern to red, move Bufo to
+    the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand grips a crank attached to the lamp
+  - The lantern is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly inside a lighthouse
+  turns:
+  - Draw Bufo inside a lighthouse. Bufo turns a lamp crank, with a blue lantern clearly visible. Put Bufo
+    on the viewer left and include a sign that reads OPEN.
+- id: heldout-underwater_diver-01
+  family: underwater_diver
+  split: heldout
+  prompt: Draw Bufo underwater beside coral. Bufo holds an air hose to a diving mask, with a blue oxygen
+    tank clearly visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hose connects the hand and diving mask
+  - The oxygen tank is blue
+  - The setting is visibly underwater beside coral
+  - Whole body and both feet fit inside the frame
+- id: heldout-underwater_diver-02
+  family: underwater_diver
+  split: heldout
+  prompt: Draw Bufo underwater beside coral. Bufo holds an air hose to a diving mask, with a blue oxygen
+    tank clearly visible. Add a second Bufo watching from the viewer right; only the first performs the
+    action.
+  requirements:
+  - Hose connects the hand and diving mask
+  - The oxygen tank is blue
+  - The setting is visibly underwater beside coral
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-underwater_diver-03
+  family: underwater_diver
+  split: heldout
+  prompt: Draw Bufo underwater beside coral. Bufo holds an air hose to a diving mask, with a blue oxygen
+    tank clearly visible. Place a low foreground railing across the waist, obscuring the legs; keep the
+    face and working hands unobscured.
+  requirements:
+  - Hose connects the hand and diving mask
+  - The oxygen tank is blue
+  - The setting is visibly underwater beside coral
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-underwater_diver-04
+  family: underwater_diver
+  split: heldout
+  prompt: Draw Bufo underwater beside coral. Bufo holds an air hose to a diving mask, with a blue oxygen
+    tank clearly visible. Show Bufo at less than one third of the image height, on the viewer left. A
+    large sign at the top reads OPEN.
+  requirements:
+  - Hose connects the hand and diving mask
+  - The oxygen tank is blue
+  - The setting is visibly underwater beside coral
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-underwater_diver-05
+  family: underwater_diver
+  split: heldout
+  prompt: Keep Bufo underwater beside coral doing the same action. Change the oxygen tank to red, move
+    Bufo to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hose connects the hand and diving mask
+  - The oxygen tank is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly underwater beside coral
+  turns:
+  - Draw Bufo underwater beside coral. Bufo holds an air hose to a diving mask, with a blue oxygen tank
+    clearly visible. Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-courtroom_clerk-01
+  family: courtroom_clerk
+  split: heldout
+  prompt: Draw Bufo in a courtroom. Bufo stamps a paper on a desk, with a blue case folder clearly visible.
+    Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand grips a stamp that touches paper
+  - The case folder is blue
+  - The setting is visibly in a courtroom
+  - Whole body and both feet fit inside the frame
+- id: heldout-courtroom_clerk-02
+  family: courtroom_clerk
+  split: heldout
+  prompt: Draw Bufo in a courtroom. Bufo stamps a paper on a desk, with a blue case folder clearly visible.
+    Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand grips a stamp that touches paper
+  - The case folder is blue
+  - The setting is visibly in a courtroom
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-courtroom_clerk-03
+  family: courtroom_clerk
+  split: heldout
+  prompt: Draw Bufo in a courtroom. Bufo stamps a paper on a desk, with a blue case folder clearly visible.
+    Place a low foreground railing across the waist, obscuring the legs; keep the face and working hands
+    unobscured.
+  requirements:
+  - Hand grips a stamp that touches paper
+  - The case folder is blue
+  - The setting is visibly in a courtroom
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-courtroom_clerk-04
+  family: courtroom_clerk
+  split: heldout
+  prompt: Draw Bufo in a courtroom. Bufo stamps a paper on a desk, with a blue case folder clearly visible.
+    Show Bufo at less than one third of the image height, on the viewer left. A large sign at the top
+    reads OPEN.
+  requirements:
+  - Hand grips a stamp that touches paper
+  - The case folder is blue
+  - The setting is visibly in a courtroom
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-courtroom_clerk-05
+  family: courtroom_clerk
+  split: heldout
+  prompt: Keep Bufo in a courtroom doing the same action. Change the case folder to red, move Bufo to
+    the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand grips a stamp that touches paper
+  - The case folder is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in a courtroom
+  turns:
+  - Draw Bufo in a courtroom. Bufo stamps a paper on a desk, with a blue case folder clearly visible.
+    Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-pottery_studio-01
+  family: pottery_studio
+  split: heldout
+  prompt: Draw Bufo at a pottery wheel. Bufo shapes a clay bowl, with a blue apron clearly visible. Show
+    the whole body, with feet fully inside the frame.
+  requirements:
+  - Both hands touch the clay bowl on the wheel
+  - The apron is blue
+  - The setting is visibly at a pottery wheel
+  - Whole body and both feet fit inside the frame
+- id: heldout-pottery_studio-02
+  family: pottery_studio
+  split: heldout
+  prompt: Draw Bufo at a pottery wheel. Bufo shapes a clay bowl, with a blue apron clearly visible. Add
+    a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Both hands touch the clay bowl on the wheel
+  - The apron is blue
+  - The setting is visibly at a pottery wheel
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-pottery_studio-03
+  family: pottery_studio
+  split: heldout
+  prompt: Draw Bufo at a pottery wheel. Bufo shapes a clay bowl, with a blue apron clearly visible. Place
+    a low foreground railing across the waist, obscuring the legs; keep the face and working hands unobscured.
+  requirements:
+  - Both hands touch the clay bowl on the wheel
+  - The apron is blue
+  - The setting is visibly at a pottery wheel
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-pottery_studio-04
+  family: pottery_studio
+  split: heldout
+  prompt: Draw Bufo at a pottery wheel. Bufo shapes a clay bowl, with a blue apron clearly visible. Show
+    Bufo at less than one third of the image height, on the viewer left. A large sign at the top reads
+    OPEN.
+  requirements:
+  - Both hands touch the clay bowl on the wheel
+  - The apron is blue
+  - The setting is visibly at a pottery wheel
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-pottery_studio-05
+  family: pottery_studio
+  split: heldout
+  prompt: Keep Bufo at a pottery wheel doing the same action. Change the apron to red, move Bufo to the
+    viewer right, and remove the OPEN sign.
+  requirements:
+  - Both hands touch the clay bowl on the wheel
+  - The apron is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly at a pottery wheel
+  turns:
+  - Draw Bufo at a pottery wheel. Bufo shapes a clay bowl, with a blue apron clearly visible. Put Bufo
+    on the viewer left and include a sign that reads OPEN.
+- id: heldout-geology_fieldwork-01
+  family: geology_fieldwork
+  split: heldout
+  prompt: Draw Bufo beside a rocky outcrop. Bufo chips a rock with a hammer, with a blue sample bag clearly
+    visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand grips a hammer whose head touches the rock
+  - The sample bag is blue
+  - The setting is visibly beside a rocky outcrop
+  - Whole body and both feet fit inside the frame
+- id: heldout-geology_fieldwork-02
+  family: geology_fieldwork
+  split: heldout
+  prompt: Draw Bufo beside a rocky outcrop. Bufo chips a rock with a hammer, with a blue sample bag clearly
+    visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand grips a hammer whose head touches the rock
+  - The sample bag is blue
+  - The setting is visibly beside a rocky outcrop
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-geology_fieldwork-03
+  family: geology_fieldwork
+  split: heldout
+  prompt: Draw Bufo beside a rocky outcrop. Bufo chips a rock with a hammer, with a blue sample bag clearly
+    visible. Place a low foreground railing across the waist, obscuring the legs; keep the face and working
+    hands unobscured.
+  requirements:
+  - Hand grips a hammer whose head touches the rock
+  - The sample bag is blue
+  - The setting is visibly beside a rocky outcrop
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-geology_fieldwork-04
+  family: geology_fieldwork
+  split: heldout
+  prompt: Draw Bufo beside a rocky outcrop. Bufo chips a rock with a hammer, with a blue sample bag clearly
+    visible. Show Bufo at less than one third of the image height, on the viewer left. A large sign at
+    the top reads OPEN.
+  requirements:
+  - Hand grips a hammer whose head touches the rock
+  - The sample bag is blue
+  - The setting is visibly beside a rocky outcrop
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-geology_fieldwork-05
+  family: geology_fieldwork
+  split: heldout
+  prompt: Keep Bufo beside a rocky outcrop doing the same action. Change the sample bag to red, move Bufo
+    to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand grips a hammer whose head touches the rock
+  - The sample bag is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly beside a rocky outcrop
+  turns:
+  - Draw Bufo beside a rocky outcrop. Bufo chips a rock with a hammer, with a blue sample bag clearly
+    visible. Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-chess_tournament-01
+  family: chess_tournament
+  split: heldout
+  prompt: Draw Bufo at a chess table. Bufo moves a white knight, with a blue chess clock clearly visible.
+    Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Fingertips touch a white knight above a chess square
+  - The chess clock is blue
+  - The setting is visibly at a chess table
+  - Whole body and both feet fit inside the frame
+- id: heldout-chess_tournament-02
+  family: chess_tournament
+  split: heldout
+  prompt: Draw Bufo at a chess table. Bufo moves a white knight, with a blue chess clock clearly visible.
+    Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Fingertips touch a white knight above a chess square
+  - The chess clock is blue
+  - The setting is visibly at a chess table
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-chess_tournament-03
+  family: chess_tournament
+  split: heldout
+  prompt: Draw Bufo at a chess table. Bufo moves a white knight, with a blue chess clock clearly visible.
+    Place a low foreground railing across the waist, obscuring the legs; keep the face and working hands
+    unobscured.
+  requirements:
+  - Fingertips touch a white knight above a chess square
+  - The chess clock is blue
+  - The setting is visibly at a chess table
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-chess_tournament-04
+  family: chess_tournament
+  split: heldout
+  prompt: Draw Bufo at a chess table. Bufo moves a white knight, with a blue chess clock clearly visible.
+    Show Bufo at less than one third of the image height, on the viewer left. A large sign at the top
+    reads OPEN.
+  requirements:
+  - Fingertips touch a white knight above a chess square
+  - The chess clock is blue
+  - The setting is visibly at a chess table
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-chess_tournament-05
+  family: chess_tournament
+  split: heldout
+  prompt: Keep Bufo at a chess table doing the same action. Change the chess clock to red, move Bufo to
+    the viewer right, and remove the OPEN sign.
+  requirements:
+  - Fingertips touch a white knight above a chess square
+  - The chess clock is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly at a chess table
+  turns:
+  - Draw Bufo at a chess table. Bufo moves a white knight, with a blue chess clock clearly visible. Put
+    Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-library_shelving-01
+  family: library_shelving
+  split: heldout
+  prompt: Draw Bufo in a library. Bufo slides a book onto a shelf, with a blue book cart clearly visible.
+    Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand touches a book partially inserted into a shelf
+  - The book cart is blue
+  - The setting is visibly in a library
+  - Whole body and both feet fit inside the frame
+- id: heldout-library_shelving-02
+  family: library_shelving
+  split: heldout
+  prompt: Draw Bufo in a library. Bufo slides a book onto a shelf, with a blue book cart clearly visible.
+    Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand touches a book partially inserted into a shelf
+  - The book cart is blue
+  - The setting is visibly in a library
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-library_shelving-03
+  family: library_shelving
+  split: heldout
+  prompt: Draw Bufo in a library. Bufo slides a book onto a shelf, with a blue book cart clearly visible.
+    Place a low foreground railing across the waist, obscuring the legs; keep the face and working hands
+    unobscured.
+  requirements:
+  - Hand touches a book partially inserted into a shelf
+  - The book cart is blue
+  - The setting is visibly in a library
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-library_shelving-04
+  family: library_shelving
+  split: heldout
+  prompt: Draw Bufo in a library. Bufo slides a book onto a shelf, with a blue book cart clearly visible.
+    Show Bufo at less than one third of the image height, on the viewer left. A large sign at the top
+    reads OPEN.
+  requirements:
+  - Hand touches a book partially inserted into a shelf
+  - The book cart is blue
+  - The setting is visibly in a library
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-library_shelving-05
+  family: library_shelving
+  split: heldout
+  prompt: Keep Bufo in a library doing the same action. Change the book cart to red, move Bufo to the
+    viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand touches a book partially inserted into a shelf
+  - The book cart is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in a library
+  turns:
+  - Draw Bufo in a library. Bufo slides a book onto a shelf, with a blue book cart clearly visible. Put
+    Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-fire_station-01
+  family: fire_station
+  split: heldout
+  prompt: Draw Bufo outside a fire station. Bufo aims a water hose, with a blue helmet clearly visible.
+    Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hands hold the hose nozzle and water emerges from it
+  - The helmet is blue
+  - The setting is visibly outside a fire station
+  - Whole body and both feet fit inside the frame
+- id: heldout-fire_station-02
+  family: fire_station
+  split: heldout
+  prompt: Draw Bufo outside a fire station. Bufo aims a water hose, with a blue helmet clearly visible.
+    Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hands hold the hose nozzle and water emerges from it
+  - The helmet is blue
+  - The setting is visibly outside a fire station
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-fire_station-03
+  family: fire_station
+  split: heldout
+  prompt: Draw Bufo outside a fire station. Bufo aims a water hose, with a blue helmet clearly visible.
+    Place a low foreground railing across the waist, obscuring the legs; keep the face and working hands
+    unobscured.
+  requirements:
+  - Hands hold the hose nozzle and water emerges from it
+  - The helmet is blue
+  - The setting is visibly outside a fire station
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-fire_station-04
+  family: fire_station
+  split: heldout
+  prompt: Draw Bufo outside a fire station. Bufo aims a water hose, with a blue helmet clearly visible.
+    Show Bufo at less than one third of the image height, on the viewer left. A large sign at the top
+    reads OPEN.
+  requirements:
+  - Hands hold the hose nozzle and water emerges from it
+  - The helmet is blue
+  - The setting is visibly outside a fire station
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-fire_station-05
+  family: fire_station
+  split: heldout
+  prompt: Keep Bufo outside a fire station doing the same action. Change the helmet to red, move Bufo
+    to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hands hold the hose nozzle and water emerges from it
+  - The helmet is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly outside a fire station
+  turns:
+  - Draw Bufo outside a fire station. Bufo aims a water hose, with a blue helmet clearly visible. Put
+    Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-knitting_circle-01
+  family: knitting_circle
+  split: heldout
+  prompt: Draw Bufo in a knitting room. Bufo knits a scarf, with a blue yarn basket clearly visible. Show
+    the whole body, with feet fully inside the frame.
+  requirements:
+  - Hands hold two needles connected by yarn to the scarf
+  - The yarn basket is blue
+  - The setting is visibly in a knitting room
+  - Whole body and both feet fit inside the frame
+- id: heldout-knitting_circle-02
+  family: knitting_circle
+  split: heldout
+  prompt: Draw Bufo in a knitting room. Bufo knits a scarf, with a blue yarn basket clearly visible. Add
+    a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hands hold two needles connected by yarn to the scarf
+  - The yarn basket is blue
+  - The setting is visibly in a knitting room
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-knitting_circle-03
+  family: knitting_circle
+  split: heldout
+  prompt: Draw Bufo in a knitting room. Bufo knits a scarf, with a blue yarn basket clearly visible. Place
+    a low foreground railing across the waist, obscuring the legs; keep the face and working hands unobscured.
+  requirements:
+  - Hands hold two needles connected by yarn to the scarf
+  - The yarn basket is blue
+  - The setting is visibly in a knitting room
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-knitting_circle-04
+  family: knitting_circle
+  split: heldout
+  prompt: Draw Bufo in a knitting room. Bufo knits a scarf, with a blue yarn basket clearly visible. Show
+    Bufo at less than one third of the image height, on the viewer left. A large sign at the top reads
+    OPEN.
+  requirements:
+  - Hands hold two needles connected by yarn to the scarf
+  - The yarn basket is blue
+  - The setting is visibly in a knitting room
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-knitting_circle-05
+  family: knitting_circle
+  split: heldout
+  prompt: Keep Bufo in a knitting room doing the same action. Change the yarn basket to red, move Bufo
+    to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hands hold two needles connected by yarn to the scarf
+  - The yarn basket is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in a knitting room
+  turns:
+  - Draw Bufo in a knitting room. Bufo knits a scarf, with a blue yarn basket clearly visible. Put Bufo
+    on the viewer left and include a sign that reads OPEN.
+- id: heldout-observatory-01
+  family: observatory
+  split: heldout
+  prompt: Draw Bufo in an observatory. Bufo looks through a telescope eyepiece, with a blue star map clearly
+    visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - One eye meets the telescope eyepiece
+  - The star map is blue
+  - The setting is visibly in an observatory
+  - Whole body and both feet fit inside the frame
+- id: heldout-observatory-02
+  family: observatory
+  split: heldout
+  prompt: Draw Bufo in an observatory. Bufo looks through a telescope eyepiece, with a blue star map clearly
+    visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - One eye meets the telescope eyepiece
+  - The star map is blue
+  - The setting is visibly in an observatory
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-observatory-03
+  family: observatory
+  split: heldout
+  prompt: Draw Bufo in an observatory. Bufo looks through a telescope eyepiece, with a blue star map clearly
+    visible. Place a low foreground railing across the waist, obscuring the legs; keep the face and working
+    hands unobscured.
+  requirements:
+  - One eye meets the telescope eyepiece
+  - The star map is blue
+  - The setting is visibly in an observatory
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-observatory-04
+  family: observatory
+  split: heldout
+  prompt: Draw Bufo in an observatory. Bufo looks through a telescope eyepiece, with a blue star map clearly
+    visible. Show Bufo at less than one third of the image height, on the viewer left. A large sign at
+    the top reads OPEN.
+  requirements:
+  - One eye meets the telescope eyepiece
+  - The star map is blue
+  - The setting is visibly in an observatory
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-observatory-05
+  family: observatory
+  split: heldout
+  prompt: Keep Bufo in an observatory doing the same action. Change the star map to red, move Bufo to
+    the viewer right, and remove the OPEN sign.
+  requirements:
+  - One eye meets the telescope eyepiece
+  - The star map is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in an observatory
+  turns:
+  - Draw Bufo in an observatory. Bufo looks through a telescope eyepiece, with a blue star map clearly
+    visible. Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-beekeeping-01
+  family: beekeeping
+  split: heldout
+  prompt: Draw Bufo beside beehives. Bufo lifts a honeycomb frame, with a blue protective veil clearly
+    visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hands grip opposite edges of one honeycomb frame
+  - The protective veil is blue
+  - The setting is visibly beside beehives
+  - Whole body and both feet fit inside the frame
+- id: heldout-beekeeping-02
+  family: beekeeping
+  split: heldout
+  prompt: Draw Bufo beside beehives. Bufo lifts a honeycomb frame, with a blue protective veil clearly
+    visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hands grip opposite edges of one honeycomb frame
+  - The protective veil is blue
+  - The setting is visibly beside beehives
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-beekeeping-03
+  family: beekeeping
+  split: heldout
+  prompt: Draw Bufo beside beehives. Bufo lifts a honeycomb frame, with a blue protective veil clearly
+    visible. Place a low foreground railing across the waist, obscuring the legs; keep the face and working
+    hands unobscured.
+  requirements:
+  - Hands grip opposite edges of one honeycomb frame
+  - The protective veil is blue
+  - The setting is visibly beside beehives
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-beekeeping-04
+  family: beekeeping
+  split: heldout
+  prompt: Draw Bufo beside beehives. Bufo lifts a honeycomb frame, with a blue protective veil clearly
+    visible. Show Bufo at less than one third of the image height, on the viewer left. A large sign at
+    the top reads OPEN.
+  requirements:
+  - Hands grip opposite edges of one honeycomb frame
+  - The protective veil is blue
+  - The setting is visibly beside beehives
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-beekeeping-05
+  family: beekeeping
+  split: heldout
+  prompt: Keep Bufo beside beehives doing the same action. Change the protective veil to red, move Bufo
+    to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hands grip opposite edges of one honeycomb frame
+  - The protective veil is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly beside beehives
+  turns:
+  - Draw Bufo beside beehives. Bufo lifts a honeycomb frame, with a blue protective veil clearly visible.
+    Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-ferry_dock-01
+  family: ferry_dock
+  split: heldout
+  prompt: Draw Bufo on a ferry dock. Bufo ties a rope to a mooring bollard, with a blue life vest clearly
+    visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand touches a rope wrapped around the bollard
+  - The life vest is blue
+  - The setting is visibly on a ferry dock
+  - Whole body and both feet fit inside the frame
+- id: heldout-ferry_dock-02
+  family: ferry_dock
+  split: heldout
+  prompt: Draw Bufo on a ferry dock. Bufo ties a rope to a mooring bollard, with a blue life vest clearly
+    visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand touches a rope wrapped around the bollard
+  - The life vest is blue
+  - The setting is visibly on a ferry dock
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-ferry_dock-03
+  family: ferry_dock
+  split: heldout
+  prompt: Draw Bufo on a ferry dock. Bufo ties a rope to a mooring bollard, with a blue life vest clearly
+    visible. Place a low foreground railing across the waist, obscuring the legs; keep the face and working
+    hands unobscured.
+  requirements:
+  - Hand touches a rope wrapped around the bollard
+  - The life vest is blue
+  - The setting is visibly on a ferry dock
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-ferry_dock-04
+  family: ferry_dock
+  split: heldout
+  prompt: Draw Bufo on a ferry dock. Bufo ties a rope to a mooring bollard, with a blue life vest clearly
+    visible. Show Bufo at less than one third of the image height, on the viewer left. A large sign at
+    the top reads OPEN.
+  requirements:
+  - Hand touches a rope wrapped around the bollard
+  - The life vest is blue
+  - The setting is visibly on a ferry dock
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-ferry_dock-05
+  family: ferry_dock
+  split: heldout
+  prompt: Keep Bufo on a ferry dock doing the same action. Change the life vest to red, move Bufo to the
+    viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand touches a rope wrapped around the bollard
+  - The life vest is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly on a ferry dock
+  turns:
+  - Draw Bufo on a ferry dock. Bufo ties a rope to a mooring bollard, with a blue life vest clearly visible.
+    Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-archeology_dig-01
+  family: archeology_dig
+  split: heldout
+  prompt: Draw Bufo at an archaeological dig. Bufo brushes a half-buried pot, with a blue tool satchel
+    clearly visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Held brush bristles touch the pot
+  - The tool satchel is blue
+  - The setting is visibly at an archaeological dig
+  - Whole body and both feet fit inside the frame
+- id: heldout-archeology_dig-02
+  family: archeology_dig
+  split: heldout
+  prompt: Draw Bufo at an archaeological dig. Bufo brushes a half-buried pot, with a blue tool satchel
+    clearly visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Held brush bristles touch the pot
+  - The tool satchel is blue
+  - The setting is visibly at an archaeological dig
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-archeology_dig-03
+  family: archeology_dig
+  split: heldout
+  prompt: Draw Bufo at an archaeological dig. Bufo brushes a half-buried pot, with a blue tool satchel
+    clearly visible. Place a low foreground railing across the waist, obscuring the legs; keep the face
+    and working hands unobscured.
+  requirements:
+  - Held brush bristles touch the pot
+  - The tool satchel is blue
+  - The setting is visibly at an archaeological dig
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-archeology_dig-04
+  family: archeology_dig
+  split: heldout
+  prompt: Draw Bufo at an archaeological dig. Bufo brushes a half-buried pot, with a blue tool satchel
+    clearly visible. Show Bufo at less than one third of the image height, on the viewer left. A large
+    sign at the top reads OPEN.
+  requirements:
+  - Held brush bristles touch the pot
+  - The tool satchel is blue
+  - The setting is visibly at an archaeological dig
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-archeology_dig-05
+  family: archeology_dig
+  split: heldout
+  prompt: Keep Bufo at an archaeological dig doing the same action. Change the tool satchel to red, move
+    Bufo to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Held brush bristles touch the pot
+  - The tool satchel is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly at an archaeological dig
+  turns:
+  - Draw Bufo at an archaeological dig. Bufo brushes a half-buried pot, with a blue tool satchel clearly
+    visible. Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-tailor_shop-01
+  family: tailor_shop
+  split: heldout
+  prompt: Draw Bufo in a tailor shop. Bufo measures a coat with a tape, with a blue pincushion clearly
+    visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hands hold a tape touching the coat
+  - The pincushion is blue
+  - The setting is visibly in a tailor shop
+  - Whole body and both feet fit inside the frame
+- id: heldout-tailor_shop-02
+  family: tailor_shop
+  split: heldout
+  prompt: Draw Bufo in a tailor shop. Bufo measures a coat with a tape, with a blue pincushion clearly
+    visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hands hold a tape touching the coat
+  - The pincushion is blue
+  - The setting is visibly in a tailor shop
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-tailor_shop-03
+  family: tailor_shop
+  split: heldout
+  prompt: Draw Bufo in a tailor shop. Bufo measures a coat with a tape, with a blue pincushion clearly
+    visible. Place a low foreground railing across the waist, obscuring the legs; keep the face and working
+    hands unobscured.
+  requirements:
+  - Hands hold a tape touching the coat
+  - The pincushion is blue
+  - The setting is visibly in a tailor shop
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-tailor_shop-04
+  family: tailor_shop
+  split: heldout
+  prompt: Draw Bufo in a tailor shop. Bufo measures a coat with a tape, with a blue pincushion clearly
+    visible. Show Bufo at less than one third of the image height, on the viewer left. A large sign at
+    the top reads OPEN.
+  requirements:
+  - Hands hold a tape touching the coat
+  - The pincushion is blue
+  - The setting is visibly in a tailor shop
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-tailor_shop-05
+  family: tailor_shop
+  split: heldout
+  prompt: Keep Bufo in a tailor shop doing the same action. Change the pincushion to red, move Bufo to
+    the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hands hold a tape touching the coat
+  - The pincushion is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in a tailor shop
+  turns:
+  - Draw Bufo in a tailor shop. Bufo measures a coat with a tape, with a blue pincushion clearly visible.
+    Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-postal_sorting-01
+  family: postal_sorting
+  split: heldout
+  prompt: Draw Bufo in a post office. Bufo pushes a letter into a mail slot, with a blue mailbag clearly
+    visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand contacts a letter partially inside a mail slot
+  - The mailbag is blue
+  - The setting is visibly in a post office
+  - Whole body and both feet fit inside the frame
+- id: heldout-postal_sorting-02
+  family: postal_sorting
+  split: heldout
+  prompt: Draw Bufo in a post office. Bufo pushes a letter into a mail slot, with a blue mailbag clearly
+    visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand contacts a letter partially inside a mail slot
+  - The mailbag is blue
+  - The setting is visibly in a post office
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-postal_sorting-03
+  family: postal_sorting
+  split: heldout
+  prompt: Draw Bufo in a post office. Bufo pushes a letter into a mail slot, with a blue mailbag clearly
+    visible. Place a low foreground railing across the waist, obscuring the legs; keep the face and working
+    hands unobscured.
+  requirements:
+  - Hand contacts a letter partially inside a mail slot
+  - The mailbag is blue
+  - The setting is visibly in a post office
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-postal_sorting-04
+  family: postal_sorting
+  split: heldout
+  prompt: Draw Bufo in a post office. Bufo pushes a letter into a mail slot, with a blue mailbag clearly
+    visible. Show Bufo at less than one third of the image height, on the viewer left. A large sign at
+    the top reads OPEN.
+  requirements:
+  - Hand contacts a letter partially inside a mail slot
+  - The mailbag is blue
+  - The setting is visibly in a post office
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-postal_sorting-05
+  family: postal_sorting
+  split: heldout
+  prompt: Keep Bufo in a post office doing the same action. Change the mailbag to red, move Bufo to the
+    viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand contacts a letter partially inside a mail slot
+  - The mailbag is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in a post office
+  turns:
+  - Draw Bufo in a post office. Bufo pushes a letter into a mail slot, with a blue mailbag clearly visible.
+    Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-mountain_rescue-01
+  family: mountain_rescue
+  split: heldout
+  prompt: Draw Bufo on a snowy mountain. Bufo clips a rope to a carabiner, with a blue rescue harness
+    clearly visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand touches a carabiner with rope threaded through it
+  - The rescue harness is blue
+  - The setting is visibly on a snowy mountain
+  - Whole body and both feet fit inside the frame
+- id: heldout-mountain_rescue-02
+  family: mountain_rescue
+  split: heldout
+  prompt: Draw Bufo on a snowy mountain. Bufo clips a rope to a carabiner, with a blue rescue harness
+    clearly visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand touches a carabiner with rope threaded through it
+  - The rescue harness is blue
+  - The setting is visibly on a snowy mountain
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-mountain_rescue-03
+  family: mountain_rescue
+  split: heldout
+  prompt: Draw Bufo on a snowy mountain. Bufo clips a rope to a carabiner, with a blue rescue harness
+    clearly visible. Place a low foreground railing across the waist, obscuring the legs; keep the face
+    and working hands unobscured.
+  requirements:
+  - Hand touches a carabiner with rope threaded through it
+  - The rescue harness is blue
+  - The setting is visibly on a snowy mountain
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-mountain_rescue-04
+  family: mountain_rescue
+  split: heldout
+  prompt: Draw Bufo on a snowy mountain. Bufo clips a rope to a carabiner, with a blue rescue harness
+    clearly visible. Show Bufo at less than one third of the image height, on the viewer left. A large
+    sign at the top reads OPEN.
+  requirements:
+  - Hand touches a carabiner with rope threaded through it
+  - The rescue harness is blue
+  - The setting is visibly on a snowy mountain
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-mountain_rescue-05
+  family: mountain_rescue
+  split: heldout
+  prompt: Keep Bufo on a snowy mountain doing the same action. Change the rescue harness to red, move
+    Bufo to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand touches a carabiner with rope threaded through it
+  - The rescue harness is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly on a snowy mountain
+  turns:
+  - Draw Bufo on a snowy mountain. Bufo clips a rope to a carabiner, with a blue rescue harness clearly
+    visible. Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-aquarium_care-01
+  family: aquarium_care
+  split: heldout
+  prompt: Draw Bufo beside an aquarium. Bufo feeds fish from a spoon, with a blue bucket clearly visible.
+    Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand holds a spoon with food falling into aquarium water
+  - The bucket is blue
+  - The setting is visibly beside an aquarium
+  - Whole body and both feet fit inside the frame
+- id: heldout-aquarium_care-02
+  family: aquarium_care
+  split: heldout
+  prompt: Draw Bufo beside an aquarium. Bufo feeds fish from a spoon, with a blue bucket clearly visible.
+    Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand holds a spoon with food falling into aquarium water
+  - The bucket is blue
+  - The setting is visibly beside an aquarium
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-aquarium_care-03
+  family: aquarium_care
+  split: heldout
+  prompt: Draw Bufo beside an aquarium. Bufo feeds fish from a spoon, with a blue bucket clearly visible.
+    Place a low foreground railing across the waist, obscuring the legs; keep the face and working hands
+    unobscured.
+  requirements:
+  - Hand holds a spoon with food falling into aquarium water
+  - The bucket is blue
+  - The setting is visibly beside an aquarium
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-aquarium_care-04
+  family: aquarium_care
+  split: heldout
+  prompt: Draw Bufo beside an aquarium. Bufo feeds fish from a spoon, with a blue bucket clearly visible.
+    Show Bufo at less than one third of the image height, on the viewer left. A large sign at the top
+    reads OPEN.
+  requirements:
+  - Hand holds a spoon with food falling into aquarium water
+  - The bucket is blue
+  - The setting is visibly beside an aquarium
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-aquarium_care-05
+  family: aquarium_care
+  split: heldout
+  prompt: Keep Bufo beside an aquarium doing the same action. Change the bucket to red, move Bufo to the
+    viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand holds a spoon with food falling into aquarium water
+  - The bucket is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly beside an aquarium
+  turns:
+  - Draw Bufo beside an aquarium. Bufo feeds fish from a spoon, with a blue bucket clearly visible. Put
+    Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-museum_restoration-01
+  family: museum_restoration
+  split: heldout
+  prompt: Draw Bufo in an art restoration room. Bufo cleans a framed painting with a brush, with a blue
+    supply tray clearly visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Held brush tip touches the framed painting
+  - The supply tray is blue
+  - The setting is visibly in an art restoration room
+  - Whole body and both feet fit inside the frame
+- id: heldout-museum_restoration-02
+  family: museum_restoration
+  split: heldout
+  prompt: Draw Bufo in an art restoration room. Bufo cleans a framed painting with a brush, with a blue
+    supply tray clearly visible. Add a second Bufo watching from the viewer right; only the first performs
+    the action.
+  requirements:
+  - Held brush tip touches the framed painting
+  - The supply tray is blue
+  - The setting is visibly in an art restoration room
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-museum_restoration-03
+  family: museum_restoration
+  split: heldout
+  prompt: Draw Bufo in an art restoration room. Bufo cleans a framed painting with a brush, with a blue
+    supply tray clearly visible. Place a low foreground railing across the waist, obscuring the legs;
+    keep the face and working hands unobscured.
+  requirements:
+  - Held brush tip touches the framed painting
+  - The supply tray is blue
+  - The setting is visibly in an art restoration room
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-museum_restoration-04
+  family: museum_restoration
+  split: heldout
+  prompt: Draw Bufo in an art restoration room. Bufo cleans a framed painting with a brush, with a blue
+    supply tray clearly visible. Show Bufo at less than one third of the image height, on the viewer left.
+    A large sign at the top reads OPEN.
+  requirements:
+  - Held brush tip touches the framed painting
+  - The supply tray is blue
+  - The setting is visibly in an art restoration room
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-museum_restoration-05
+  family: museum_restoration
+  split: heldout
+  prompt: Keep Bufo in an art restoration room doing the same action. Change the supply tray to red, move
+    Bufo to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Held brush tip touches the framed painting
+  - The supply tray is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in an art restoration room
+  turns:
+  - Draw Bufo in an art restoration room. Bufo cleans a framed painting with a brush, with a blue supply
+    tray clearly visible. Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: heldout-hot_air_balloon-01
+  family: hot_air_balloon
+  split: heldout
+  prompt: Draw Bufo in a hot-air balloon basket. Bufo pulls the burner cord, with a blue scarf clearly
+    visible. Show the whole body, with feet fully inside the frame.
+  requirements:
+  - Hand visibly grips a cord connected to the burner
+  - The scarf is blue
+  - The setting is visibly in a hot-air balloon basket
+  - Whole body and both feet fit inside the frame
+- id: heldout-hot_air_balloon-02
+  family: hot_air_balloon
+  split: heldout
+  prompt: Draw Bufo in a hot-air balloon basket. Bufo pulls the burner cord, with a blue scarf clearly
+    visible. Add a second Bufo watching from the viewer right; only the first performs the action.
+  requirements:
+  - Hand visibly grips a cord connected to the burner
+  - The scarf is blue
+  - The setting is visibly in a hot-air balloon basket
+  - Exactly two Bufos are visible
+  - Watching Bufo is to the viewer right of the acting Bufo
+  - Only one Bufo performs the action
+- id: heldout-hot_air_balloon-03
+  family: hot_air_balloon
+  split: heldout
+  prompt: Draw Bufo in a hot-air balloon basket. Bufo pulls the burner cord, with a blue scarf clearly
+    visible. Place a low foreground railing across the waist, obscuring the legs; keep the face and working
+    hands unobscured.
+  requirements:
+  - Hand visibly grips a cord connected to the burner
+  - The scarf is blue
+  - The setting is visibly in a hot-air balloon basket
+  - A foreground railing occludes Bufo below the waist
+  - Face and acting hands remain visible
+- id: heldout-hot_air_balloon-04
+  family: hot_air_balloon
+  split: heldout
+  prompt: Draw Bufo in a hot-air balloon basket. Bufo pulls the burner cord, with a blue scarf clearly
+    visible. Show Bufo at less than one third of the image height, on the viewer left. A large sign at
+    the top reads OPEN.
+  requirements:
+  - Hand visibly grips a cord connected to the burner
+  - The scarf is blue
+  - The setting is visibly in a hot-air balloon basket
+  - Bufo is less than one third of image height
+  - Bufo is on the viewer left
+  - A top sign reads exactly OPEN
+- id: heldout-hot_air_balloon-05
+  family: hot_air_balloon
+  split: heldout
+  prompt: Keep Bufo in a hot-air balloon basket doing the same action. Change the scarf to red, move Bufo
+    to the viewer right, and remove the OPEN sign.
+  requirements:
+  - Hand visibly grips a cord connected to the burner
+  - The scarf is red
+  - Bufo is on the viewer right
+  - No OPEN sign is visible
+  - The setting is visibly in a hot-air balloon basket
+  turns:
+  - Draw Bufo in a hot-air balloon basket. Bufo pulls the burner cord, with a blue scarf clearly visible.
+    Put Bufo on the viewer left and include a sign that reads OPEN.
+- id: validation-ice_cream_cart-01
+  family: ice_cream_cart
+  split: validation
+  prompt: Draw Bufo serving one scoop of strawberry ice cream into a cone beside an ice cream cart. His
+    hand grips the scoop and the scoop touches the cone.
+  requirements:
+  - Bufo stands beside an ice cream cart
+  - Hand visibly grips an ice cream scoop
+  - Pink strawberry ice cream touches a cone
+- id: validation-airport_marshaller-01
+  family: airport_marshaller
+  split: validation
+  prompt: Draw full-body Bufo on an airport apron holding two orange signal wands, one in each hand, with
+    arms raised and a plane in the background.
+  requirements:
+  - Both feet are visible
+  - Exactly two orange signal wands are visible
+  - Each raised hand grips one wand
+  - A plane appears behind Bufo
+- id: validation-florist_arranging-01
+  family: florist_arranging
+  split: validation
+  prompt: Draw Bufo placing one yellow sunflower into a blue vase on a florist counter. The hand grips
+    the stem and the stem passes through the vase opening.
+  requirements:
+  - Hand grips the yellow sunflower stem
+  - Stem passes through a blue vase opening
+  - A florist counter is visible
+- id: validation-locksmith-01
+  family: locksmith
+  split: validation
+  prompt: Draw Bufo at a locksmith counter turning a brass key inside a blue padlock. One hand
+    grips the key and the other steadies the padlock on the counter.
+  requirements:
+  - One hand grips a brass key inserted into the padlock keyhole
+  - The other hand contacts the blue padlock
+  - A locksmith counter is visible

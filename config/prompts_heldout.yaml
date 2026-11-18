@@ -1,0 +1,24 @@
+- id: heldout-gpu
+  theme: gpu
+  prompt: A green bufo assembling a tiny GPU greenhouse, carrying a blue toolbox.
+- id: heldout-cloud
+  theme: cloud
+  prompt: A green bufo sailing a blue paper boat between fluffy clouds.
+- id: heldout-network
+  theme: network
+  prompt: A green bufo testing a blue fiber cable between two miniature server racks.
+- id: heldout-cooling
+  theme: cooling
+  prompt: A green bufo holding a blue umbrella beside a frosty server rack.
+- id: heldout-text
+  theme: text
+  prompt: A green bufo holding a white sign with exactly the words STAY COOL in blue.
+- id: heldout-complex
+  theme: complex
+  prompt: Two green bufos inspecting a GPU cluster with a blue cable, a small latency chart and a cooling fan.
+- id: heldout-style
+  theme: style
+  prompt: A clean green bufo enamel-pin design holding a small CoreWeave blue cloud.
+- id: heldout-training
+  theme: training
+  prompt: A green bufo coaching tiny GPUs around a blue running track.

@@ -1,0 +1,1 @@
+This is Bufo, an agent that creates new scenes around a recognizable frog character. The demo follows the AI loop in CoreWeave Forge: run, observe, curate, improve, and evaluate. We will use recorded validation conversations and real training results to show what improved, and what still needs work.

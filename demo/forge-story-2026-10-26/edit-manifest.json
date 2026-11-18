@@ -1,0 +1,74 @@
+[
+  {
+    "scene": "01-app",
+    "source": "forge-demo-raw-20261026T161322Z.mov",
+    "source_start_s": 23,
+    "source_end_s": 50,
+    "output_start_s": 0.0,
+    "output_duration_s": 26.0,
+    "last_frame_hold_s": 0
+  },
+  {
+    "scene": "02-problem",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "source_start_s": 279,
+    "source_end_s": 307,
+    "output_start_s": 26.0,
+    "output_duration_s": 29.0,
+    "last_frame_hold_s": 1.0
+  },
+  {
+    "scene": "03-observe",
+    "source": "forge-demo-raw-20261026T161322Z.mov",
+    "source_start_s": 80,
+    "source_end_s": 109,
+    "output_start_s": 55.0,
+    "output_duration_s": 28.583333333333332,
+    "last_frame_hold_s": 0
+  },
+  {
+    "scene": "04-curate",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "source_start_s": 334,
+    "source_end_s": 351,
+    "output_start_s": 83.58333333333333,
+    "output_duration_s": 32.708333333333336,
+    "last_frame_hold_s": 15.708333333333336
+  },
+  {
+    "scene": "05-improve",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "source_start_s": 355,
+    "source_end_s": 376,
+    "output_start_s": 116.29166666666666,
+    "output_duration_s": 32.291666666666664,
+    "last_frame_hold_s": 11.291666666666664
+  },
+  {
+    "scene": "06-evaluate",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "source_start_s": 380,
+    "source_end_s": 402,
+    "output_start_s": 148.58333333333331,
+    "output_duration_s": 35.541666666666664,
+    "last_frame_hold_s": 13.541666666666664
+  },
+  {
+    "scene": "07-result",
+    "source": "../forge-recording-2026-10-26/forge-demo-raw-20261026T145624Z.mov",
+    "source_start_s": 314,
+    "source_end_s": 328,
+    "output_start_s": 184.12499999999997,
+    "output_duration_s": 25.583333333333332,
+    "last_frame_hold_s": 11.583333333333332
+  },
+  {
+    "scene": "08-app-loop",
+    "source": "forge-demo-raw-20261026T161322Z.mov",
+    "source_start_s": 284,
+    "source_end_s": 316,
+    "output_start_s": 209.70833333333331,
+    "output_duration_s": 30.666666666666668,
+    "last_frame_hold_s": 0
+  }
+]

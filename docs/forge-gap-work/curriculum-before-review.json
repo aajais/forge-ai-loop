@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "source": "config/forge_gap_prompts.yaml",
+  "sha256": "9534cdeb054f63eba83113cd9be1cc1f7acd483c0900d076107a4664d827931f",
+  "counts": {
+    "train": 128,
+    "validation": 24,
+    "heldout": 80
+  },
+  "families": {
+    "train": [
+      "archery_range",
+      "bakery",
+      "basketball_court",
+      "concert_stage",
+      "f1_presentation",
+      "film_set",
+      "gpu_garden",
+      "laundry_room",
+      "office_coffee",
+      "ping_pong",
+      "pizza_kitchen",
+      "rainy_commute",
+      "skate_park",
+      "tennis_court",
+      "video_call",
+      "workshop_repair"
+    ],
+    "validation": [
+      "airport_marshaller",
+      "florist_arranging",
+      "ice_cream_cart",
+      "locksmith"
+    ],
+    "confirmation": [
+      "bicycle_tuneup",
+      "birdwatching",
+      "bowling_alley",
+      "car_wash",
+      "chalk_artist",
+      "drum_lesson",
+      "golf_green",
+      "kite_flying",
+      "pancake_breakfast",
+      "sailing_dinghy",
+      "science_fair",
+      "snowman_building",
+      "soccer_pitch",
+      "spacewalk",
+      "sushi_bar",
+      "woodcarving"
+    ],
+    "old_test_excluded": [
+      "aquarium_care",
+      "archeology_dig",
+      "beekeeping",
+      "chess_tournament",
+      "courtroom_clerk",
+      "ferry_dock",
+      "fire_station",
+      "geology_fieldwork",
+      "hot_air_balloon",
+      "knitting_circle",
+      "library_shelving",
+      "lighthouse_keeper",
+      "mountain_rescue",
+      "museum_restoration",
+      "observatory",
+      "orchard_harvest",
+      "postal_sorting",
+      "pottery_studio",
+      "tailor_shop",
+      "underwater_diver"
+    ]
+  },
+  "confirmation_outputs_generated": false,
+  "selection_rule": "Select on validation strict pass count; break ties by requirement coverage then fewer generation errors. Open confirmation only after selection."
+}

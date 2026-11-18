@@ -1,0 +1,19 @@
+{
+  "positive_images": [
+    {
+      "name": "bufo-concerned",
+      "url": "https://bufo.fun/bufos/bufo-concerned.png"
+    },
+    {
+      "name": "bufo-awkward-smile",
+      "url": "https://bufo.fun/bufos/bufo-awkward-smile.png"
+    },
+    {
+      "name": "bufo-all-good",
+      "url": "https://bufo.fun/bufos/bufo-all-good.png"
+    }
+  ],
+  "svg_example": "vtracer vectorization of bufo-concerned; 128x128; original transparent silhouette and 22 tonal paths",
+  "fullbody_asset": "fullbody.svg adds an authored continuous torso and feet behind the original-derived bufo-character bust, blending its cropped lower neck; local bounds 128x176. This is an application asset, not a model-generated or learned improvement.",
+  "negative_image": "Earlier Gemma text-only GPU gardener output; not an original bufo"
+}

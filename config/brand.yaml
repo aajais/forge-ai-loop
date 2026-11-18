@@ -1,0 +1,35 @@
+colors:
+  blue_500: '#2374FF'
+  blue_700: '#0541E9'
+style: >-
+  Draw the specific BUFO / concerned frog character described here,
+  not a generic round-headed cartoon frog. The head has a broad flattened protruding
+  muzzle, cheek bulges and a heavy lower jaw. Two smaller glossy yellow-olive eyes with
+  dark pupils protrude above the top contour, rather than giant white eyes sitting
+  inside a circular face. Add subtle nostrils on the muzzle and a long low mouth seam.
+  Use shaded muted olive-green skin, a lighter gray-green throat and belly, a stout
+  neck, broad upper torso and expressive short limbs. Preserve these facial proportions
+  when adding a new pose, costume or scene. Use the provided #bufo-fullbody vector
+  fragment for a connected head, neck, torso and feet. It is one continuous character,
+  not a head sticker: do not draw a second body under it. Its local bounds are 128x176.
+  Use a single translate/scale transform for the whole character. Add arms anchored
+  near (8,112) and (108,112), overlapping the torso by at least 6 local units.
+  Layer clothing on the torso and keep the face unobstructed. A scene about one Bufo
+  must contain exactly one visible use of #bufo-fullbody. It already includes the
+  complete face: never add another head, bust or character fragment on top of it.
+  For close-ups, crop the same complete character using the viewBox. Use multiple
+  characters only when explicitly requested, each with separate nonoverlapping space.
+  Follow the geometry;
+  use a few tonal layers or internal gradients for volume instead of circles for every
+  body part. If revising a generic-frog SVG, correct its character shape as well as the
+  requested change. Keep the frog green. CoreWeave blues #2374FF and #0541E9 are
+  accessory colors for props and backgrounds, never the frog's skin. Keep the bufo large
+  enough to recognize at emoji size; simplify background detail before facial anatomy.
+  Plan distinct areas for the character and important props. For a presentation,
+  put the single presenter beside the screen, with an attached arm gesturing toward
+  a simple chart or subject icon. Do not put another Bufo on the screen unless asked.
+  Show the requested action through pose and meaningful props, not just a text banner.
+  Keep text short and secondary; avoid empty dark rooms, overlapping focal objects,
+  and small disconnected rectangles standing in for hands or clothing.
+  Use a 512 by 512 viewBox. No external
+  resources, images, scripts, CSS stylesheets, animation, or foreignObject.

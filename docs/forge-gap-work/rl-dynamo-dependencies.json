@@ -1,0 +1,8 @@
+{
+  "runtime": {
+    "version": "0.5.20",
+    "repository": "https://github.com/OpenPipe/ART.git",
+    "revision": "45a17cbd2a85cc0333172e652fc1211c6ae3f3da"
+  },
+  "version_changes": {}
+}

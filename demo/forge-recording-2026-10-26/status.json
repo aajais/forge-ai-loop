@@ -1,0 +1,20 @@
+{
+  "status": "complete",
+  "video": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/demo/forge-recording-2026-10-26/forge-bufo-demo.mp4",
+  "duration_s": 204.104667,
+  "bytes": 9153665,
+  "resolution": [
+    2560,
+    1600
+  ],
+  "narration": "Local synthesized Samantha voice",
+  "chapters": 7,
+  "captions": "/Users/aayush.jaiswal/Desktop/cw-bufo-gen/demo/forge-recording-2026-10-26/forge-bufo-demo.srt",
+  "editing": "Setup and loading removed; browser chrome cropped; shorter scenes hold their last frame during narration.",
+  "qa": {
+    "chapter_frames_inspected": 7,
+    "audio_mean_db": -18.7,
+    "audio_peak_db": -4.5
+  },
+  "scope": "Local file only; no upload or publishing."
+}

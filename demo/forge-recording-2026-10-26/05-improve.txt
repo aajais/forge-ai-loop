@@ -1,0 +1,1 @@
+In Forge Post Training, the deployed student is Qwen three point eight, twenty seven B. This job uses one epoch, batch size two, and a learning rate of zero point zero zero zero one. The page connects the training dataset, Weights and Biases run, and immutable version one model artifact. A separate three epoch experiment lets us test whether more training actually helps.

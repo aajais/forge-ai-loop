@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Bufo studio</title><link rel="stylesheet" href="/static/style.css?v=8"><script src="/static/demo-models.js?v=1" defer></script><script src="/static/generation-client.js?v=1" defer></script><script src="/static/app.js?v=9" defer></script></head>
+<body>
+<div class="studio">
+<aside class="sidebar" aria-label="Conversations">
+<a class="wordmark" href="/" aria-label="Bufo studio home"><span class="mark" aria-hidden="true">b.</span> Bufo studio</a>
+<button id="new-chat" class="new-chat" type="button">＋ New conversation</button>
+<a class="new-chat compare-link" href="/static/compare.html">Compare all 4 models</a>
+<p class="sidebar-label">Your conversations</p>
+<nav id="conversation-list" aria-label="Saved conversations"></nav>
+<select id="conversation-select" aria-label="Select conversation"><option value="">New conversation</option></select>
+<div class="sidebar-footer"><div><span class="status-dot" id="status-dot"></span><strong id="active-model-label">Loading models…</strong></div><a id="weave-link" target="_blank" rel="noreferrer">Open in Weave ↗</a></div>
+</aside>
+<main class="chat">
+<header class="chat-header"><div><h1 id="conversation-title">A little frog. A big idea.</h1><p id="model-status">Checking connection settings…</p></div><div class="model-picker"><label for="model-select">Model</label><select id="model-select" aria-describedby="model-status" disabled><option>Loading models…</option></select></div></header>
+<div id="thread-scroll" class="thread-scroll">
+<section id="welcome" class="welcome"><img src="/static/bufo-avatar.png" alt="The original Bufo character"><h2>What’s your<br>bufo up to?</h2><p>Start with an idea. Then change a detail,<br>try a new scene, and make it yours.</p><div class="starters"><button type="button" data-prompt="A green bufo gardening with tiny GPUs and a CoreWeave blue watering can.">GPU gardener</button><button type="button" data-prompt="A green bufo riding a fluffy cloud with a CoreWeave blue scarf.">Cloud rider</button><button type="button" data-prompt="A green bufo in sunglasses relaxing beside a liquid-cooled server with a blue drink.">Cool operator</button></div></section>
+<section id="thread" class="thread" role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions"></section>
+</div>
+<div class="composer-area"><div id="notice" role="alert" hidden></div><div id="attachment-preview" class="attachment-preview" hidden><img id="attachment-image" alt="Attached image preview"><span id="attachment-name"></span><button id="remove-image" type="button" aria-label="Remove attached image">×</button></div><form id="prompt-form" class="composer"><input id="image-file" type="file" accept="image/png,image/jpeg,image/webp" hidden><button id="attach-image" type="button" aria-label="Attach an image" title="Attach an image or paste a screenshot">＋</button><label class="sr-only" for="prompt">Message Bufo</label><textarea id="prompt" maxlength="4000" rows="1" placeholder="Describe your bufo, or paste an image…"></textarea><button id="send" type="submit" aria-label="Send message"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form><p class="composer-hint"><span id="context-hint">A new idea starts here</span><span>Enter to send · Shift + Enter for a new line</span></p></div>
+</main>
+</div>
+</body></html>
