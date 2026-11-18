@@ -306,11 +306,11 @@ async def test_repairs_and_parallel_conversations_keep_complete_turns_in_separat
     tmp_path, monkeypatch
 ):
     import weave
-    from test_forge_cli import _chat_response
-    from test_studio_runtime import response_reply
 
     import bufogen.integrations.observability as observability
     import bufogen.integrations.telemetry as telemetry
+    from test_forge_cli import _chat_response
+    from test_studio_runtime import response_reply
 
     provider, exporter = TracerProvider(), InMemorySpanExporter()
     provider.add_span_processor(SimpleSpanProcessor(exporter))

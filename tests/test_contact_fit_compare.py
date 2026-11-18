@@ -1,4 +1,5 @@
 """Synthetic local evidence checks; no generation, scoring or service requests."""
+
 import importlib.util
 import json
 from copy import deepcopy
@@ -28,10 +29,16 @@ def save_rows(path, values):
 
 @pytest.fixture
 def comparison(tmp_path, monkeypatch):
-    prompts = [{
-        "id": f"train-{i}", "prompt": f"Synthetic Bufo request {i}.",
-        "family": f"train_family_{i}", "split": "train", "requirements": ["Visible contact"],
-    } for i in range(24)]
+    prompts = [
+        {
+            "id": f"train-{i}",
+            "prompt": f"Synthetic Bufo request {i}.",
+            "family": f"train_family_{i}",
+            "split": "train",
+            "requirements": ["Visible contact"],
+        }
+        for i in range(24)
+    ]
     save(tmp_path / "train-prompts.json", prompts)
     checkpoint = "wandb-artifact:///synthetic/project/fixed:v0"
     identity = {"checkpoint": checkpoint, "finetune_id": "fixed-job", "recipe": compare.RECIPE}
@@ -55,30 +62,53 @@ def comparison(tmp_path, monkeypatch):
         }.items():
             (protocol_folder / filename).write_bytes(content)
         evidence = {p.name: compare.sha(p) for p in protocol_folder.iterdir()}
-        fixture_hashes = {"manifest_sha256": evidence["fixture-manifest.json"],
-                          "review_sha256": evidence["fixture-assistant-review.json"]}
+        fixture_hashes = {
+            "manifest_sha256": evidence["fixture-manifest.json"],
+            "review_sha256": evidence["fixture-assistant-review.json"],
+        }
         frozen = folder / "frozen" / source_key
         frozen.parent.mkdir(parents=True)
         frozen.write_bytes(source.read_bytes())
         model = compare.BASE if name == "baseline" else checkpoint
         config = {
-            "prompts": prompts, "prompt_hash": benchmark.digest(prompts),
+            "prompts": prompts,
+            "prompt_hash": benchmark.digest(prompts),
             "prompt_version": "bufo-contact-v2-synthetic",
-            "arms": [{"name": arm_name, "model": model, "label": model, "model_env": "synthetic",
-                      "base_model": compare.BASE, "tuning_method": "" if name == "baseline" else "sft",
-                      "provider": "coreweave", "sampling": {"temperature": 0.7, "max_tokens": 6000}}],
+            "arms": [
+                {
+                    "name": arm_name,
+                    "model": model,
+                    "label": model,
+                    "model_env": "synthetic",
+                    "base_model": compare.BASE,
+                    "tuning_method": "" if name == "baseline" else "sft",
+                    "provider": "coreweave",
+                    "sampling": {"temperature": 0.7, "max_tokens": 6000},
+                }
+            ],
             "source_hashes": {source_key: compare.sha(source)},
             "policy": {"concurrency": 8, "max_tokens": 6000, "max_turns_per_attempt": 8},
-            "runtime": {"instructions_hash": "synthetic"}, "scorer": {"threshold": 0.65},
+            "runtime": {"instructions_hash": "synthetic"},
+            "scorer": {"threshold": 0.65},
         }
         configurations[name] = config
-        settings = {"configuration": config, "configuration_hash": benchmark.digest(config),
-                    "comparison_fingerprint": benchmark.comparison_fingerprint(config), "run_id": name}
+        settings = {
+            "configuration": config,
+            "configuration_hash": benchmark.digest(config),
+            "comparison_fingerprint": benchmark.comparison_fingerprint(config),
+            "run_id": name,
+        }
         save(folder / "benchmark.json", settings)
-        save(folder / "experiment-protocol.json", {
-            "schema_version": 1, "configuration": config, "configuration_hash": benchmark.digest(config),
-            "fixture_evidence": fixture_hashes, "evidence_sha256": evidence,
-        })
+        save(
+            folder / "experiment-protocol.json",
+            {
+                "schema_version": 1,
+                "configuration": config,
+                "configuration_hash": benchmark.digest(config),
+                "fixture_evidence": fixture_hashes,
+                "evidence_sha256": evidence,
+            },
+        )
         original, scored = [], []
         for i, prompt in enumerate(prompts):
             missing = name == "baseline" and i == 1
@@ -87,30 +117,63 @@ def comparison(tmp_path, monkeypatch):
             if not missing:
                 Image.new("RGBA", (512, 512), (i, 0, 0, 255)).save(png)
             row = BufoGeneration(
-                id=f"{name}-{i}", prompt_id=prompt["id"], prompt=prompt["prompt"],
-                backend=arm_name, model=model, group_id=f"group-{name}-{i}",
-                svg="", valid=not missing, latency_s=1, png_path=str(png) if not missing else None,
+                id=f"{name}-{i}",
+                prompt_id=prompt["id"],
+                prompt=prompt["prompt"],
+                backend=arm_name,
+                model=model,
+                group_id=f"group-{name}-{i}",
+                svg="",
+                valid=not missing,
+                latency_s=1,
+                png_path=str(png) if not missing else None,
                 error="synthetic failed final reply" if failed_turn else None,
                 prompt_version=config["prompt_version"],
-                benchmark_metadata=benchmark._metadata(prompt, name, config) | {
+                benchmark_metadata=benchmark._metadata(prompt, name, config)
+                | {
                     "status": "generation_error" if failed_turn else "completed",
                     "png_sha256": compare.sha(png) if not missing else None,
                 },
             )
             original.append(row.to_dict())
-            score = failure_result("missing_image") if missing else scene_result({
-                "bufo_present": True, "similarity": 1, "anatomy": 1, "composition": 1, "readability": 1,
-                "reason": "Synthetic score.", "prompt_checks": [{
-                    "requirement": "Visible contact", "satisfied": True, "evidence": "Synthetic check.",
-                }],
-            }, prompt["requirements"])
-            score.update(generation_id=row.id, scorer_configuration=config["scorer"], requirements=prompt["requirements"])
+            score = (
+                failure_result("missing_image")
+                if missing
+                else scene_result(
+                    {
+                        "bufo_present": True,
+                        "similarity": 1,
+                        "anatomy": 1,
+                        "composition": 1,
+                        "readability": 1,
+                        "reason": "Synthetic score.",
+                        "prompt_checks": [
+                            {
+                                "requirement": "Visible contact",
+                                "satisfied": True,
+                                "evidence": "Synthetic check.",
+                            }
+                        ],
+                    },
+                    prompt["requirements"],
+                )
+            )
+            score.update(
+                generation_id=row.id,
+                scorer_configuration=config["scorer"],
+                requirements=prompt["requirements"],
+            )
             row.scores = {"scene_quality": score}
             scored.append(row.to_dict())
         save_rows(folder / "manifest.jsonl", original)
         save_rows(folder / "scored.jsonl", scored)
-        save(folder / "summary.json", benchmark._summary([BufoGeneration(**r) for r in scored], settings))
-    monkeypatch.setattr(compare, "current_configurations", lambda *_: (configurations, fixture_hashes))
+        save(
+            folder / "summary.json",
+            benchmark._summary([BufoGeneration(**r) for r in scored], settings),
+        )
+    monkeypatch.setattr(
+        compare, "current_configurations", lambda *_: (configurations, fixture_hashes)
+    )
     return tmp_path, configurations
 
 
@@ -124,14 +187,20 @@ def write_reviews(data, candidate_failures=4):
         decisions = []
         for item in inputs:
             source = ordered[item["index"]]
-            candidate_fail = source["arm"] == "candidate" and int(
-                source["generation"]["prompt_id"].split("-")[-1]
-            ) >= 24 - candidate_failures
+            candidate_fail = (
+                source["arm"] == "candidate"
+                and int(source["generation"]["prompt_id"].split("-")[-1]) >= 24 - candidate_failures
+            )
             passed = bool(item["png_path"]) and not candidate_fail
-            decisions.append({key: item[key] for key in ("index", "label", "png_sha256")} | {
-                "reviewer_kind": "assistant", "passed": passed, "evidence": "Synthetic visual review.",
-                "failed_requirements": [] if passed else item["requirements"],
-            })
+            decisions.append(
+                {key: item[key] for key in ("index", "label", "png_sha256")}
+                | {
+                    "reviewer_kind": "assistant",
+                    "passed": passed,
+                    "evidence": "Synthetic visual review.",
+                    "failed_requirements": [] if passed else item["requirements"],
+                }
+            )
         save_rows(packet / "decisions.jsonl", decisions)
         (packet / "review-notes.md").write_text("Synthetic review; no real generated images.")
 
@@ -147,8 +216,14 @@ def test_all_48_attempts_and_partial_image_survive_neutral_packet_creation(compa
         packet = folder / f"reviewer-{reviewer}"
         inputs = compare.read(packet / "inputs.json")
         assert len(inputs) == 16
-        assert all(set(item) == {"index", "label", "prompt", "requirements", "png_path", "png_sha256"} for item in inputs)
-        assert all(item["png_path"] is None or "/visual-review/images/image-" in item["png_path"] for item in inputs)
+        assert all(
+            set(item) == {"index", "label", "prompt", "requirements", "png_path", "png_sha256"}
+            for item in inputs
+        )
+        assert all(
+            item["png_path"] is None or "/visual-review/images/image-" in item["png_path"]
+            for item in inputs
+        )
         sheets = list(packet.glob("sheet-*.png"))
         assert len(sheets) == 4
         with Image.open(sheets[0]) as image:
@@ -158,7 +233,9 @@ def test_all_48_attempts_and_partial_image_survive_neutral_packet_creation(compa
     assert (folder / "packet-manifest.json").read_bytes() == before
 
 
-@pytest.mark.parametrize("mutation", ["missing_attempt", "duplicate_attempt", "png_bytes", "missing_png", "source_bytes"])
+@pytest.mark.parametrize(
+    "mutation", ["missing_attempt", "duplicate_attempt", "png_bytes", "missing_png", "source_bytes"]
+)
 def test_missing_or_corrupted_generation_evidence_is_rejected(comparison, mutation):
     root, configurations = comparison
     folder = root / "fit-baseline"
@@ -209,7 +286,12 @@ def test_fit_gate_requires_20_same_attempt_conjunction_passes_and_completed_turn
     baseline = result["models"]["baseline"]
     assert baseline["attempts"] == 24 and baseline["generation_errors"] == 2
     assert baseline["assistant_image_passes"] == 23
-    assert baseline["assistant_completed_passes"] == baseline["automated_passes"] == baseline["combined_passes"] == 22
+    assert (
+        baseline["assistant_completed_passes"]
+        == baseline["automated_passes"]
+        == baseline["combined_passes"]
+        == 22
+    )
     assert compare.summarize(data) == result
 
 
@@ -221,8 +303,13 @@ def test_19_combined_passes_fail_fixed_gate(comparison):
     assert result["gate"]["passed"] is False
 
 
-@pytest.mark.parametrize("mutation", ["omit_review", "duplicate_review", "changed_copy", "omit_score", "alter_scored_generation"])
-def test_incomplete_or_corrupted_review_and_scoring_evidence_cannot_freeze_summary(comparison, mutation):
+@pytest.mark.parametrize(
+    "mutation",
+    ["omit_review", "duplicate_review", "changed_copy", "omit_score", "alter_scored_generation"],
+)
+def test_incomplete_or_corrupted_review_and_scoring_evidence_cannot_freeze_summary(
+    comparison, mutation
+):
     root, _ = comparison
     data = compare.validate(root)
     write_reviews(data)
@@ -275,30 +362,61 @@ def candidate(tmp_path):
     witness = training / "source-witness"
     witness.write_text("synthetic reviewed source witness")
     receipt = {
-        "source_sha256": compare.sha(source), "upload_sha256": compare.sha(upload),
-        "contract_sha256": "synthetic-contract", "entry_counts": {"train": 24, "val": 0},
-        "training_request_policy": compare.RECIPE, "heldout_ids": ["excluded"], "heldout_families": ["excluded_family"],
+        "source_sha256": compare.sha(source),
+        "upload_sha256": compare.sha(upload),
+        "contract_sha256": "synthetic-contract",
+        "entry_counts": {"train": 24, "val": 0},
+        "training_request_policy": compare.RECIPE,
+        "heldout_ids": ["excluded"],
+        "heldout_families": ["excluded_family"],
         "source_files": [{"path": str(witness), "sha256": compare.sha(witness)}],
     }
     save(training / "source-receipt.json", receipt)
     spec = {
-        "candidate": "contact-v2-fit", "base_model": compare.BASE, "model_name": compare.MODEL_NAME,
-        "display_model_id": f"ft-{compare.BASE}", "initialization": "independent_base_model",
-        "training_config": compare.RECIPE, "source_receipt_sha256": compare.sha(training / "source-receipt.json"),
-        "source_path": str(source), "source_sha256": receipt["source_sha256"], "upload_sha256": receipt["upload_sha256"],
-        "contract_sha256": receipt["contract_sha256"], "dataset_name": "synthetic-dataset",
-        "project": {"entity": "synthetic", "project": "synthetic", "project_id": "synthetic-project"},
+        "candidate": "contact-v2-fit",
+        "base_model": compare.BASE,
+        "model_name": compare.MODEL_NAME,
+        "display_model_id": f"ft-{compare.BASE}",
+        "initialization": "independent_base_model",
+        "training_config": compare.RECIPE,
+        "source_receipt_sha256": compare.sha(training / "source-receipt.json"),
+        "source_path": str(source),
+        "source_sha256": receipt["source_sha256"],
+        "upload_sha256": receipt["upload_sha256"],
+        "contract_sha256": receipt["contract_sha256"],
+        "dataset_name": "synthetic-dataset",
+        "project": {
+            "entity": "synthetic",
+            "project": "synthetic",
+            "project_id": "synthetic-project",
+        },
     }
     save(training / "candidate/candidate.json", spec)
-    state = {key: spec[key] for key in (
-        "base_model", "model_name", "dataset_name", "source_path", "source_sha256", "upload_sha256",
-    )} | spec["project"] | {
-        "training_config": compare.RECIPE, "heldout_ids": receipt["heldout_ids"],
-        "heldout_families": receipt["heldout_families"], "status": "deployed",
-        "pending_operation": None, "finetune_id": "synthetic-job", "entries_imported": True,
-        "entry_counts": {"train": 24, "val": 0},
-        "model_artifact_ref": "wandb-artifact:///synthetic/project/fixed:v0",
-    }
+    state = (
+        {
+            key: spec[key]
+            for key in (
+                "base_model",
+                "model_name",
+                "dataset_name",
+                "source_path",
+                "source_sha256",
+                "upload_sha256",
+            )
+        }
+        | spec["project"]
+        | {
+            "training_config": compare.RECIPE,
+            "heldout_ids": receipt["heldout_ids"],
+            "heldout_families": receipt["heldout_families"],
+            "status": "deployed",
+            "pending_operation": None,
+            "finetune_id": "synthetic-job",
+            "entries_imported": True,
+            "entry_counts": {"train": 24, "val": 0},
+            "model_artifact_ref": "wandb-artifact:///synthetic/project/fixed:v0",
+        }
+    )
     save(training / "candidate/forge-state.json", state)
     return tmp_path
 
@@ -316,7 +434,10 @@ def test_candidate_identity_binds_fixed_recipe_source_and_immutable_final_checkp
     assert compare.candidate_identity(candidate)[0] == identity
 
 
-@pytest.mark.parametrize("mutation", ["epoch_selection", "mutable_alias", "pending", "source", "upload", "witness", "state_recipe"])
+@pytest.mark.parametrize(
+    "mutation",
+    ["epoch_selection", "mutable_alias", "pending", "source", "upload", "witness", "state_recipe"],
+)
 def test_candidate_drift_or_unresolved_state_is_rejected(candidate, mutation):
     training = candidate / "training"
     if mutation == "epoch_selection":
@@ -325,7 +446,11 @@ def test_candidate_drift_or_unresolved_state_is_rejected(candidate, mutation):
         spec["training_config"]["epochs"] = 3
         save(path, spec)
     elif mutation in {"source", "upload", "witness"}:
-        filename = {"source": "reviewed-examples.jsonl", "upload": "upload-entries.json", "witness": "source-witness"}[mutation]
+        filename = {
+            "source": "reviewed-examples.jsonl",
+            "upload": "upload-entries.json",
+            "witness": "source-witness",
+        }[mutation]
         (training / filename).write_text("changed")
     else:
         path = training / "candidate/forge-state.json"

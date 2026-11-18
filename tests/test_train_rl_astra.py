@@ -9,11 +9,11 @@ import httpx
 import pytest
 import yaml
 from openai import AsyncOpenAI
-from test_rl_recovery import BASE, completion
 
 from bufogen.generation import BufoGeneration
 from bufogen.training import rl as train_rl
 from bufogen.training.rl_contract import write_environment_tasks
+from test_rl_recovery import BASE, completion
 
 CONFIG = {"rubric_version": "bufo-astra-v5", "samples": 3, "threshold": 0.65}
 REQUIREMENTS = ["Hand grips pointer"]
@@ -70,8 +70,8 @@ def astra_row(reference):
 
 def build(tmp_path, monkeypatch, reference, *, runtime=None):
     import art.serverless
-
     import wandb
+
     from bufogen.evaluation.scorers import astra_judge
     from bufogen.integrations import telemetry
 

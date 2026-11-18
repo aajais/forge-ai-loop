@@ -1,4 +1,5 @@
 """Frozen curriculum must preserve split isolation and bind correction evidence."""
+
 import copy
 import importlib.util
 from pathlib import Path
@@ -23,15 +24,21 @@ def test_frozen_curriculum_counts_lineage_and_new_confirmation_families():
     rows, manifest = m.build(ROOT)
     assert manifest["counts"] == {"train": 80, "validation": 24, "heldout": 48}
     assert len({r["id"] for r in rows}) == 152
-    old = [*yaml.safe_load((ROOT / "config/forge_prompts.yaml").read_text()),
-           *yaml.safe_load((ROOT / "config/forge_gap_prompts.yaml").read_text())]
+    old = [
+        *yaml.safe_load((ROOT / "config/forge_prompts.yaml").read_text()),
+        *yaml.safe_load((ROOT / "config/forge_gap_prompts.yaml").read_text()),
+    ]
     assert not {r["family"] for r in rows if r["split"] == "heldout"} & {r["family"] for r in old}
     assert not {r["id"] for r in rows} & {r["id"] for r in old}
     by_id = {r["id"]: r for r in old}
     for row in rows:
         if row["split"] == "validation":
             original = by_id[row["curriculum_metadata"]["source_prompt_id"]]
-            assert (row["prompt"], row["requirements"], row["family"]) == (original["prompt"], original["requirements"], original["family"])
+            assert (row["prompt"], row["requirements"], row["family"]) == (
+                original["prompt"],
+                original["requirements"],
+                original["family"],
+            )
 
 
 def test_corrections_are_bound_untrusted_train_only_and_have_no_privileged_answers():
@@ -43,7 +50,10 @@ def test_corrections_are_bound_untrusted_train_only_and_have_no_privileged_answe
         assert r["split"] == "train" and meta["source_prompt_id"].startswith("gap-train-")
         assert meta["critic_model"] == "gpt-6.1-sol"
         assert meta["review_status"] == "unreviewed_automatic_critique"
-        assert all(len(meta[k]) == 64 for k in ("source_svg_sha256", "source_png_sha256", "source_row_sha256"))
+        assert all(
+            len(meta[k]) == 64
+            for k in ("source_svg_sha256", "source_png_sha256", "source_row_sha256")
+        )
         assert "Automatic critique" in r["prompt"] and "<editable_scene>" in r["prompt"]
         assert "system" not in r and not r.get("turns")
         assert meta["history"] is None and meta["image"] is None

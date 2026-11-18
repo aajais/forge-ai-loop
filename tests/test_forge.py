@@ -16,10 +16,9 @@ MODEL = "google/gemma-4-26B-A4B-it"
 
 
 def example(partition="train", family="cloud"):
+    from bufogen.curation.curate import select_examples
     from test_training_contract import review
     from test_trajectories import captured_row
-
-    from bufogen.curation.curate import select_examples
 
     row = captured_row()
     row.group_id = family

@@ -45,10 +45,10 @@ def fakes(monkeypatch):
         def log_artifact(self, artifact, aliases=None):
             return artifact
 
+    import wandb
     import weave
 
     import bufogen.integrations.telemetry as telemetry
-    import wandb
 
     monkeypatch.setattr(telemetry, "init_weave", lambda: None)
     monkeypatch.setattr(weave, "Dataset", FakeDataset)

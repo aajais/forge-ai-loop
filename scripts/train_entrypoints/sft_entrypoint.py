@@ -28,6 +28,7 @@ def main():
     os.environ["WANDB_PROJECT"] = payload["project"]
     os.environ["WANDB_ENTITY"] = payload["entity"]
     import torch
+    import wandb
     from datasets import Dataset
     from peft import LoraConfig
     from transformers import (
@@ -39,8 +40,6 @@ def main():
         BitsAndBytesConfig,
     )
     from trl import SFTConfig, SFTTrainer
-
-    import wandb
 
     if not 1 <= payload["rank"] <= 16:
         raise ValueError("Rank must be <=16 for serverless serving.")

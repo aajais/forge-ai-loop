@@ -4,9 +4,9 @@ import subprocess
 from pathlib import Path
 
 import pytest
-from test_review_packet import decisions_for, make_rows, write
 
 from bufogen.curation.review_packet import create_packet, select_review_rows
+from test_review_packet import decisions_for, make_rows, write
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "scripts/review_agreement.py"

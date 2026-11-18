@@ -93,9 +93,8 @@ async def test_agent_trace_name_uses_model_id(tmp_path, monkeypatch):
 def test_reports_use_frozen_ids_and_leave_source_evidence_unchanged(tmp_path, monkeypatch):
     import json
 
-    from test_forge_cli import benchmark_fixture
-
     from bufogen.workflows.loop_report import write_loop_report
+    from test_forge_cli import benchmark_fixture
 
     monkeypatch.setenv("OPEN_MODEL", "google/new-model")
     directory = tmp_path / "benchmark"

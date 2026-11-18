@@ -144,11 +144,11 @@ async def test_agent_persists_original_root_and_runtime_metadata(tmp_path, monke
     from opentelemetry.sdk.trace import TracerProvider
     from opentelemetry.sdk.trace.export import SimpleSpanProcessor
     from opentelemetry.sdk.trace.export.in_memory_span_exporter import InMemorySpanExporter
-    from test_forge_cli import _chat_response
 
     import bufogen.integrations.observability as observability
     import bufogen.integrations.telemetry as telemetry
     from bufogen.rendering.renderer import RenderResult
+    from test_forge_cli import _chat_response
 
     provider, exporter = TracerProvider(), InMemorySpanExporter()
     provider.add_span_processor(SimpleSpanProcessor(exporter))

@@ -133,12 +133,12 @@ async def test_training_failure_is_never_retried_and_existing_attempt_refuses_re
     tmp_path, monkeypatch, missing_metadata
 ):
     import art.serverless
-    from test_rl_contract import scored_row
-
     import wandb
+
     from bufogen.evaluation.scorers import scene_quality
     from bufogen.integrations import telemetry
     from bufogen.training.rl_contract import build_calibration_report, write_environment_tasks
+    from test_rl_contract import scored_row
 
     positive, yes, config = scored_row()
     negative, no, _ = scored_row(False)

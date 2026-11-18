@@ -5,9 +5,9 @@ import sys
 import tempfile
 from pathlib import Path
 
+import wandb
 from dotenv import load_dotenv
 
-import wandb
 from bufogen.settings import ROOT
 
 

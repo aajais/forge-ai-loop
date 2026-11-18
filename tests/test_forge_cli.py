@@ -182,10 +182,9 @@ async def test_cli_forwards_disable_thinking(stage, tmp_path, monkeypatch):
 
 
 def reviewed_inputs(tmp_path):
+    from bufogen.generation import Manifest
     from test_training_contract import review
     from test_trajectories import captured_row
-
-    from bufogen.generation import Manifest
 
     row = captured_row()
     row.backend = "closed_quality_bar"
@@ -324,10 +323,9 @@ async def test_rl_cli_requires_calibration_and_paired_continuation(tmp_path):
 
 
 def benchmark_fixture(path, *, fingerprint, backend="student", run_id="one", split="heldout"):
-    from test_trajectories import captured_row
-
     from bufogen.evaluation.benchmark import _summary
     from bufogen.evaluation.scorers.scene_quality import failure_result
+    from test_trajectories import captured_row
 
     path.mkdir()
     row = replace(captured_row(), backend=backend)

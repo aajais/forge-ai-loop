@@ -231,7 +231,9 @@ async def test_large_renderer_files_are_uploaded_after_creation(monkeypatch, tmp
     wheel = tmp_path / "renderer.whl"
     wheel.write_bytes(b"wheel" * 300_000)
     monkeypatch.delenv("BUFO_RENDER_IMAGE", raising=False)
-    monkeypatch.setattr("bufogen.integrations.sandbox.renderer_wheel", AsyncMock(return_value=wheel))
+    monkeypatch.setattr(
+        "bufogen.integrations.sandbox.renderer_wheel", AsyncMock(return_value=wheel)
+    )
     remote, created, _ = install_sandbox_factory(monkeypatch, [])
     job = SandboxJob()
     await job._start()
@@ -357,7 +359,9 @@ async def test_status_diagnostic_failure_keeps_original_startup_error(monkeypatc
     failure = SandboxFailedError("Sandbox failed to start")
     remote.exec = Mock(side_effect=failure)
     monkeypatch.setattr(
-        "bufogen.integrations.sandbox.sandbox_status", AsyncMock(side_effect=TimeoutError()), raising=False
+        "bufogen.integrations.sandbox.sandbox_status",
+        AsyncMock(side_effect=TimeoutError()),
+        raising=False,
     )
     job = SandboxJob(image="python-with-resvg")
     with pytest.raises(SandboxFailedError) as error:
@@ -446,13 +450,17 @@ async def test_mismatched_sidecar_falls_back_to_network_and_writes_sidecar(tmp_p
         if request.url.path.endswith("/json"):
             return httpx.Response(
                 200,
-                json={"urls": [{"filename": name, "url": "https://x/w", "digests": {"sha256": good}}]},
+                json={
+                    "urls": [{"filename": name, "url": "https://x/w", "digests": {"sha256": good}}]
+                },
             )
         return httpx.Response(200, content=b"fresh")
 
     real = httpx.AsyncClient
     monkeypatch.setattr(
-        sandbox.httpx, "AsyncClient", lambda **kw: real(transport=httpx.MockTransport(handler), **kw)
+        sandbox.httpx,
+        "AsyncClient",
+        lambda **kw: real(transport=httpx.MockTransport(handler), **kw),
     )
     assert await sandbox.renderer_wheel() == wheel
     assert wheel.read_bytes() == b"fresh"

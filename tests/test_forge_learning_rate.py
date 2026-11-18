@@ -2,10 +2,10 @@ import json
 
 import httpx
 import pytest
-from test_forge import MODEL, client, prepared
 
 from bufogen.integrations.forge import ForgeError
 from bufogen.workflows.forge_loop import AmbiguousOperation, resume_training, submit_training
+from test_forge import MODEL, client, prepared
 
 
 def imported_state(tmp_path, api):

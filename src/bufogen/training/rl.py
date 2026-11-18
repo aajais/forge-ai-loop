@@ -749,9 +749,9 @@ class RLTrainer(PostTrainingJob):
             validate_task_references(examples)
         runtime = require_rl_runtime()
         import art
+        import wandb
         from art.serverless import ServerlessBackend
 
-        import wandb
         from bufogen.integrations.forge import ForgeClient
         from bufogen.integrations.telemetry import init_weave
 

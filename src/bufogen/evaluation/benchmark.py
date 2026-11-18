@@ -1506,11 +1506,11 @@ async def _publish_astra(rows, directory, settings, scorers):
     frozen = settings["configuration"]["source_hashes"]
     code = {
         name: (
-            frozen.get(
-                f"src/bufogen/{ASTRA_CODE_PATHS[name]}", frozen.get(f"src/bufogen/{name}")
-            )
+            frozen.get(f"src/bufogen/{ASTRA_CODE_PATHS[name]}", frozen.get(f"src/bufogen/{name}"))
             if name in GENERATION_CODE_FILES
-            else hashlib.sha256((ROOT / "src/bufogen" / ASTRA_CODE_PATHS[name]).read_bytes()).hexdigest()
+            else hashlib.sha256(
+                (ROOT / "src/bufogen" / ASTRA_CODE_PATHS[name]).read_bytes()
+            ).hexdigest()
         )
         for name in ASTRA_CODE_FILES
     }

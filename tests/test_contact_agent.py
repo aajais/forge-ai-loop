@@ -41,28 +41,42 @@ def module():
 
 
 def scene(m):
-    return m.Scene.model_validate({
-        "bufo": {"x": 150, "y": 80, "scale": 2},
-        "objects": [{
-            "id": "mug", "svg": '<rect width="20" height="30" fill="#2374FF"/>',
-            "anchors": [{"name": "grip", "x": 10, "y": 15}],
-            "transform": {"x": 370, "y": 250},
-        }],
-        "hands": [{"side": "right", "to": "mug.grip"}],
-    }).model_dump(mode="json")
+    return m.Scene.model_validate(
+        {
+            "bufo": {"x": 150, "y": 80, "scale": 2},
+            "objects": [
+                {
+                    "id": "mug",
+                    "svg": '<rect width="20" height="30" fill="#2374FF"/>',
+                    "anchors": [{"name": "grip", "x": 10, "y": 15}],
+                    "transform": {"x": 370, "y": 250},
+                }
+            ],
+            "hands": [{"side": "right", "to": "mug.grip"}],
+        }
+    ).model_dump(mode="json")
 
 
 def call(value, call_id):
     return ResponseFunctionToolCall(
-        type="function_call", name="render_scene", call_id=call_id,
+        type="function_call",
+        name="render_scene",
+        call_id=call_id,
         arguments=json.dumps({"scene": value, "emoji_name": ":bufo-blue-mug:"}),
     )
 
 
 def reply():
     return ResponseOutputMessage(
-        id="reply", role="assistant", status="completed", type="message",
-        content=[ResponseOutputText(type="output_text", text="Here's Bufo with a blue mug!", annotations=[])],
+        id="reply",
+        role="assistant",
+        status="completed",
+        type="message",
+        content=[
+            ResponseOutputText(
+                type="output_text", text="Here's Bufo with a blue mug!", annotations=[]
+            )
+        ],
     )
 
 
@@ -75,7 +89,8 @@ class OfflineModel(Model):
         if not self.outputs:
             raise AssertionError("Unexpected extra model call")
         return ModelResponse(
-            output=[self.outputs.pop(0)], usage=Usage(requests=1, input_tokens=10, output_tokens=5, total_tokens=15),
+            output=[self.outputs.pop(0)],
+            usage=Usage(requests=1, input_tokens=10, output_tokens=5, total_tokens=15),
             response_id=f"response-{len(self.requests)}",
         )
 
@@ -106,21 +121,30 @@ def offline(monkeypatch):
             return RenderResult(png, True, None)
 
     backend = BackendConfig(
-        name="open_base", label="google/gemma-4-26B-A4B-it",
-        model="google/gemma-4-26B-A4B-it", model_env="", provider="coreweave",
-        base_url="https://unused.invalid", api_key_env="", base_model="google/gemma-4-26B-A4B-it",
+        name="open_base",
+        label="google/gemma-4-26B-A4B-it",
+        model="google/gemma-4-26B-A4B-it",
+        model_env="",
+        provider="coreweave",
+        base_url="https://unused.invalid",
+        api_key_env="",
+        base_model="google/gemma-4-26B-A4B-it",
     )
     yield m, provider, exporter, logged, uri, OfflineRenderer, backend
     provider.shutdown()
 
 
-async def test_real_runner_calls_compiler_and_captures_scene_then_text_png(offline, monkeypatch, tmp_path):
+async def test_real_runner_calls_compiler_and_captures_scene_then_text_png(
+    offline, monkeypatch, tmp_path
+):
     m, _, exporter, logged, uri, Renderer, backend = offline
     value = scene(m)
     model = OfflineModel([call(value, "real-call-1"), reply()])
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
     renderer = Renderer()
-    agent = m.ContactAgent(backend, renderer, tmp_path, client=object(), benchmark_metadata={"split": "train"})
+    agent = m.ContactAgent(
+        backend, renderer, tmp_path, client=object(), benchmark_metadata={"split": "train"}
+    )
     row = await agent.generate("Bufo holding a blue mug", prompt_id="mug", group_id="conversation")
     assert row.valid and row.response_text == "Here's Bufo with a blue mug!"
     assert row.emoji_name == ":bufo-blue-mug:"
@@ -165,9 +189,13 @@ async def test_invalid_scene_is_actual_error_then_corrected_call(offline, monkey
     bad["hands"][0]["to"] = "absent.grip"
     model = OfflineModel([call(bad, "bad-call"), call(good, "repair-call"), reply()])
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
-    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate("Hold a mug")
+    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate(
+        "Hold a mug"
+    )
     assert row.valid and row.tool_calls == 2
-    results = [json.loads(msg["content"]) for msg in row.trajectory["messages"] if msg["role"] == "tool"]
+    results = [
+        json.loads(msg["content"]) for msg in row.trajectory["messages"] if msg["role"] == "tool"
+    ]
     assert results[0]["valid"] is False and "absent" in results[0]["error"]
     assert results[1]["valid"] is True
     attempts = [s for s in exporter.get_finished_spans() if s.name == "execute_tool render_scene"]
@@ -175,7 +203,9 @@ async def test_invalid_scene_is_actual_error_then_corrected_call(offline, monkey
     assert json.loads(attempts[0].attributes["gen_ai.tool.call.result"])["valid"] is False
 
 
-async def test_media_failure_keeps_valid_render_and_optional_image_is_preserved(offline, monkeypatch, tmp_path):
+async def test_media_failure_keeps_valid_render_and_optional_image_is_preserved(
+    offline, monkeypatch, tmp_path
+):
     m, _, _, _, _, Renderer, backend = offline
     model = OfflineModel([call(scene(m), "image-call"), reply()])
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
@@ -185,7 +215,9 @@ async def test_media_failure_keeps_valid_render_and_optional_image_is_preserved(
 
     monkeypatch.setattr(m, "publish_render_png", unavailable)
     image = "data:image/png;base64,YQ=="
-    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate("Use this scene", image=image)
+    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate(
+        "Use this scene", image=image
+    )
     assert row.valid and Path(row.png_path).exists()
     assert row.png_content_ref is None
     assert model.requests[0]["input"][0]["content"][1]["image_url"] == image
@@ -199,33 +231,47 @@ def test_web_search_cannot_silently_change_pilot(offline, tmp_path):
         m.ContactAgent(backend, Renderer(), tmp_path, web_search_enabled=True)
 
 
-async def test_schema_rejection_is_traced_and_does_not_disable_local_identifier_validation(offline, monkeypatch, tmp_path):
+async def test_schema_rejection_is_traced_and_does_not_disable_local_identifier_validation(
+    offline, monkeypatch, tmp_path
+):
     m, _, exporter, _, _, Renderer, backend = offline
     good = scene(m)
     bad = deepcopy(good)
     bad["objects"][0]["id"] = "invalid identifier"
     model = OfflineModel([call(bad, "invalid-schema"), call(good, "fixed-schema"), reply()])
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
-    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate("Hold a mug")
+    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate(
+        "Hold a mug"
+    )
     assert row.valid and row.tool_calls == 2
-    results = [json.loads(msg["content"]) for msg in row.trajectory["messages"] if msg["role"] == "tool"]
+    results = [
+        json.loads(msg["content"]) for msg in row.trajectory["messages"] if msg["role"] == "tool"
+    ]
     assert results[0]["valid"] is False and results[1]["valid"] is True
     attempts = [s for s in exporter.get_finished_spans() if s.name == "execute_tool render_scene"]
     assert len(attempts) == 2
     assert "invalid identifier" in attempts[0].attributes["gen_ai.tool.call.arguments"]
 
 
-async def test_followup_replays_authentic_scene_json_without_invented_svg_tool(offline, monkeypatch, tmp_path):
+async def test_followup_replays_authentic_scene_json_without_invented_svg_tool(
+    offline, monkeypatch, tmp_path
+):
     m, _, _, _, _, Renderer, backend = offline
     original = scene(m)
     revised = deepcopy(original)
     revised["objects"][0]["svg"] = '<rect width="20" height="30" fill="#ffcc00"/>'
-    model = OfflineModel([call(original, "first-scene"), reply(), call(revised, "second-scene"), reply()])
+    model = OfflineModel(
+        [call(original, "first-scene"), reply(), call(revised, "second-scene"), reply()]
+    )
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
     agent = m.ContactAgent(backend, Renderer(), tmp_path, client=object())
     first = await agent.generate("Hold a blue mug", group_id="same-conversation")
-    second = await agent.generate("Make the mug yellow", group_id="same-conversation", history=[first.to_dict()])
-    history_calls = [item for item in model.requests[2]["input"] if item.get("type") == "function_call"]
+    second = await agent.generate(
+        "Make the mug yellow", group_id="same-conversation", history=[first.to_dict()]
+    )
+    history_calls = [
+        item for item in model.requests[2]["input"] if item.get("type") == "function_call"
+    ]
     assert len(history_calls) == 1
     assert history_calls[0]["call_id"] == "first-scene"
     assert history_calls[0]["name"] == "render_scene"
@@ -235,11 +281,15 @@ async def test_followup_replays_authentic_scene_json_without_invented_svg_tool(o
     assert len([m for m in second.trajectory["messages"] if m.get("tool_calls")]) == 2
 
 
-async def test_missing_render_triggers_only_the_existing_bounded_repair_invocation(offline, monkeypatch, tmp_path):
+async def test_missing_render_triggers_only_the_existing_bounded_repair_invocation(
+    offline, monkeypatch, tmp_path
+):
     m, _, _, _, _, Renderer, backend = offline
     model = OfflineModel([reply(), reply()])
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
-    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate("Hold a mug")
+    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate(
+        "Hold a mug"
+    )
     assert not row.valid and row.png_path is None
     assert row.response_text == "I couldn't finish rendering this Bufo."
     assert len(model.requests) == 2

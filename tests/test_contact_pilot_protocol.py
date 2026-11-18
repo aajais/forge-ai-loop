@@ -35,6 +35,7 @@ def test_pilot_has_balanced_diagnostic_relations_and_no_confirmation_prompts():
     assert all(p["split"] == "development" for p in prompts)
     assert all(len(p["requirements"]) >= 1 for p in prompts)
     import yaml
+
     existing = yaml.safe_load((m.ROOT / "config/forge_iteration2_prompts.yaml").read_text())
     sealed = {p["prompt"] for p in existing if p["split"] == "heldout"}
     assert not sealed.intersection(p["prompt"] for p in prompts)
@@ -43,10 +44,17 @@ def test_pilot_has_balanced_diagnostic_relations_and_no_confirmation_prompts():
 def test_fixture_gate_rejects_reviews_that_do_not_match_current_compiler(tmp_path):
     m = module()
     import json
-    (tmp_path / "assistant-review.json").write_text(json.dumps({
-        "compiler_sha256": "old-compiler", "accepted_for_interface_test": True,
-        "reviewer_kind": "assistant", "fixtures": [],
-    }))
+
+    (tmp_path / "assistant-review.json").write_text(
+        json.dumps(
+            {
+                "compiler_sha256": "old-compiler",
+                "accepted_for_interface_test": True,
+                "reviewer_kind": "assistant",
+                "fixtures": [],
+            }
+        )
+    )
     with pytest.raises(ValueError, match="compiler"):
         m.validate_fixture_review(tmp_path, "new-compiler")
 

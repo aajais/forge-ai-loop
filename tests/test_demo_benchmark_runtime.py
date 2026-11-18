@@ -1,10 +1,9 @@
 import json
 from dataclasses import replace
 
-from test_benchmark import FakeRenderer, backend, prompts
-
 from bufogen.evaluation.benchmark import run_benchmark
 from bufogen.generation import BufoGeneration
+from test_benchmark import FakeRenderer, backend, prompts
 
 
 async def test_controlled_benchmark_freezes_resolved_runtime_and_explicit_overrides(

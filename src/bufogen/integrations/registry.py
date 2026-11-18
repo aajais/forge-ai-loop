@@ -100,9 +100,7 @@ class RegistryClient:
             for source in sources:
                 run.use_artifact(source.removeprefix("wandb-artifact:///"))
             artifact = run.use_artifact(reference.removeprefix("wandb-artifact:///"), type="lora")
-            run.link_artifact(
-                artifact, self.target_path(name), aliases=list(aliases)
-            )
+            run.link_artifact(artifact, self.target_path(name), aliases=list(aliases))
             return f"wandb-artifact:///{self.entity}/{self.project}/{artifact.name}"
 
     def download(self, reference: str, *, kind: str | None = None) -> Path:

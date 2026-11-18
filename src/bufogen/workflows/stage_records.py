@@ -41,9 +41,9 @@ def publish_record(kind: str, path: Path, *, metadata: dict, ledger: Path = LEDG
     text = data.decode("utf-8")
     assert_no_env_leak(json.dumps(metadata, default=str), text)
 
+    import wandb
     import weave
 
-    import wandb
     from bufogen.integrations import telemetry
 
     telemetry.init_weave()

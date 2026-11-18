@@ -112,10 +112,13 @@ def test_serving_schema_omits_xgrammar_incompatible_pattern():
     assert schema["properties"]["paint_order"]["items"]["minLength"] == 1
 
 
-@pytest.mark.parametrize("change", [
-    {"contact_anchors": [{"name": " \t\n", "x": 1, "y": 1}]},
-    {"paint_order": ["background", "  \t"]},
-])
+@pytest.mark.parametrize(
+    "change",
+    [
+        {"contact_anchors": [{"name": " \t\n", "x": 1, "y": 1}]},
+        {"paint_order": ["background", "  \t"]},
+    ],
+)
 async def test_runtime_rejects_blank_labels_without_regex_in_serving_schema(change):
     with pytest.raises((ModelBehaviorError, ValueError)):
         await invoke(payload(**change))

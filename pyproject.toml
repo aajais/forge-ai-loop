@@ -40,6 +40,13 @@ testpaths = ["tests"]
 
 [tool.ruff]
 line-length = 100
+# Resolve first-party imports from these roots only. The gitignored runs/, wandb/ and
+# data/ folders at the repo root would otherwise shadow third-party packages locally.
+src = ["src", "tests"]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+# `comparison` is a pytest fixture imported from a sibling test module.
+"tests/test_contact_fit_publisher.py" = ["F401", "F811"]

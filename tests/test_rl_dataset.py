@@ -168,12 +168,11 @@ async def test_serverless_rollouts_use_calibrated_tasks_and_keep_judge_outside_c
     import sys
     from unittest.mock import AsyncMock, Mock
 
-    from test_rl_contract import captured, scored_row
-
     from bufogen.evaluation.scorers import scene_quality
     from bufogen.integrations import telemetry
     from bufogen.training import rl as train_rl
     from bufogen.training.rl_contract import build_calibration_report, write_environment_tasks
+    from test_rl_contract import captured, scored_row
 
     positive, yes, config = scored_row()
     negative, no, _ = scored_row(False)

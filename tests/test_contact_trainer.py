@@ -1,4 +1,5 @@
 """Synthetic targets test local qualification and durable managed lifecycle; no network."""
+
 import importlib.util
 import json
 import sys
@@ -6,17 +7,17 @@ from copy import deepcopy
 from pathlib import Path
 
 import pytest
-from test_contact_training_contract import captured
 
 from bufogen.evaluation import benchmark
 from bufogen.generation import Manifest
 from bufogen.models import load_backends
 from bufogen.workflows.forge_loop import AmbiguousOperation
+from test_contact_training_contract import captured
 
 HERE = Path(__file__).resolve().parents[1] / "docs/forge-contact-pilot"
 sys.path.insert(0, str(HERE))
-import contact_agent_v2
-import experiment
+import contact_agent_v2  # noqa: E402
+import experiment  # noqa: E402
 
 SPEC = importlib.util.spec_from_file_location("contact_trainer_tests", HERE / "train_contact.py")
 trainer = importlib.util.module_from_spec(SPEC)
@@ -27,31 +28,45 @@ SPEC.loader.exec_module(trainer)
 def corpus(tmp_path, monkeypatch):
     root = tmp_path / "learnability"
     root.mkdir()
-    prompts = [{
-        "id": f"synthetic-{index}", "family": f"synthetic_family_{index}",
-        "split": "train" if index < 24 else "heldout",
-        "relation_class": f"relation_{index // 6 if index < 24 else (index - 24) // 2}",
-        "prompt": f"Draw synthetic standing Bufo number {index}.",
-        "requirements": ["Synthetic visible contact"],
-    } for index in range(32)]
-    for name, rows in (("curriculum.json", prompts), ("train-prompts.json", prompts[:24]),
-                       ("diagnostic-prompts.json", prompts[24:])):
+    prompts = [
+        {
+            "id": f"synthetic-{index}",
+            "family": f"synthetic_family_{index}",
+            "split": "train" if index < 24 else "heldout",
+            "relation_class": f"relation_{index // 6 if index < 24 else (index - 24) // 2}",
+            "prompt": f"Draw synthetic standing Bufo number {index}.",
+            "requirements": ["Synthetic visible contact"],
+        }
+        for index in range(32)
+    ]
+    for name, rows in (
+        ("curriculum.json", prompts),
+        ("train-prompts.json", prompts[:24]),
+        ("diagnostic-prompts.json", prompts[24:]),
+    ):
         (root / name).write_bytes(trainer.encoded(rows))
     reserved = root / "reserved-identity-receipt.json"
-    reserved.write_bytes(trainer.encoded({
-        "heldout_ids": [f"reserved-{i}" for i in range(48)],
-        "heldout_families": [f"reserved_family_{i}" for i in range(12)],
-    }))
+    reserved.write_bytes(
+        trainer.encoded(
+            {
+                "heldout_ids": [f"reserved-{i}" for i in range(48)],
+                "heldout_families": [f"reserved_family_{i}" for i in range(12)],
+            }
+        )
+    )
     monkeypatch.setattr(trainer, "RESERVED_RECEIPT", reserved)
     with experiment.harness():
         config = benchmark._configuration(
-            prompts[:24], [load_backends()["closed_quality_bar"]], **experiment.POLICY,
+            prompts[:24],
+            [load_backends()["closed_quality_bar"]],
+            **experiment.POLICY,
         )
     # Configuration hashes and loaded code are real; only fixture acceptance is synthetic.
     teacher = root / "teacher"
     teacher.mkdir()
     settings = {
-        "run_id": "synthetic-run", "configuration": config,
+        "run_id": "synthetic-run",
+        "configuration": config,
         "configuration_hash": benchmark.digest(config),
         "comparison_fingerprint": benchmark.comparison_fingerprint(config),
     }
@@ -66,11 +81,17 @@ def corpus(tmp_path, monkeypatch):
         "manifest_sha256": hashes["fixture-manifest.json"],
         "review_sha256": hashes["fixture-assistant-review.json"],
     }
-    (teacher / "experiment-protocol.json").write_bytes(trainer.encoded({
-        "schema_version": 1, "configuration": config,
-        "configuration_hash": benchmark.digest(config),
-        "fixture_evidence": fixtures, "evidence_sha256": hashes,
-    }))
+    (teacher / "experiment-protocol.json").write_bytes(
+        trainer.encoded(
+            {
+                "schema_version": 1,
+                "configuration": config,
+                "configuration_hash": benchmark.digest(config),
+                "fixture_evidence": fixtures,
+                "evidence_sha256": hashes,
+            }
+        )
+    )
     for relative in config["source_hashes"]:
         target = teacher / "frozen" / relative
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -88,14 +109,19 @@ def corpus(tmp_path, monkeypatch):
         trajectory["messages"][0]["content"] = contact_agent_v2.instructions()
         trajectory["messages"][1]["content"] = row.prompt
         trajectory["provenance"].update(
-            prompt_id=row.prompt_id, group_id=row.group_id, prompt_version=row.prompt_version,
+            prompt_id=row.prompt_id,
+            group_id=row.group_id,
+            prompt_version=row.prompt_version,
             tool_contract=contact_agent_v2.TOOL_CONTRACT,
         )
         row.benchmark_metadata = benchmark._metadata(prompt, settings["run_id"], config) | {
-            "status": "completed", "png_sha256": review["png_sha256"],
+            "status": "completed",
+            "png_sha256": review["png_sha256"],
         }
         review.update(
-            source_generation_id=row.id, prompt_id=row.prompt_id, prompt_family=prompt["family"],
+            source_generation_id=row.id,
+            prompt_id=row.prompt_id,
+            prompt_family=prompt["family"],
         )
         Manifest(teacher / "manifest.jsonl").append(row)
         rows.append(row)
@@ -115,7 +141,10 @@ def test_prepare_binds_exact_clean_contact_upload_and_is_idempotent(corpus):
     assert receipt["teacher_model"] == "gpt-6.1-sol"
     assert trainer.prepare(root) == receipt
     entries = json.loads((root / "training/upload-entries.json").read_text())
-    assert trainer.sha((root / "training/upload-entries.json").read_bytes()) == receipt["upload_sha256"]
+    assert (
+        trainer.sha((root / "training/upload-entries.json").read_bytes())
+        == receipt["upload_sha256"]
+    )
     assert len(entries) == 24 and {entry["split"] for entry in entries} == {"train"}
     by_prompt = {entry["metadata"]["prompt_id"]: entry for entry in entries}
     for row in rows:
@@ -155,7 +184,9 @@ def test_collection_or_capture_mismatch_stops_preparation(corpus, mutation):
             rows.pop()
         else:
             rows[0].model = trainer.STUDENT_MODEL
-        (root / "teacher/manifest.jsonl").write_bytes(trainer.jsonl([row.to_dict() for row in rows]))
+        (root / "teacher/manifest.jsonl").write_bytes(
+            trainer.jsonl([row.to_dict() for row in rows])
+        )
     with pytest.raises(ValueError):
         trainer.prepare(root)
     assert not (root / "training/reviewed-examples.jsonl").exists()
@@ -189,28 +220,46 @@ class FakeForge:
     def upload_entries(self, dataset, entries, dry_run):
         self.calls.append("validate_entries" if dry_run else "upload_entries")
         assert len(entries) == 24 and {e["split"] for e in entries} == {"train"}
-        return {"dry_run": dry_run, "group_conflicts": [], "revision": "synthetic-revision",
-                "entry_counts": {"total": 24, "train": 24, "val": 0}}
+        return {
+            "dry_run": dry_run,
+            "group_conflicts": [],
+            "revision": "synthetic-revision",
+            "entry_counts": {"total": 24, "train": 24, "val": 0},
+        }
 
     def create_finetune(self, **kwargs):
         self.calls.append("create_finetune")
         assert kwargs == {
-            "dataset_id": "dataset-synthetic", "model_name": trainer.MODEL_NAME,
-            "base_model": trainer.STUDENT_MODEL, "epochs": 6, "batch_size": 2, "learning_rate": 1e-4,
+            "dataset_id": "dataset-synthetic",
+            "model_name": trainer.MODEL_NAME,
+            "base_model": trainer.STUDENT_MODEL,
+            "epochs": 6,
+            "batch_size": 2,
+            "learning_rate": 1e-4,
         }
         return {"id": "job-synthetic", "status": "queued"}
 
     def get_finetune(self, job_id):
         assert job_id == "job-synthetic"
         self.calls.append("get_finetune")
-        return {"id": job_id, "status": "deployed", "base_model": trainer.STUDENT_MODEL,
-                "model_artifact_ref": "wandb-artifact:///synthetic/project/contact:v0"}
+        return {
+            "id": job_id,
+            "status": "deployed",
+            "base_model": trainer.STUDENT_MODEL,
+            "model_artifact_ref": "wandb-artifact:///synthetic/project/contact:v0",
+        }
 
 
 def project():
-    return {key: getattr(FakeForge, key) for key in (
-        "entity", "project_alias", "base_url", "training_base_url",
-    )} | {"project": "project", "project_id": "project-synthetic"}
+    return {
+        key: getattr(FakeForge, key)
+        for key in (
+            "entity",
+            "project_alias",
+            "base_url",
+            "training_base_url",
+        )
+    } | {"project": "project", "project_id": "project-synthetic"}
 
 
 def test_real_durable_lifecycle_creates_once_and_status_only_polls(corpus):
@@ -249,7 +298,9 @@ def test_status_never_creates_a_new_workflow(corpus):
     assert not client.calls
 
 
-@pytest.mark.parametrize("mutation", ["candidate_recipe", "state_source", "state_project", "missing_candidate"])
+@pytest.mark.parametrize(
+    "mutation", ["candidate_recipe", "state_source", "state_project", "missing_candidate"]
+)
 def test_existing_identity_mismatch_blocks_every_remote_call(corpus, mutation):
     root = corpus[0]
     client = FakeForge()

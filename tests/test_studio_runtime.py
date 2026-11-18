@@ -99,6 +99,7 @@ def test_studio_requests_enable_reasoning_without_output_caps(
 
 async def test_studio_repair_shares_total_turn_budget(tmp_path, offline_telemetry):
     from agents import MaxTurnsExceeded, trace
+
     from test_forge_cli import _chat_response
 
     requests = []

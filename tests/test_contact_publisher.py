@@ -1,4 +1,5 @@
 """Offline publication safeguards using synthetic identities and bytes only."""
+
 import hashlib
 import importlib.util
 import json
@@ -33,30 +34,41 @@ def packets(tmp_path):
     for index in range(64):
         interface = "svg" if index < 32 else "contact"
         row = {
-            "id": f"attempt-{index}", "prompt_id": f"prompt-{index % 16}",
+            "id": f"attempt-{index}",
+            "prompt_id": f"prompt-{index % 16}",
             "backend": "open_base" if index % 2 else "closed_quality_bar",
-            "model": "synthetic-model", "prompt": "synthetic prompt",
+            "model": "synthetic-model",
+            "prompt": "synthetic prompt",
             "png_path": str(image) if index else None,
             "benchmark_metadata": {"requirements": ["visible grip"], "status": "completed"},
             "valid": bool(index),
         }
         evidence[interface].append(row)
-        key.append({k: row[k] for k in ("id", "prompt_id", "backend", "model")} | {
-            "interface": interface, "index": index,
-        })
+        key.append(
+            {k: row[k] for k in ("id", "prompt_id", "backend", "model")}
+            | {
+                "interface": interface,
+                "index": index,
+            }
+        )
         item = {
-            "index": index, "label": f"Image {index+1:02d}",
-            "prompt": row["prompt"], "requirements": ["visible grip"],
-            "png_path": row["png_path"], "png_sha256": sha(image) if index else None,
+            "index": index,
+            "label": f"Image {index + 1:02d}",
+            "prompt": row["prompt"],
+            "requirements": ["visible grip"],
+            "png_path": row["png_path"],
+            "png_sha256": sha(image) if index else None,
         }
         inputs[index % 3].append(item)
-        decisions[index % 3].append({
-            k: item[k] for k in ("index", "label", "png_sha256")
-        } | {
-            "reviewer_kind": "assistant", "passed": bool(index),
-            "evidence": "Synthetic evidence." if index else "No image generated.",
-            "failed_requirements": [] if index else ["visible grip"],
-        })
+        decisions[index % 3].append(
+            {k: item[k] for k in ("index", "label", "png_sha256")}
+            | {
+                "reviewer_kind": "assistant",
+                "passed": bool(index),
+                "evidence": "Synthetic evidence." if index else "No image generated.",
+                "failed_requirements": [] if index else ["visible grip"],
+            }
+        )
     (folder / "unblinding-key.json").write_text(json.dumps(key))
     for reviewer in range(3):
         directory = folder / f"reviewer-{reviewer}"
@@ -89,7 +101,9 @@ def test_partial_review_is_waiting(packets):
     assert status["status"] == "waiting"
 
 
-@pytest.mark.parametrize("mutation", ["duplicate", "label", "hash", "kind", "requirements", "missing_png_pass"])
+@pytest.mark.parametrize(
+    "mutation", ["duplicate", "label", "hash", "kind", "requirements", "missing_png_pass"]
+)
 def test_invalid_or_misattributed_review_rejected(packets, mutation):
     path = packets[0] / "blind-review/reviewer-0/decisions.jsonl"
     rows = publisher.jsonl(path)
@@ -124,10 +138,20 @@ def test_publish_refuses_incomplete_reviews_before_network(monkeypatch, tmp_path
     directory = tmp_path / "comparison"
     for interface in ("svg", "contact"):
         (directory / interface).mkdir(parents=True)
-    monkeypatch.setattr(publisher, "validate", lambda _: (
-        SimpleNamespace(BASE="base", TEACHER="teacher"), [], {}, {}, {"purpose": "test"},
-        {}, {}, {"status": "waiting", "reviewed_attempts": 63},
-    ))
+    monkeypatch.setattr(
+        publisher,
+        "validate",
+        lambda _: (
+            SimpleNamespace(BASE="base", TEACHER="teacher"),
+            [],
+            {},
+            {},
+            {"purpose": "test"},
+            {},
+            {},
+            {"status": "waiting", "reviewed_attempts": 63},
+        ),
+    )
     assert publisher.publish(tmp_path)["offline_validation"] == "waiting_for_blind_review"
     with pytest.raises(ValueError, match="all 64"):
         publisher.publish(tmp_path, execute=True)
@@ -143,30 +167,58 @@ def test_publication_tables_align_reviews_and_provisional_scores(monkeypatch, pa
     root, evidence = packets
     reviews, _, status = validate(packets)
     summaries = {}
-    prompts = [{"id": f"prompt-{i}", "prompt": "synthetic prompt", "requirements": ["visible grip"]}
-               for i in range(16)]
+    prompts = [
+        {"id": f"prompt-{i}", "prompt": "synthetic prompt", "requirements": ["visible grip"]}
+        for i in range(16)
+    ]
     for interface, rows in evidence.items():
         (root / "comparison" / interface).mkdir(parents=True)
         for i, row in enumerate(rows):
             row.update(
-                prompt_id=f"prompt-{i // 2}", input_tokens=1, output_tokens=2,
-                latency_s=1.0, tool_calls=1, prompt_version="synthetic",
-                scores={"scene_quality": {
-                    "status": "ok", "quality_failure": False,
-                    "constraint_coverage": 1.0, "prompt_checks": [True],
-                }},
+                prompt_id=f"prompt-{i // 2}",
+                input_tokens=1,
+                output_tokens=2,
+                latency_s=1.0,
+                tool_calls=1,
+                prompt_version="synthetic",
+                scores={
+                    "scene_quality": {
+                        "status": "ok",
+                        "quality_failure": False,
+                        "constraint_coverage": 1.0,
+                        "prompt_checks": [True],
+                    }
+                },
             )
-        summaries[interface] = {"arms": {
-            arm: {
-                "total": 16, "provisional_passes": 16, "provisional_pass_rate_all_attempts": 1.0,
-                "metric_means_scored_only": {"constraint_coverage": 1.0},
-                "generation_errors": 0, "judge_errors": 0,
-            } for arm in publisher.ARMS
-        }}
-    monkeypatch.setattr(publisher, "validate", lambda _: (
-        SimpleNamespace(BASE="base", TEACHER="teacher", INTERFACES=("svg", "contact"), read=read),
-        prompts, evidence, summaries, {"purpose": "synthetic"}, {}, reviews, status,
-    ))
+        summaries[interface] = {
+            "arms": {
+                arm: {
+                    "total": 16,
+                    "provisional_passes": 16,
+                    "provisional_pass_rate_all_attempts": 1.0,
+                    "metric_means_scored_only": {"constraint_coverage": 1.0},
+                    "generation_errors": 0,
+                    "judge_errors": 0,
+                }
+                for arm in publisher.ARMS
+            }
+        }
+    monkeypatch.setattr(
+        publisher,
+        "validate",
+        lambda _: (
+            SimpleNamespace(
+                BASE="base", TEACHER="teacher", INTERFACES=("svg", "contact"), read=read
+            ),
+            prompts,
+            evidence,
+            summaries,
+            {"purpose": "synthetic"},
+            {},
+            reviews,
+            status,
+        ),
+    )
     tables, logged = [], {}
 
     class Table:
@@ -195,10 +247,16 @@ def test_publication_tables_align_reviews_and_provisional_scores(monkeypatch, pa
             return SimpleNamespace(name="evidence:v0", wait=lambda: None)
 
     monkeypatch.setattr(publisher, "project_path", lambda: "synthetic/project")
-    monkeypatch.setitem(sys.modules, "wandb", SimpleNamespace(
-        Table=Table, Image=lambda path: path, init=lambda **_: Run(),
-        Artifact=lambda *_, **__: SimpleNamespace(add_file=lambda *_, **__: None),
-    ))
+    monkeypatch.setitem(
+        sys.modules,
+        "wandb",
+        SimpleNamespace(
+            Table=Table,
+            Image=lambda path: path,
+            init=lambda **_: Run(),
+            Artifact=lambda *_, **__: SimpleNamespace(add_file=lambda *_, **__: None),
+        ),
+    )
     result = publisher.publish(root, execute=True)
     assert result["status"] == "published"
     assert [len(table.rows) for table in tables] == [16, 64, 4]

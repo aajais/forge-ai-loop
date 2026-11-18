@@ -5,13 +5,13 @@ from types import SimpleNamespace
 
 import pytest
 from PIL import Image
-from test_astra_judge import judgment
-from test_benchmark import FakeAgent, backend, fake_generation, prompts  # noqa: F401
 
 from bufogen.evaluation.benchmark import _validate_eval_coverage, run_benchmark, score_benchmark
 from bufogen.evaluation.references import build_reference_manifest
 from bufogen.evaluation.scorers.astra_judge import AstraReferenceJudge
 from bufogen.generation import BufoGeneration
+from test_astra_judge import judgment
+from test_benchmark import FakeAgent, backend, fake_generation, prompts  # noqa: F401
 
 
 class PngAgent(FakeAgent):
@@ -300,7 +300,8 @@ async def test_all_judge_errors_fail_loudly_and_never_publish(
     monkeypatch.setattr(AstraReferenceJudge, "_judge", failing_judge)
     published = []
     monkeypatch.setattr(
-        "bufogen.evaluation.benchmark._publish_astra", lambda *a, **k: published.append(a) or _noop()
+        "bufogen.evaluation.benchmark._publish_astra",
+        lambda *a, **k: published.append(a) or _noop(),
     )
     with pytest.raises(RuntimeError, match="no verdicts"):
         await score_benchmark(out, publish=True, judge="astra", references=refs)
@@ -781,7 +782,8 @@ async def test_no_ok_verdicts_never_publish_even_without_judge_errors(
     (refs / "references.json").write_text(json.dumps(manifest))
     published = []
     monkeypatch.setattr(
-        "bufogen.evaluation.benchmark._publish_astra", lambda *a, **k: published.append(a) or _noop()
+        "bufogen.evaluation.benchmark._publish_astra",
+        lambda *a, **k: published.append(a) or _noop(),
     )
     with pytest.raises(RuntimeError, match="no verdicts.*missing_reference"):
         await score_benchmark(out, publish=True, judge="astra", references=refs)
@@ -815,7 +817,9 @@ async def test_code_sha256_uses_frozen_generation_hashes(
         assert code["svg.py"] == "s" * 64
         assert code["render.py"] == "r" * 64
         # The judge is not part of generation; its hash is the scoring-time file.
-        current = hashlib.sha256((ROOT / "src/bufogen/evaluation/scorers/astra_judge.py").read_bytes())
+        current = hashlib.sha256(
+            (ROOT / "src/bufogen/evaluation/scorers/astra_judge.py").read_bytes()
+        )
         assert code["scorers/astra_judge.py"] == current.hexdigest()
 
 

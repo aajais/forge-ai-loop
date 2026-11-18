@@ -7,8 +7,9 @@ from copy import deepcopy
 from pathlib import Path
 
 import pytest
-import test_contact_agent as original
 from openai.types.responses import ResponseFunctionToolCall
+
+import test_contact_agent as original
 
 
 def module():
@@ -37,13 +38,17 @@ async def test_invalid_reference_feedback_names_field_and_reason_then_null_retry
     bad = deepcopy(good)
     bad["objects"][0]["attach"] = {"anchor": "grip", "to": "none", "dx": 0, "dy": 0}
     bad["objects"][0]["svg"] += "<!-- PRIVATE_INPUT_NOT_FOR_ERROR -->"
-    model = original.OfflineModel([
-        original.call(bad, "invalid-reference"),
-        original.call(good, "null-attachment"),
-        original.reply(),
-    ])
+    model = original.OfflineModel(
+        [
+            original.call(bad, "invalid-reference"),
+            original.call(good, "null-attachment"),
+            original.reply(),
+        ]
+    )
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
-    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate("Hold a mug")
+    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate(
+        "Hold a mug"
+    )
     results = [json.loads(x["content"]) for x in row.trajectory["messages"] if x["role"] == "tool"]
     assert results[0]["valid"] is False
     assert "objects.0.attach.to" in results[0]["error"]
@@ -57,16 +62,26 @@ async def test_invalid_reference_feedback_names_field_and_reason_then_null_retry
     assert "objects.0.attach.to" in attempts[0].attributes["gen_ai.tool.call.result"]
 
 
-async def test_malformed_json_reports_location_without_echoing_input(offline, monkeypatch, tmp_path):
+async def test_malformed_json_reports_location_without_echoing_input(
+    offline, monkeypatch, tmp_path
+):
     m, _, _, _, _, Renderer, backend = offline
     malformed = ResponseFunctionToolCall(
-        type="function_call", name="render_scene", call_id="bad-json",
+        type="function_call",
+        name="render_scene",
+        call_id="bad-json",
         arguments='{"PRIVATE_INPUT_NOT_FOR_ERROR":\n',
     )
-    model = original.OfflineModel([malformed, original.call(original.scene(m), "fixed"), original.reply()])
+    model = original.OfflineModel(
+        [malformed, original.call(original.scene(m), "fixed"), original.reply()]
+    )
     monkeypatch.setattr(m, "OpenAIChatCompletionsModel", lambda **kwargs: model)
-    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate("Hold a mug")
-    failure = next(json.loads(x["content"]) for x in row.trajectory["messages"] if x["role"] == "tool")
+    row = await m.ContactAgent(backend, Renderer(), tmp_path, client=object()).generate(
+        "Hold a mug"
+    )
+    failure = next(
+        json.loads(x["content"]) for x in row.trajectory["messages"] if x["role"] == "tool"
+    )
     assert "line 2" in failure["error"] and "column 1" in failure["error"]
     assert "PRIVATE_INPUT_NOT_FOR_ERROR" not in failure["error"]
     assert row.valid

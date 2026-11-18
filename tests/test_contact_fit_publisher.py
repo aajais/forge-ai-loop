@@ -1,4 +1,5 @@
 """Offline publication checks over the real synthetic comparison validator."""
+
 import importlib.util
 import json
 import sys
@@ -6,6 +7,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
+
 from test_contact_fit_compare import compare, comparison, write_reviews
 
 PATH = Path(__file__).resolve().parents[1] / "docs/forge-contact-pilot/publish_fit.py"
@@ -64,15 +66,25 @@ def fake_wandb(monkeypatch, *, fail_upload=False):
         return Run()
 
     monkeypatch.setattr(publisher, "project_path", lambda: "synthetic/project")
-    monkeypatch.setitem(sys.modules, "wandb", SimpleNamespace(
-        Table=Table, Image=lambda path: path, init=init,
-        Artifact=lambda *_, **__: SimpleNamespace(add_file=lambda path, name: files.append((path, name))),
-    ))
+    monkeypatch.setitem(
+        sys.modules,
+        "wandb",
+        SimpleNamespace(
+            Table=Table,
+            Image=lambda path: path,
+            init=init,
+            Artifact=lambda *_, **__: SimpleNamespace(
+                add_file=lambda path, name: files.append((path, name))
+            ),
+        ),
+    )
     return calls, logged, files
 
 
 def test_default_reuses_frozen_comparison_without_publication_or_rewrite(ready, monkeypatch):
-    monkeypatch.setitem(sys.modules, "wandb", SimpleNamespace(init=lambda **_: pytest.fail("network")))
+    monkeypatch.setitem(
+        sys.modules, "wandb", SimpleNamespace(init=lambda **_: pytest.fail("network"))
+    )
     summary_path = ready / "fit-comparison/comparison.json"
     stamp = summary_path.stat().st_mtime_ns
     result = publisher.publish(ready)
@@ -89,7 +101,9 @@ def test_missing_summary_does_not_create_comparison_or_publish(comparison, monke
     assert not (comparison[0] / "fit-comparison").exists()
 
 
-def test_all_attempts_and_partial_png_verdicts_are_preserved_and_upload_is_idempotent(ready, monkeypatch):
+def test_all_attempts_and_partial_png_verdicts_are_preserved_and_upload_is_idempotent(
+    ready, monkeypatch
+):
     calls, logged, files = fake_wandb(monkeypatch)
     receipt = publisher.publish(ready, execute=True)
     assert receipt["status"] == "published"

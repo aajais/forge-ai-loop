@@ -40,9 +40,8 @@ def test_adapter_requires_real_weight_file(tmp_path):
 
 
 def test_automatic_scores_cannot_qualify_training_examples():
-    from test_trajectories import captured_row
-
     from bufogen.curation.curate import select_examples
+    from test_trajectories import captured_row
 
     row = captured_row()
     row.scores = {
@@ -75,9 +74,8 @@ def review(row, **overrides):
 def test_review_import_and_heldout_family_gating(tmp_path):
     import json
 
-    from test_trajectories import captured_row
-
     from bufogen.curation.curate import import_review_decisions, select_examples
+    from test_trajectories import captured_row
 
     row = captured_row()
     row.scores = {
@@ -98,9 +96,8 @@ def test_review_import_and_heldout_family_gating(tmp_path):
 
 
 def test_missing_negative_and_auto_only_reviews_are_denied():
-    from test_trajectories import captured_row
-
     from bufogen.curation.curate import select_examples
+    from test_trajectories import captured_row
 
     row = captured_row()
     row.scores = {
@@ -124,9 +121,8 @@ def test_missing_negative_and_auto_only_reviews_are_denied():
 
 
 def test_reviewed_legacy_rows_are_skipped_with_diagnostics():
-    from test_trajectories import captured_row
-
     from bufogen.curation.curate import select_examples
+    from test_trajectories import captured_row
 
     row = captured_row()
     row.trajectory = None
@@ -142,9 +138,8 @@ def test_reviewed_legacy_rows_are_skipped_with_diagnostics():
 
 
 def test_explicit_review_does_not_require_legacy_automatic_metrics():
-    from test_trajectories import captured_row
-
     from bufogen.curation.curate import select_examples
+    from test_trajectories import captured_row
 
     row = captured_row()
     row.training_review = review(row, reviewer_kind="assistant")
